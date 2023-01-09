@@ -13,9 +13,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   return <div className='app-container'>
-    <h1>Greeting from Cyber Insecure!🤠</h1>
-    <Container className='d-flex align-items-center justify-content-center' style={{ minHeight: '100vh' }}>
-      <div className='w-100' style={{ maxWidth: '400px' }}>
         <Router>
           <AuthProvider>
             <Routes>
@@ -29,8 +26,6 @@ function App() {
             </Routes>
           </AuthProvider>
         </Router>
-      </div>
-    </Container>
     </div>
 }
 
