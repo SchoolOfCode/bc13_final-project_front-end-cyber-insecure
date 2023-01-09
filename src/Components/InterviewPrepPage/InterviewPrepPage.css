@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS Variables */
+:root {
+  --primary_colour: #94c296;
+  --secondary_colour: #E5BE83;
+}
+
+body {
+  background-color: var(--primary_colour);
+}
+
+/* Page Container */
+.interviewPrepPage_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px ;
+}
+
+/* Questions Section */
+.allQuestions_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual Question Sections */
+.interviewQuestionsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.questionsList {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+/* Individual Questions Styling */
+
+.questionStyling {
+  background-color: var(--secondary_colour);
+  margin-right: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
