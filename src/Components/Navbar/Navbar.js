@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Navbar.css'
 
 export default function Navbar() {
     const navigate = useNavigate()
@@ -21,8 +22,7 @@ export default function Navbar() {
     }
 
     return (
-        <div>
-        <h1> Buttons below are the navbar </h1>
+        <div className='navbar-container'>
             <button onClick={navigateHome}> Dashboard </button>
             <button onClick={navigateApplications}> My applications</button>
             <button onClick={navigateInterviewPrep}> Interview Prep</button>
