@@ -17,6 +17,18 @@ export default function Navbar() {
         navigate('/interviewprep', { replace: true })
     }
 
+    const navigateCV = () => {
+        navigate('/cv-workshop', { replace: true })
+    }
+
+    const navigateKnowledgebank = () => {
+        navigate('/knowledge-bank', { replace: true })
+    }
+
+    const navigateQuizzes = () => {
+        navigate('/quizzes', { replace: true })
+    }
+
     const navigatePortfolio = () => {
         navigate('/portfolio', { replace: true })
     }
@@ -27,6 +39,9 @@ export default function Navbar() {
             <button onClick={navigateApplications}> My applications</button>
             <button onClick={navigateInterviewPrep}> Interview Prep</button>
             <button onClick={navigatePortfolio}> Perfect your portfolio</button>
+            <button onClick={navigateCV}> CV workshop </button>
+            <button onClick={navigateKnowledgebank}> Knowledge Bank </button>
+            <button onClick={navigateQuizzes}> Quizzes </button>
         </div>
     )
 }

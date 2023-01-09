@@ -80,6 +80,7 @@ export default function DashboardPage() {
           </div>
         </a>
       </div>
+      
       <div className="dashboard-other-container">
         <div className="dashboard-cards">
           <a className="dashboard-card" onClick={navigateInterviewPrep}>
