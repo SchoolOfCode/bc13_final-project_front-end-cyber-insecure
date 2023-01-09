@@ -33,6 +33,8 @@ export default function Navbar() {
         navigate('/portfolio', { replace: true })
     }
 
+    //for deploy
+
     return (
         <div className='navbar-container'>
             <button onClick={navigateHome}> Dashboard </button>
