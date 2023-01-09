@@ -41,13 +41,13 @@ export default function DashboardPage() {
             <h1>Everything you need for job preparation in one place</h1>
 
             <div className='dashboard-cards'>
-                <a className='dashboard-card' onClick={navigateApplications}>
+                <a className='dashboard-card' onClick={navigateInterviewPrep}>
                     <h1> Interview Prep </h1>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg"/>
                     <p>Find all the essential knowledge and material you need for a junior developer interview</p>
                 </a>
 
-                <a className='dashboard-card' onClick={navigateInterviewPrep}>
+                <a className='dashboard-card' onClick={navigateApplications}>
                     <h1> My applications </h1>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg"/>
                     <p>Track all of your job applications easily and in one place </p>
