@@ -6,29 +6,23 @@
     text-align: center;
     width: 100vw;
     height: 100%;
+    gap: 5vh;
 }
-
+.dashboard-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+}
 .dashboard-cards {
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
     gap: 20px;
-}
-
-.dashboard-card img {
-    width: 150px;
-}
-
-.dashboard-card h1 {
-    font-size: large;
-    height: 25%;
-}
-
-.dashboard-card p {
-    height: 25%;
 }
 
 .dashboard-card {
@@ -39,8 +33,52 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 27%;
-    min-height: 40%;
+    min-width: 160px;
+    max-width: 30%;
+    min-height: 350px;
     border-radius: 5px;
-    margin-top: 20px;
+}
+.dashboard-card:hover{
+    transform: scale(1.1);
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.46); 
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.46);
+    cursor: pointer;
+    color: black;
+}
+
+.dashboard-card img {
+    width: 150px;
+}
+
+.dashboard-card-header{
+    width: 100%;
+    min-height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-card-header h1{
+    font-size: large;
+}
+.dashboard-card-main{
+    width: 100%;
+    height: 40%;
+}
+.dashboard-card-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40%;
+}
+@media (max-width: 600px) {
+    .dashboard-card-footer p {
+      font-size: smaller;
+    }
+  }
+.dashboard-other-container{
+    min-height: 80vh;
+    margin-top: 7vh;
 }
