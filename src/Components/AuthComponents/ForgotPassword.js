@@ -26,10 +26,9 @@ export default function ForgotPassword() {
     }
 
     return (
-        <>
-        <h1> deVault </h1>
-        <hr></hr>
-        <Card>
+        <div className="login-container">
+        
+        <Card id="card">
             <Card.Body>
                 <h2 className='text-center mb-4'> Password Reset </h2>
                 {error && <Alert variant='danger'>{error}</Alert>}
@@ -40,7 +39,7 @@ export default function ForgotPassword() {
                         <Form.Control type='email' ref={emailRef} required/>
                     </Form.Group>
 
-                    <Button disabled={loading} className='w-100' type='submit'>Reset password</Button>
+                    <Button disabled={loading} className='mt-4 w-100' type='submit'>Reset password</Button>
                 </Form>
                 <div className='w-100 text-center mt-3'>
             <Link to='/login'>Log in</Link>
@@ -50,6 +49,6 @@ export default function ForgotPassword() {
         <div className='w-100 text-center mt-2'>
             Need an account? <Link to='/signup'>Sign Up</Link>
         </div>
-        </>
+        </div>
     )
 }
