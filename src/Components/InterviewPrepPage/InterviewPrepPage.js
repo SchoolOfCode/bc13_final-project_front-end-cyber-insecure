@@ -2,6 +2,7 @@ import './InterviewPrepPage.css';
 import { useState } from 'react';
 import React from "react";
 import Popup from '../Popup/Popup';
+import Navbar from '../Navbar/Navbar';
 
 function InterviewPrepPage (props){
 
@@ -12,7 +13,8 @@ function InterviewPrepPage (props){
     // 3. Check chatGt
 
 
-    return (
+    return [
+        <Navbar/>,
         <div className="interviewPrepPage_container">
             <h1>Interview Preparation</h1>
             <h2>Key Interview Questions and Answers</h2>
@@ -120,6 +122,6 @@ function InterviewPrepPage (props){
 
         </div>
         
-    )
+    ]
 }
 export default InterviewPrepPage
