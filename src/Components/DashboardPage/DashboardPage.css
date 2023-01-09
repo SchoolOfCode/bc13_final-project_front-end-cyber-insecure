@@ -1,0 +1,46 @@
+.dashboard-page-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100%;
+}
+
+.dashboard-cards {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.dashboard-card img {
+    width: 150px;
+}
+
+.dashboard-card h1 {
+    font-size: large;
+    height: 25%;
+}
+
+.dashboard-card p {
+    height: 25%;
+}
+
+.dashboard-card {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 27%;
+    min-height: 40%;
+    border-radius: 5px;
+    margin-top: 20px;
+}
