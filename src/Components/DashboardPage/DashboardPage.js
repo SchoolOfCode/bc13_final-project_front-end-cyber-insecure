@@ -127,7 +127,7 @@ export default function DashboardPage() {
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
                         </div>
                         <div className="dashboard-card-footer">
-                            <p>Use our wide range of quizzes to master your understanding</p>
+                            <p>Use our wide range of quizzes to master your understanding.</p>
                         </div>
                     </a>
                 </div>
