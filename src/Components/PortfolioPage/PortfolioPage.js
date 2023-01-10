@@ -1,37 +1,38 @@
 import React from "react";
+import { useState } from "react";
 import Popup from "../Popup/Popup";
 import Navbar from '../Navbar/Navbar'
-import { useState } from "react";
 import jordanGithubPlain from '../../Images/jordanGithubPlain.png'
 import jordanGithubPopup from '../../Images/jordanGithubPopup.png'
+import jordanPortfolioPlain from '../../Images/jordanPortfolioPlain.png'
+import jordanPortfolioPopup from '../../Images/jordanPorfolioPopup.png'
 import './PortfolioPage.css'
 
 function PortfolioPage(props) {
 
     const [buttonPopUp, setButtonPopUp] = useState(false);
 
+    console.log(buttonPopUp)
     return [
         <Navbar />,
         <div className='PortfolioPage-container'>
-        <h1>This is the Portfolio page</h1>
+            <h1>This is the Portfolio page</h1>
 
             <div className='PortfolioPage-examples'>
-                <div className="PorfolioPage-example-item">
-                    <a onClick={() => setButtonPopUp(true)}>
-                        <img className='portfolio-plain-image' src={jordanGithubPlain} alt='' />
-                        <Popup trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-                            <img className='portfolio-popup-image' src={jordanGithubPopup} alt='' />
-                        </Popup>
-                    </a>
+                <div onClick={() => setButtonPopUp(!buttonPopUp)} className="PorfolioPage-example-item">
+                    <img className='portfolio-plain-image' src={jordanGithubPlain} alt=''/>
+                    <br></br>
+                    <Popup trigger={buttonPopUp} setTrigger={setButtonPopUp}>
+                        <img className='portfolio-popup-image' src={jordanGithubPopup} alt=''/>
+                    </Popup>
                 </div>
 
-                <div className="PorfolioPage-example-item">
-                    <a onClick={() => setButtonPopUp(true)}>
-                        <img className='portfolio-plain-image' src={jordanGithubPlain} alt='' />
-                        <Popup trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-                            <img img className='portfolio-popup-image' src={jordanGithubPopup} alt='' />
-                        </Popup>
-                    </a>
+                <div onClick={() => setButtonPopUp(!buttonPopUp)} className="PorfolioPage-example-item">
+                    <img className='portfolio-plain-image' src={jordanPortfolioPlain} alt=''/>
+                    <br></br>
+                    <Popup trigger={buttonPopUp} setTrigger={setButtonPopUp}>
+                        <img className='portfolio-popup-image' src={jordanPortfolioPopup} alt=''/>
+                    </Popup>
                 </div>
             </div>
         </div>
