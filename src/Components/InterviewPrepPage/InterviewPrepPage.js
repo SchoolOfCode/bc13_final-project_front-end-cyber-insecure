@@ -6,8 +6,6 @@ import Navbar from '../Navbar/Navbar';
 import Popup from 'reactjs-popup';
 
 function InterviewPrepPage(props) {
-  const [buttonPopUp, setButtonPopUp] = useState(false);
-
   // 1. Onclick event handler showing a popup card of a good answer structure to each question when clicked
   // 2. I think we need to use, the useState hook in order for this to work.
   // 3. Check chatGt
