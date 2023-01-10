@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { useState } from "react";
+// import ReorderIcon from "material-ui/icons/Reorder"
+import {GiHamburgerMenu} from "react-icons/gi"
 
 export default function Navbar() {
   const [hamburger, setHamburger] = useState(true);
@@ -40,7 +42,7 @@ export default function Navbar() {
     <div className={hamburger?"navbar-container":"navbar-open"}>
       <div className="hamburger">
         <button onClick={() => setHamburger(!hamburger)} id="hamburger">
-          Open
+        <GiHamburgerMenu/>
         </button>
       </div>
       <div className={hamburger?"navbar-links":"hamburger-open"}>
