@@ -33,7 +33,7 @@ export const questionsJavaScript = [
       question: "What type of data does the parseInt() function return?",
       options: [
         { id: 0, question: "String", isCorrect: false },
-        { id: 1, question: "Integer (correct)", isCorrect: true },
+        { id: 1, question: "Integer", isCorrect: true },
         { id: 2, question: "Boolean", isCorrect: false },
         { id: 3, question: "Float", isCorrect: false },
       ],
