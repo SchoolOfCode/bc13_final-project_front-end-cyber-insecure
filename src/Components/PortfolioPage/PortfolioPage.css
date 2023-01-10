@@ -1,0 +1,27 @@
+.PortfolioPage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.PortfolioPage-examples {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.portfolio-plain-image {
+    width: 100px;
+    height: 100px;
+}
+
+.portfolio-popup-image {
+    width: 100px;
+    height: 100px;
+}
+
+.PorfolioPage-example-item {
+    width: 100%;
+}
