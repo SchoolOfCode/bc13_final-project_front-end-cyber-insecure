@@ -14,6 +14,10 @@
     align-items: center;
     justify-content: center;
     height: 25vh;
+
+}
+.dashboard-header h1{
+        border-bottom: 1px solid;
 }
 .dashboard-cards {
     width: 100%;
@@ -33,8 +37,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 160px;
-    max-width: 300px;
+    /* min-width: 160px; */
+    width: 300px;
     min-height: 350px;
     border-radius: 5px;
 }
@@ -42,10 +46,12 @@
 
 .dashboard-card:hover{
     transform: scale(1.1);
-    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.46); 
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.46);
+    -webkit-box-shadow: 0px 0px 5px 5px #e5be8382; 
+    box-shadow: 0px 0px 5px 5px #e5be8367;
     cursor: pointer;
     color: black;
+    border: 1px solid;
+    border-color: #FBF0A2;
 }
 
 .dashboard-card img {
@@ -62,6 +68,7 @@
 }
 .dashboard-card-header h1{
     font-size: large;
+    border-bottom: 1px solid;
 }
 .dashboard-card-main{
     width: 100%;
