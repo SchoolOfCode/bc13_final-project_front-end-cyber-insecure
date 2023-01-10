@@ -17,13 +17,13 @@ function PortfolioPage(props) {
 
             <div className='PortfolioPage-examples'>
                 <div className="PorfolioPage-example-item">
-                    <Popup trigger={<img className='portfolio-plain-image' src={jordanGithubPlain} alt='' />} position="right center">
+                    <Popup trigger={<img className='portfolio-plain-image' src={jordanGithubPlain} alt='' />}>
                         <img className='portfolio-popup-image' src={jordanGithubPopup} alt='' />
                     </Popup>
                 </div>
             <hr></hr>
                 <div className="PorfolioPage-example-item">
-                    <Popup trigger={<img className='portfolio-plain-image' src={jordanPortfolioPlain} alt='' />} position="right center">
+                    <Popup trigger={<img className='portfolio-plain-image' src={jordanPortfolioPlain} alt='' />}>
                         <img className='portfolio-popup-image' src={jordanPortfolioPopup} alt='' />
                     </Popup>
                 </div>
