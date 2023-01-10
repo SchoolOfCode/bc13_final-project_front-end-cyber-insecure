@@ -1,4 +1,4 @@
-.navbar-container {
+.navbar-links {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -11,27 +11,48 @@
     top: 0px;
 }
 
-.navbar-container button {
+
+.navbar-links button {
     border: none;
     padding: 5px;
     background-color: rgba(255, 255, 255, 0);
 }
 
-.navbar-container button:hover {
+.navbar-links button:hover {
     border: none;
     padding: 5px;
     background-color: #FBF0A2 ;
 }
 @media (max-width: 500px) {
-    .navbar-container{
+    .navbar-links{
         width: 100%;
         font-size:small;
         gap: 0px;
         padding: 5px;
         gap:3px;
     }
-    .navbar-container button{
+    .navbar-links button{
         padding: 0px;
 
+    }
+}
+
+
+@media (min-width: 500px) {
+    #hamburger {
+        display: none;
+
+    }
+}
+
+@media (max-width: 500px) {
+    #hamburger {
+        display: flex;
+
+    }
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        
     }
 }

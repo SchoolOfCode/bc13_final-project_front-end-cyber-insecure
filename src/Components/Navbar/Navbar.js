@@ -1,8 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Navbar.css'
+import {useState} from "react" 
 
 export default function Navbar() {
+    const [hamburger, setHamburger] = useState(false)
+
+
     const navigate = useNavigate()
 
     const navigateHome = () => {
@@ -33,8 +37,10 @@ export default function Navbar() {
         navigate('/portfolio', { replace: true })
     }
 
-    return (
-        <div className='navbar-container'>
+    return  (
+        <div className="navbar-container">
+        <div className="hamburger"><button onClick={() => setHamburger(!hamburger)} id="hamburger">Open</button></div>
+        <div className='navbar-links'>
             <button onClick={navigateHome}> Dashboard </button>
             <button onClick={navigateApplications}> My applications</button>
             <button onClick={navigateInterviewPrep}> Interview Prep</button>
@@ -43,5 +49,6 @@ export default function Navbar() {
             <button onClick={navigateKnowledgebank}> Knowledge Bank </button>
             <button onClick={navigateQuizzes}> Quizzes </button>
         </div>
-    )
+        </div>
+    ) 
 }
