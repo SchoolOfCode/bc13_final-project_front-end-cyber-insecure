@@ -7,10 +7,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: 75%;
-    min-width: 70%;
+    max-width: 75vw;
+    min-width: 70vw;
     gap: 20%;
     height: 90vh;
+    
 }
 .login-container{
     background-color: #59ee6046;
@@ -20,9 +21,12 @@
     min-width: 300px;
     max-width: 400px;
 }
+.title-container h1{
+    font-size: 100px;
+}
 .login-second-section-container{
-    max-width: 75%;
-    min-width: 70%;
+    max-width: 75vw;
+    min-width: 70vw;
     min-height: 60vh;
     display: flex;
     flex-direction: column;
@@ -59,8 +63,8 @@ max-width: 200px;
 }
 
 .login-third-section-container{
-    max-width: 75%;
-    min-width: 70%;
+    max-width: 75vw;
+    min-width: 70vw;
     min-height: 70vh;
     display: flex;
     flex-direction: row;
@@ -77,8 +81,8 @@ max-width: 200px;
 }
 .login-fourth-section-container{
     min-height: 50vh;
-    max-width: 75%;
-    min-width: 70%;
+    max-width: 75vw;
+    min-width: 70vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -89,3 +93,18 @@ max-width: 200px;
     max-height: 100px;
 }
 
+@media (max-width: 500px){
+    .login-component{
+        flex-direction: column;
+        gap:10vh;
+    }
+    .title-container h1{
+        font-size: 70px;
+    }
+    .login-second-section-main{
+        flex-direction: column;
+    }
+    .second-ex{
+        max-width: 70%;
+    }
+}
