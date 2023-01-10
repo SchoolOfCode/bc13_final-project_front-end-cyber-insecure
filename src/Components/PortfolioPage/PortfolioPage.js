@@ -12,7 +12,6 @@ function PortfolioPage(props) {
 
     const [buttonPopUp, setButtonPopUp] = useState(false);
 
-    console.log(buttonPopUp)
     return [
         <Navbar />,
         <div className='PortfolioPage-container'>
@@ -22,8 +21,9 @@ function PortfolioPage(props) {
                 <div onClick={() => setButtonPopUp(!buttonPopUp)} className="PorfolioPage-example-item">
                     <img className='portfolio-plain-image' src={jordanGithubPlain} alt=''/>
                     <br></br>
-                    <Popup trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-                        <img className='portfolio-popup-image' src={jordanGithubPopup} alt=''/>
+                    <Popup trigger={buttonPopUp} setTrigger={setButtonPopUp} newProp={'hello'} >
+                        <img className='portfolio-popup-image' src={jordanGithubPopup} alt=''/> 
+                        <p> hello </p>
                     </Popup>
                 </div>
 
