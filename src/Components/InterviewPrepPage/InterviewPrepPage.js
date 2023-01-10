@@ -14,7 +14,7 @@ function InterviewPrepPage(props) {
     <Navbar />,
     <div className="interviewPrepPage_container">
       <h1>Interview Preparation</h1>
-      <h2>Key Interview Questions and Answers</h2>
+      <h2>Key Interview Questions and Answerswd</h2>
 
       <div className="allQuestions_container">
         <section className="interviewQuestionsSection">
