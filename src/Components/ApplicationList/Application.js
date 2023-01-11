@@ -1,20 +1,36 @@
-import React from "react";
-import {RiDeleteBinLine} from "react-icons/ri"
-import {FiExternalLink} from "react-icons/fi"
-import {AiFillEdit, AiOutlinePlus, AiOutlineMinus} from "react-icons/ai"
-
-
-const progressStage = [
-  { 1: "Research" },
-  { 2: "Ready to Apply" },
-  { 3: "Applied" },
-  { 4: "Interview Date" },
-  { 5: "Initial Interview Done" },
-  { 6: "Second Interview Done" },
-  { 7: "Success" },
-];
+import { React } from "react";
+import { RiDeleteBinLine } from "react-icons/ri";
+import { FiExternalLink } from "react-icons/fi";
+import { AiFillEdit, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 function Application(props) {
+  let progressStage;
+  switch (props.progress) {
+    case 1:
+      progressStage = "Research";
+      break;
+    case 2:
+      progressStage = "Ready_to_Apply";
+      break;
+    case 3:
+      progressStage = "Applied";
+      break;
+    case 4:
+      progressStage = "Interview_Date";
+      break;
+    case 5:
+      progressStage = "Initial_Interview_Done";
+      break;
+    case 6:
+      progressStage = "Second_Interview_Done";
+      break;
+    case 7:
+      progressStage = "Success";
+      break;
+    default:
+      progressStage = "Research";
+  }
+
   return [
     <div className="application-container">
       <div className="app-sections">
@@ -68,7 +84,7 @@ function Application(props) {
                 window.open(props.jobLink, "_blank").focus();
               }}
             >
-              <FiExternalLink/>
+              <FiExternalLink />
             </button>
           </div>
         </div>
@@ -81,19 +97,27 @@ function Application(props) {
           </div>
         </div>
         <div className="app-section" id="app-section-buttons">
-          <button><AiFillEdit/></button>
-          <button><RiDeleteBinLine/></button>
+          <button>
+            <AiFillEdit />
+          </button>
+          <button>
+            <RiDeleteBinLine />
+          </button>
         </div>
       </div>
       <div className="app-progress-container">
         <div className="app-progress-bar-container">
-          <div className="app-progress-bar">
-            <p>Progress Bar</p>
+          <div className={progressStage}>
+            <p>{progressStage}</p>
           </div>
         </div>
         <div className="app-progress-button">
-          <button><AiOutlineMinus/></button>
-          <button><AiOutlinePlus/></button>
+          <button onClick={props.progressPlus}>
+            <AiOutlineMinus />
+          </button>
+          <button onClick={props.progressMinus}>
+            <AiOutlinePlus />
+          </button>
         </div>
       </div>
     </div>,
