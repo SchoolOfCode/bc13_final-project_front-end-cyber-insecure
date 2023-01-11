@@ -25,7 +25,7 @@ function Application(props) {
       progressStage = "Second_Interview_Done";
       break;
     case 7:
-      progressStage = "Success";
+      progressStage = "Completed";
       break;
     default:
       progressStage = "Research";
@@ -71,7 +71,7 @@ function Application(props) {
             <p>Salary</p>
           </div>
           <div className="app-section-footer">
-            <p2>{props.salary}</p2>
+            <p2>£{props.salary}</p2>
           </div>
         </div>
         <div className="app-section">

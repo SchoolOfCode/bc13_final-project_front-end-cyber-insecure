@@ -20,10 +20,12 @@
 .navbar-open button:hover {
     border: none;
     background-color: #FBF0A2 ;
+    border-radius: 5px;
 }
 .navbar-container button:hover {
     border: none;
     background-color: #FBF0A2 ;
+    border-radius: 5px;
 }
 .hamburger{
     display: flex;
