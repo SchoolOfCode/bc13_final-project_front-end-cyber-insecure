@@ -2,27 +2,42 @@
     width: 100%;
     background-color: white;
 }
+#login-button{
+    background-color: #e5be83;
+    border-color: #FBF0A2;
+}
 .login-component{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: 75%;
-    min-width: 70%;
+    max-width: 75vw;
+    min-width: 70vw;
     gap: 20%;
     height: 90vh;
 }
+.login-component a{
+    color: black;
+    text-decoration: none;
+}
 .login-container{
-    background-color: #59ee6046;
+    background-color: #e5be83;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 300px;
     max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #FBF0A2;
+}
+.title-container h1{
+    font-size: 100px;
+    border-bottom: 1px solid;
 }
 .login-second-section-container{
-    max-width: 75%;
-    min-width: 70%;
+    max-width: 75vw;
+    min-width: 70vw;
     min-height: 60vh;
     display: flex;
     flex-direction: column;
@@ -35,6 +50,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.login-second-section-header h1{
+    border-bottom: 1px solid;
 }
 .login-second-section-main{
     display: flex;
@@ -59,8 +77,8 @@ max-width: 200px;
 }
 
 .login-third-section-container{
-    max-width: 75%;
-    min-width: 70%;
+    max-width: 75vw;
+    min-width: 70vw;
     min-height: 70vh;
     display: flex;
     flex-direction: row;
@@ -72,20 +90,41 @@ max-width: 200px;
     display: flex;
     flex-direction: column;
 }
+.login-third-section-header h1{
+    border-bottom: 1px solid;
+}
 .login-third-section-container img{
     max-height: 100px;
 }
 .login-fourth-section-container{
     min-height: 50vh;
-    max-width: 75%;
-    min-width: 70%;
+    max-width: 75vw;
+    min-width: 70vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
+.login-fourth-section-container h1{
+    border-bottom: 1px solid;
+}
 .login-fourth-section-container img{
     max-height: 100px;
 }
 
+@media (max-width: 700px){
+    .login-component{
+        flex-direction: column;
+        gap:10vh;
+    }
+    .title-container h1{
+        font-size: 70px;
+    }
+    .login-second-section-main{
+        flex-direction: column;
+    }
+    .second-ex{
+        max-width: 70%;
+    }
+}
