@@ -1,146 +1,167 @@
-.applications-container{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    /* justify-content: center; */
-    width: 100vw;
+.applications-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100vw;
+text-align: center;
 }
-.applications-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 1vh;
+.applications-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1vh;
 }
-.application-container{
-    display: flex;
-    flex-direction: column;
-    min-width: 90%;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.784);
-    border-radius: 5px;
-    border: 2px solid #bb8f6a;
+.application-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.784);
+  border-radius: 5px;
+  border: 2px solid #bb8f6a;
 }
-.app-sections{
-    display: flex;
-    width: 100%;
-    height: 80%;
-    align-items: center;
-    justify-content: space-evenly;
+.application-container:hover {
+  -webkit-box-shadow: 0px 0px 5px 5px #e5be83;
+  box-shadow: 0px 0px 5px 5px #e5be83d4;
 }
-.app-section{
-    display: flex;
-    flex-direction: column;
-    width: 5%;
-    height: 80%;
-    align-items: center;
-    justify-content: center;
-    border-left:1px solid #bb8f6a ;
-    border-right:1px solid #bb8f6a;
-    border-bottom:2px solid #bb8f6a ;
-    text-align: center;
-    /* text-overflow: ellipsis;
+.app-sections {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.app-section {
+  display: flex;
+  flex-direction: column;
+  min-width: 5%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #bb8f6a;
+  border-right: 1px solid #bb8f6a;
+  text-align: center;
+  /* text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap; */
 }
-.app-section p{
-    border-bottom: 1px solid #bb8f6a;
+/* .app-section p {
+  border-bottom: 1px solid #bb8f6a;
+} */
+.app-section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 10%;
+  border-bottom: 1px solid #bb8f6a;
+}
+.app-section-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
 
 }
-#app-section-buttons{
-    display: flex;
-    flex-direction: row;
-    gap: 4%;
+#app-job-title {
+  border-left: none;
 }
-.app-section7{
-    display: flex;
-    flex-direction: column;
-    width: 7%;
-    height: 80%;
-    align-items: center;
-    justify-content: center;
-    border-left:1px solid #bb8f6a ;
-    border-right:1px solid #bb8f6a;
-    border-bottom:2px solid #bb8f6a ;
-    text-align: center;
-    /* text-overflow: ellipsis;
+#app-section-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+  border-right: none;
+}
+.app-section7 {
+  display: flex;
+  flex-direction: column;
+  min-width: 7%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #bb8f6a;
+  border-right: 1px solid #bb8f6a;
+  text-align: center;
+  /* text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap; */
 }
-.app-section7 p{
-    border-bottom: 1px solid #bb8f6a;
-
-}
-.app-section32{
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    height: 80%;
-    align-items: center;
-    justify-content: center;
-    border-left:1px solid #bb8f6a ;
-    border-right:1px solid #bb8f6a;
-    border-bottom:2px solid #bb8f6a ;
-    text-align: center;
-    /* text-overflow: ellipsis;
+/* .app-section7 p {
+  border-bottom: 1px solid #bb8f6a;
+} */
+.app-section32 {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #bb8f6a;
+  border-right: 1px solid #bb8f6a;
+  text-align: center;
+  /* text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap; */
 }
-.app-section32 p{
-    border-bottom: 1px solid #bb8f6a;
+/* .app-section32 p {
+  border-bottom: 1px solid #bb8f6a;
+} */
 
-}
-
-.app-section button{
-    background-color: #bb8f6a;
-    border: none;
-    border-radius: 5px;
-    min-width: 45%;
-}
-
-.app-progress-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 16%;
-    width: 100%;
-}
-.app-progress-bar-container{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 95%;
-}
-.app-progress-bar{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: red;
-    width: 60%;
-    height: 100%;
-    border-radius: 5px;
-}
-.app-progress-bar p{
-    margin-top: 15px;
-    margin-right: 20px;
-    text-align: center;
-}
-.app-progress-button{
-    display: flex;
-    height: 100%;
-    width: 5%;
-    gap: 5%;
-    align-items: center;
-}
-.app-progress-button button{
-    width: 45%;
-    height: 100%;
-    background-color: #bb8f6a;
-    border: none;
-    border-radius: 5px;
+.app-section button {
+  background-color: #bb8f6a;
+  border: none;
+  border-radius: 5px;
+  min-width: 45%;
 }
 
+.app-progress-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 16%;
+  width: 100%;
+}
+.app-progress-bar-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 94%;
+}
+.app-progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(255, 0, 0, 0.808);
+  width: 60%;
+  height: 100%;
+  border-radius: 5px;
+}
+.app-progress-bar p {
+  margin-top: 15px;
+  margin-right: 20px;
+  text-align: center;
+}
+.app-progress-button {
+  display: flex;
+  height: 100%;
+  width: 5%;
+  gap: 5%;
+  align-items: center;
+  /* border-left: 1px solid #bb8f6a; */
+}
+.app-progress-button button {
+  width: 45%;
+  height: 100%;
+  background-color: #bb8f6a;
+  border: none;
+  border-radius: 5px;
+}
