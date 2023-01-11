@@ -22,7 +22,7 @@ function InterviewPrepPage(props) {
           <h2>General Questions from Interviewers</h2>
           <div className="questionsList">
             <div className="questionStyling">
-              <div>
+              <div className="">
                 <h3>Why did you choose to be a developer?</h3>
                 <br />
                 <br />
