@@ -1,0 +1,63 @@
+.PortfolioPage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.portfolio-main-h1 {
+  margin: 2%;
+}
+
+.PorfolioPage-example-item-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  margin: 1%;
+}
+
+.PortfolioPage-examples {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.portfolio-plain-image {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-plain-image:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.portfolio-popup-image {
+  width: 80%;
+  height: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #fbf0a2;
+}
+
+.PorfolioPage-example-item {
+  width: 100%;
+}
+
+.portfolio-hr {
+  width: 95%;
+  background-color: black;
+  border: none;
+  height: 5px;
+  margin-top: 2%;
+}
+
+.portfolio-h1 {
+  text-align: center;
+}
