@@ -3,12 +3,27 @@ import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { useState } from "react";
 // import ReorderIcon from "material-ui/icons/Reorder"
-import {GiHamburgerMenu} from "react-icons/gi"
+import { GiHamburgerMenu } from "react-icons/gi"
+import { useAuth } from "../contexts/AuthContext";
+import { Alert } from "react-bootstrap";
 
 export default function Navbar() {
   const [hamburger, setHamburger] = useState(true);
+  const [error, setError] = useState("");
+  const { logOut } = useAuth();
 
   const navigate = useNavigate();
+
+      async function handleLogout() {
+        setError("");
+
+        try {
+            await logOut();
+            navigate("/login", { replace: true });
+        } catch {
+            setError("Failed to log out");
+        }
+    }
 
   const navigateHome = () => {
     navigate("/", { replace: true });
@@ -39,13 +54,14 @@ export default function Navbar() {
   };
 
   return (
-    <div className={hamburger?"navbar-container":"navbar-open"}>
+    <div className={hamburger ? "navbar-container" : "navbar-open"}>
+    {error && <Alert variant="danger">{error}</Alert>}
       <div className="hamburger">
         <button onClick={() => setHamburger(!hamburger)} id="hamburger">
-        <GiHamburgerMenu/>
+          <GiHamburgerMenu />
         </button>
       </div>
-      <div className={hamburger?"navbar-links":"hamburger-open"}>
+      <div className={hamburger ? "navbar-links" : "hamburger-open"}>
         <button onClick={navigateHome}> Dashboard </button>
         <button onClick={navigateApplications}> My applications</button>
         <button onClick={navigateInterviewPrep}> Interview Prep</button>
@@ -53,6 +69,7 @@ export default function Navbar() {
         <button onClick={navigateCV}> CV workshop </button>
         <button onClick={navigateKnowledgebank}> Knowledge Bank </button>
         <button onClick={navigateQuizzes}> Quizzes </button>
+        <button onClick={handleLogout}> Log out </button>
       </div>
     </div>
   );

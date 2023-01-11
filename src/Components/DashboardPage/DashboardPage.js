@@ -1,25 +1,10 @@
-import React, { useState } from "react";
-import { Button, Alert } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
 import Navbar from "../Navbar/Navbar";
 import "./DashboardPage.css";
 
 export default function DashboardPage() {
-    const [error, setError] = useState("");
-    const { logOut } = useAuth();
     const navigate = useNavigate();
-
-    async function handleLogout() {
-        setError("");
-
-        try {
-            await logOut();
-            navigate("/login", { replace: true });
-        } catch {
-            setError("Failed to log out");
-        }
-    }
 
     const navigateApplications = () => {
         navigate("/applications", { replace: true });
@@ -48,7 +33,6 @@ export default function DashboardPage() {
     return [
         <Navbar />,
         <div className="dashboard-page-cont">
-            {error && <Alert variant="danger">{error}</Alert>}
             <div className="dashboard-header">
                 <h1>Everything you need for job preparation in one place</h1>
             </div>
@@ -131,11 +115,6 @@ export default function DashboardPage() {
                         </div>
                     </a>
                 </div>
-            </div>
-            <div className="w-100 text-center mt-2">
-                <Button variant="link" onClick={handleLogout}>
-                    Log Out
-                </Button>
             </div>
         </div>,
     ];
