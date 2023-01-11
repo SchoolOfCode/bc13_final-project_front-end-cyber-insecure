@@ -6,10 +6,24 @@
   width: 100%;
 }
 
+.portfolio-main-h1 {
+  margin: 2%;
+}
+
+.PorfolioPage-example-item-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  margin: 1%;
+}
+
 .PortfolioPage-examples {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-bottom: 5%;
 }
 
 .portfolio-plain-image {
@@ -29,9 +43,21 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 3px solid black;
+  border: 3px solid #fbf0a2;
 }
 
 .PorfolioPage-example-item {
   width: 100%;
+}
+
+.portfolio-hr {
+  width: 95%;
+  background-color: black;
+  border: none;
+  height: 5px;
+  margin-top: 2%;
+}
+
+.portfolio-h1 {
+  text-align: center;
 }
