@@ -6,7 +6,7 @@ let dummyJobsApplications = [
     jobDescription:
       "Junior Developer role, you have done it, you are awesome, enjoy!",
     location: "Tatooine",
-    salary: "£100000",
+    salary: "100000",
     jobLink: "https://www.otta.com",
     notes: "This job might be for me!",
     progress: 1,
@@ -19,7 +19,7 @@ let dummyJobsApplications = [
     jobDescription:
       "Junior Developer role, you have done it, you are awesome, enjoy!",
     location: "Remote",
-    salary: "£9999",
+    salary: "9999",
     jobLink: "https://www.otta.com",
     notes: "This job might be for me!",
     progress: 2,
@@ -32,7 +32,7 @@ let dummyJobsApplications = [
     jobDescription:
       "Junior Developer role, you have done it, you are awesome, enjoy!",
     location: "Narnia",
-    salary: "£5",
+    salary: "5",
     jobLink: "https://www.otta.com",
     notes: "This job might be for me!",
     progress: 3,
@@ -45,7 +45,7 @@ let dummyJobsApplications = [
     jobDescription:
       "Junior Developer role, you have done it, you are awesome, enjoy!",
     location: "Narnia",
-    salary: "£5",
+    salary: "5",
     jobLink: "https://www.otta.com",
     notes: "This job might be for me!",
     progress: 4,
@@ -58,7 +58,7 @@ let dummyJobsApplications = [
     jobDescription:
       "Junior Developer role, you have done it, you are awesome, enjoy!",
     location: "Narnia",
-    salary: "£5",
+    salary: "5",
     jobLink: "https://www.otta.com",
     notes: "This job might be for me!",
     progress: 5,
@@ -71,7 +71,7 @@ let dummyJobsApplications = [
     jobDescription:
       "Junior Developer role, you have done it, you are awesome, enjoy!",
     location: "Narnia",
-    salary: "£5",
+    salary: "5",
     jobLink: "https://www.otta.com",
     notes: "This job might be for me!",
     progress: 6,
@@ -84,7 +84,7 @@ let dummyJobsApplications = [
     jobDescription:
       "Junior Developer role, you have done it, you are awesome, enjoy!",
     location: "Narnia",
-    salary: "£5",
+    salary: "5",
     jobLink: "https://www.otta.com",
     notes: "This job might be for me!",
     progress: 7,
