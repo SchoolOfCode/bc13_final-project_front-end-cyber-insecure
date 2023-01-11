@@ -54,7 +54,7 @@ let dummyJobsApplications = [
   {
     userEmail: "ttt@ttt.com",
     jobTitle: "Senior Developer",
-    company: "Google",
+    company: "Samsung",
     jobDescription:
       "Junior Developer role, you have done it, you are awesome, enjoy!",
     location: "Narnia",
