@@ -1,8 +1,8 @@
-* {
+ * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} 
 
 /* CSS Variables */
 :root {
@@ -49,9 +49,22 @@ body {
 
 .questionStyling {
   background-color: var(--secondary_colour);
+  font-size: 1.2em;
   margin-right: 20px;
   border-radius: 10px;
   padding: 10px;
+  width: 33%;
+  height: 200px;
+}
+
+/* Answer Example Button */
+.exampleButton {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.exampleButton:hover {
+  background-color: var(--primary_colour);
 }
 
 
