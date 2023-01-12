@@ -93,7 +93,7 @@ function Application(props) {
         </div>
         <div className="app-section32">
           <div className="app-section-header">
-            <p>Notes</p>
+            <p>NoteS</p>
           </div>
           <div className="app-section-footer">
             <p2>{props.notes}</p2>
