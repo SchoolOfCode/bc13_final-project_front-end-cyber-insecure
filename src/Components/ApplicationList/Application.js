@@ -110,7 +110,16 @@ function Application(props) {
             {(close) => (
               <div className="app-popup-container">
                 <div className="app-popup">
-                  <Form close={close} defaultJobDescription={dummyJobsApplications[0].jobDescription}/>
+                  <Form 
+                    close={close} 
+                    defaultJobDescription={dummyJobsApplications[0].jobDescription}
+                    defaultCompany={dummyJobsApplications[0].company}
+                    defaultJobTitle={dummyJobsApplications[0].jobTitle}
+                    defaultLocation={dummyJobsApplications[0].location}
+                    defaultSalary={dummyJobsApplications[0].salary}
+                    defaultJobLink={dummyJobsApplications[0].jobLink}
+                    defaultNotes={dummyJobsApplications[0].notes}
+                    />
                 </div>
               </div>
             )}

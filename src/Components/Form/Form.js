@@ -54,7 +54,8 @@ export default function Form(props) {
             <div className="form-right-top-header">
               <div className="form-companyName">
                 <label>Company name</label>
-                <textarea
+                <textarea 
+                  defaultValue={props.defaultCompany}
                   type="text"
                   name="company"
                   {...register("company", {
@@ -73,7 +74,8 @@ export default function Form(props) {
               </div>
               <div className="form-jobTitle">
                 <label>Job Title</label>
-                <textarea
+                <textarea 
+                  defaultValue={props.defaultJobTitle}
                   type="text"
                   name="jobTitle"
                   {...register("jobTitle", {
@@ -94,7 +96,8 @@ export default function Form(props) {
             <div className="form-right-top-footer">
               <div className="form-location">
                 <label>Location</label>
-                <textarea
+                <textarea 
+                  defaultValue={props.defaultLocation}
                   type="text"
                   name="location"
                   {...register("location", {
@@ -113,7 +116,8 @@ export default function Form(props) {
               </div>
               <div className="form-salary">
                 <label>Salary</label>
-                <textarea
+                <textarea 
+                  defaultValue={props.defaultSalary}
                   type="text"
                   name="salary"
                   {...register("salary", {
@@ -133,6 +137,7 @@ export default function Form(props) {
               <div className="form-jobLink">
                 <label>Job Link</label>
                 <textarea
+                  defaultValue={props.defaultJobLink}
                   type="text"
                   name="jobLink"
                   {...register("jobLink", {
@@ -155,6 +160,7 @@ export default function Form(props) {
             <div className="form-notes">
               <label>Notes</label>
               <textarea
+                defaultValue={props.defaultNotes}
                 type="text"
                 name="notes"
                 {...register("notes", {
