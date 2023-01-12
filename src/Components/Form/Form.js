@@ -1,8 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./Form.css";
+import Popup from "reactjs-popup";
+import {ImCancelCircle} from 'react-icons/im';
+import {GrCheckmark} from 'react-icons/gr';
 
-export default function Form() {
+export default function Form(props) {
+  const { close } = props;
+
   const {
     register,
     handleSubmit,
@@ -23,14 +28,15 @@ export default function Form() {
         <div className="form-left">
           <div className="form-jobDescription">
             <label>Job Description</label>
-            <input
+            <textarea
+              defaultValue={props.defaultJobDescription}
               type="text"
               name="jobDescription"
               {...register("jobDescription", {
                 required: true,
                 minLength: 20,
               })}
-            ></input>
+            ></textarea>
             {errors.jobDescription &&
               errors.jobDescription.type === "required" && (
                 <p className="error">Job Description must not be blank</p>
@@ -48,14 +54,14 @@ export default function Form() {
             <div className="form-right-top-header">
               <div className="form-companyName">
                 <label>Company name</label>
-                <input
+                <textarea
                   type="text"
                   name="company"
                   {...register("company", {
                     required: true,
                     minLength: 5,
                   })}
-                ></input>
+                ></textarea>
                 {errors.company && errors.company.type === "required" && (
                   <p className="error">Company name must not be blank</p>
                 )}
@@ -67,14 +73,14 @@ export default function Form() {
               </div>
               <div className="form-jobTitle">
                 <label>Job Title</label>
-                <input
+                <textarea
                   type="text"
                   name="jobTitle"
                   {...register("jobTitle", {
                     required: true,
                     minLength: 5,
                   })}
-                ></input>
+                ></textarea>
                 {errors.jobTitle && errors.jobTitle.type === "required" && (
                   <p className="error">Job title must not be blank</p>
                 )}
@@ -88,14 +94,14 @@ export default function Form() {
             <div className="form-right-top-footer">
               <div className="form-location">
                 <label>Location</label>
-                <input
+                <textarea
                   type="text"
                   name="location"
                   {...register("location", {
                     required: true,
                     minLength: 5,
                   })}
-                ></input>
+                ></textarea>
                 {errors.location && errors.location.type === "required" && (
                   <p className="error">Location must not be blank</p>
                 )}
@@ -107,14 +113,14 @@ export default function Form() {
               </div>
               <div className="form-salary">
                 <label>Salary</label>
-                <input
+                <textarea
                   type="text"
                   name="salary"
                   {...register("salary", {
                     required: true,
                     minLength: 5,
                   })}
-                ></input>
+                ></textarea>
                 {errors.salary && errors.salary.type === "required" && (
                   <p className="error">Salary must not be blank</p>
                 )}
@@ -126,14 +132,14 @@ export default function Form() {
               </div>
               <div className="form-jobLink">
                 <label>Job Link</label>
-                <input
+                <textarea
                   type="text"
                   name="jobLink"
                   {...register("jobLink", {
                     required: true,
                     minLength: 5,
                   })}
-                ></input>
+                ></textarea>
                 {errors.jobLink && errors.jobLink.type === "required" && (
                   <p className="error">Job Link must not be blank</p>
                 )}
@@ -148,14 +154,14 @@ export default function Form() {
           <div className="form-right-bottom">
             <div className="form-notes">
               <label>Notes</label>
-              <input
+              <textarea
                 type="text"
                 name="notes"
                 {...register("notes", {
                   required: true,
                   minLength: 5,
                 })}
-              ></input>
+              ></textarea>
               {errors.notes && errors.notes.type === "required" && (
                 <p className="error">Notes must not be blank</p>
               )}
@@ -164,9 +170,17 @@ export default function Form() {
               )}
             </div>
           </div>
-        <div className="form-buttons">
-          <button type="submit">Save</button>
-        </div>
+          <div className="form-buttons">
+            <button
+              className="button"
+              onClick={() => {
+                close();
+              }}
+            >
+              <ImCancelCircle/>
+            </button>
+            <button type="submit"><GrCheckmark/></button>
+          </div>
         </div>
       </form>
     </div>

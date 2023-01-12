@@ -2,6 +2,9 @@ import { React } from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FiExternalLink } from "react-icons/fi";
 import { AiFillEdit, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import Popup from "reactjs-popup";
+import Form from "../Form/Form";
+import dummyJobsApplications from "./dummyData";
 
 function Application(props) {
   let progressStage;
@@ -97,9 +100,21 @@ function Application(props) {
           </div>
         </div>
         <div className="app-section" id="app-section-buttons">
-          <button>
-            <AiFillEdit />
-          </button>
+          <Popup
+            trigger={
+              <button>
+                <AiFillEdit />
+              </button>
+            }
+          >
+            {(close) => (
+              <div className="app-popup-container">
+                <div className="app-popup">
+                  <Form close={close} defaultJobDescription={dummyJobsApplications[0].jobDescription}/>
+                </div>
+              </div>
+            )}
+          </Popup>
           <button>
             <RiDeleteBinLine />
           </button>

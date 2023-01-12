@@ -8,7 +8,7 @@ import Popup from "reactjs-popup";
 import Form from "../Form/Form";
 
 function ApplicationList(props) {
-
+  
   return [
     <Navbar />,
     <div className="applications-container">
@@ -28,8 +28,8 @@ function ApplicationList(props) {
               {(close) => (
                 <div className="app-popup-container">
                   <div className="app-popup">
-                  <Form/>
-                    <div className="">
+                    <Form close={close} />
+                    {/* <div className="">
                       <button
                         className="button"
                         onClick={() => {
@@ -39,7 +39,7 @@ function ApplicationList(props) {
                       >
                         close
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               )}
