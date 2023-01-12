@@ -13,13 +13,13 @@ export default function KnowledgeBankItem(props) {
             </div>
             <div className='knowledge-bank-middle-third'>
                 <h2> Definition </h2>
-                <p> {props.definition}</p>
+                <p className='knowledge-bank-text'> {props.definition}</p>
             </div>
             <div className='knowledge-bank-last-third'>
                 <h2> Resource links </h2>
-                <a href={props.article_link_one} target="_blank" rel="noreferrer"> Article example 1</a>
-                <a href={props.article_link_two} target="_blank" rel="noreferrer"> Article example 2</a>
-                <a href={props.video_link} target="_blank" rel="noreferrer"> Video example </a>
+                <a className='knowledge-bank-text' href={props.article_link_one} target="_blank" rel="noreferrer"> Article example 1</a>
+                <a className='knowledge-bank-text' href={props.article_link_two} target="_blank" rel="noreferrer"> Article example 2</a>
+                <a className='knowledge-bank-text' href={props.video_link} target="_blank" rel="noreferrer"> Video example </a>
             </div>
         </div>
     )
