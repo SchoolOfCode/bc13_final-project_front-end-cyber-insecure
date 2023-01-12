@@ -18,7 +18,7 @@ export const KnowledgeBank =   [
     {
         "title": "Async function",
         "definition": "The async function declaration declares an async function where the await keyword is permitted within the function body. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.",
-        "image": "https://cdn.programiz.com/sites/tutorial2program/files/async-await-function.png",
+        "image": "https://miro.medium.com/max/1198/1*jcywAqHuABrR1wt0oB1WCQ.png",
         "article_link_one": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
         "article_link_two": "https://www.w3schools.com/js/js_async.asp",
         "video_link": "https://www.youtube.com/watch?v=li7FzDHYZpc"
@@ -26,7 +26,7 @@ export const KnowledgeBank =   [
     {
         "title": "Database",
         "definition": "In computing, a database is an organized collection of data stored and accessed electronically. Small databases can be stored on a file system, while large databases are hosted on computer clusters or cloud storage.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7hH9pzWkAcEuhtzgBUBkURpCPiioiqAl0jw&usqp=CAU",
+        "image": "https://raw.githubusercontent.com/Codecademy/articles/0b631b51723fbb3cc652ef5f009082aa71916e63/images/rdbms_header.svg",
         "article_link_one": "https://www.techtarget.com/searchdatamanagement/definition/database",
         "article_link_two": "https://www.oracle.com/uk/database/what-is-database/",
         "video_link": "https://www.youtube.com/watch?v=Zc14ZkWVhhs"
@@ -42,7 +42,7 @@ export const KnowledgeBank =   [
     {
         "title": "End to end testing",
         "definition": "End to end testing (E2E testing) is a software testing method that involves testing an application's workflow from beginning to end. This method aims to replicate real user scenarios to validate the system for integration and data integrity.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFhjXHhNUo_8tbD3tafLxTe2Gxln5xS-Y8vA&usqp=CAU",
+        "image": "https://cypress-io.ghost.io/blog/content/images/2022/05/test-runner-new-look-6.png",
         "article_link_one": "https://circleci.com/blog/what-is-end-to-end-testing/",
         "article_link_two": "https://www.browserstack.com/guide/end-to-end-testing#:~:text=End%20to%20end%20testing%20(E2E,for%20integration%20and%20data%20integrity.",
         "video_link": "https://www.youtube.com/watch?v=wycIcpuLkzU"
@@ -66,7 +66,7 @@ export const KnowledgeBank =   [
     {
         "title": "Function",
         "definition": "A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. A JavaScript function is executed when \"something\" invokes it (calls it)",
-        "image": "https://www.programiz.com/sites/tutorial2program/files/javascript-function-with-parameter.png",
+        "image": "https://www.tutorialstonight.com/assets/js/javascript-function.png",
         "article_link_one": "https://www.w3schools.com/js/js_functions.asp",
         "article_link_two": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
         "video_link": "https://www.youtube.com/watch?v=xUI5Tsl2JpY"
@@ -74,7 +74,7 @@ export const KnowledgeBank =   [
     {
         "title": "If statements",
         "definition": "Use if to specify a block of code to be executed, if a specified condition is true. Use else to specify a block of code to be executed, if the same condition is false",
-        "image": "https://cdn.programiz.com/sites/tutorial2program/files/js-if-else-if-statement_0.png",
+        "image": "https://cdn.pimylifeup.com/wp-content/uploads/2022/04/Javascript-if-else-else-if-conditional-statements-Thumbnail-NoWM.png",
         "article_link_one": "https://developer.mozilla.org/en-US/docs/WebAssembly/Reference/Control_flow/if...else",
         "article_link_two": "https://www.w3schools.com/js/js_if_else.asp",
         "video_link": "https://www.youtube.com/watch?v=IsG4Xd6LlsM"
@@ -98,7 +98,7 @@ export const KnowledgeBank =   [
     {
         "title": "React useEffect",
         "definition": "The useEffect Hook allows you to perform side effects in your components. Some images of side effects are: fetching data, directly updating the DOM, and timers. useEffect accepts two arguments. The second argument is optional.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDv-xlfL62Kg-ChVPiJbd2KMPB235gF40DEg&usqp=CAU",
+        "image": "https://devsenv.com/public/website-images/posts/1623571243.webp",
         "article_link_one": "https://reactjs.org/docs/hooks-effect.html",
         "article_link_two": "https://www.w3schools.com/react/react_useeffect.asp",
         "video_link": "https://www.youtube.com/watch?v=0ZJgIjIuY7U"
@@ -106,7 +106,7 @@ export const KnowledgeBank =   [
     {
         "title": "React useReducer",
         "definition": "useReducer returns an array that holds the current state value and a dispatch function to which you can pass an action and later invoke it. While this is similar to the pattern Redux uses, there are a few differences. For image, the useReducer function is tightly coupled to a specific reducer.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMmANtyYZd1vAjtq-xz0EMV1SncmBUe3nTag&usqp=CAU",
+        "image": "https://dmitripavlutin.com/react-usereducer/cover.png",
         "article_link_one": "https://reactjs.org/docs/hooks-reference.html",
         "article_link_two": "https://www.w3schools.com/react/react_usereducer.asp",
         "video_link": "https://www.youtube.com/watch?v=kK_Wqx3RnHk"
@@ -114,7 +114,7 @@ export const KnowledgeBank =   [
     {
         "title": "React useState",
         "definition": "The React useState Hook allows us to track state in a function component. State generally refers to data or properties that need to be tracking in an application.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzRRzwC_9_5jM3vJ43LZC6w_-_KkGckPSC_Q&usqp=CAU",
+        "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--JLn7kpSs--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/py0wwooahlgbezv8jx5j.png",
         "article_link_one": "https://reactjs.org/docs/hooks-state.html",
         "article_link_two": "https://www.w3schools.com/react/react_usestate.asp",
         "video_link": "https://www.youtube.com/watch?v=4pO-HcG2igk"
@@ -122,7 +122,7 @@ export const KnowledgeBank =   [
     {
         "title": "SQL Like operator",
         "definition": "The LIKE operator is used in a WHERE clause to search for a specified pattern in a column. There are two wildcards often used in conjunction with the LIKE operator: The percent sign (%) represents zero, one, or multiple characters. The underscore sign (_) represents one, single character.",
-        "image": "https://www.programiz.com/sites/tutorial2program/files/sql-like.png",
+        "image": "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/27029/images/vosfR4WpROeGNQTr3tKT_4536ebd2ba7b10f303bcb76c4ff0f1c1.jpg",
         "article_link_one": "https://www.w3schools.com/sql/sql_like.asp",
         "article_link_two": "https://www.tutorialspoint.com/sql/sql-like-clause.htm",
         "video_link": "https://www.youtube.com/watch?v=vEt7bDnXlnY"
@@ -130,7 +130,7 @@ export const KnowledgeBank =   [
     {
         "title": "Unit testing",
         "definition": "In computer programming, unit testing is a software testing method by which individual units of source code—sets of one or more computer program modules together with associated control data, usage procedures, and operating procedures—are tested to determine whether they are fit for use.",
-        "image": "https://miro.medium.com/max/1138/1*ohoa7R6eyI-r9HKSeLmb7w.png",
+        "image": "https://www.testim.io/wp-content/uploads/2021/01/jesttutorial1.png",
         "article_link_one": "https://en.wikipedia.org/wiki/Unit_testing",
         "article_link_two": "https://www.techtarget.com/searchsoftwarequality/definition/unit-testing#:~:text=Unit%20testing%20is%20a%20software,developers%20and%20sometimes%20QA%20staff.",
         "video_link": "https://www.youtube.com/watch?v=3kzHmaeozDI"
@@ -138,7 +138,7 @@ export const KnowledgeBank =   [
     {
         "title": "User Experience",
         "definition": "User Experience refers to the feeling users experience when using a product, application, system, or service. It is a broad term that can cover anything from how well the user can navigate the product, how easy it is to use, how relevant the content displayed is etc.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQESTBO3fUDgA38gO51TX4Gdj4cNNdrXHgiDA&usqp=CAU",
+        "image": "https://miro.medium.com/max/1050/1*hp-yfKsmzsj711iLbM8eEw.jpeg",
         "article_link_one": "https://www.interaction-design.org/literature/topics/ux-design",
         "article_link_two": "https://en.wikipedia.org/wiki/User_experience",
         "video_link": "https://www.youtube.com/watch?v=SRec90j6lTY"
@@ -146,7 +146,7 @@ export const KnowledgeBank =   [
     {
         "title": "User Interface",
         "definition": "The user interface (UI) is the point of human-computer interaction and communication in a device. This can include display screens, keyboards, a mouse and the appearance of a desktop. It is also the way through which a user interacts with an application or a website.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxgo9YuXuJtZPi1SCj53XN0BDlDNEqwf-vow&usqp=CAU",
+        "image": "https://aelaschool.com/wp-content/uploads/2022/08/artigoQualadiferencaentreUXeUIDesign_01aaa69067bf7dd2a32f9fba1df84b12_2000.png",
         "article_link_one": "https://www.techtarget.com/searchapparchitecture/definition/user-interface-UI",
         "article_link_two": "https://en.wikipedia.org/wiki/User_interface",
         "video_link": "https://www.youtube.com/watch?v=_K06Dni-RE4"
@@ -154,7 +154,7 @@ export const KnowledgeBank =   [
     {
         "title": "While loops",
         "definition": "A 'While' Loop is used to repeat a specific block of code an unknown number of times, until a condition is met. For example, if we want to ask a user for a number between 1 and 10, we don't know how many times the user may enter a larger number, so we keep asking 'while the number is not between 1 and 10'.",
-        "image": "https://www.tutorialspoint.com/javascript/images/while_loop.jpg",
+        "image": "https://cdn.pimylifeup.com/wp-content/uploads/2022/05/javascript-while-loop-thumbnail.png",
         "article_link_one": "https://www.w3schools.com/js/js_loop_while.asp",
         "article_link_two": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while",
         "video_link": "https://www.youtube.com/watch?v=leMzF0esu38"
