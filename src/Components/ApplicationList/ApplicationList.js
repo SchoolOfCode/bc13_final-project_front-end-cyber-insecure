@@ -5,8 +5,10 @@ import Application from "./Application.js";
 import dummyJobsApplications from "./dummyData";
 import { AiOutlinePlus } from "react-icons/ai";
 import Popup from "reactjs-popup";
+import Form from "../Form/Form";
 
 function ApplicationList(props) {
+  
   return [
     <Navbar />,
     <div className="applications-container">
@@ -26,40 +28,8 @@ function ApplicationList(props) {
               {(close) => (
                 <div className="app-popup-container">
                   <div className="app-popup">
-                    <div>
-                      <p>Job Title</p>
-                      <input></input>
-                    </div>
-                    <div>
-                      <p>Company Name</p>
-                      <input></input>
-                    </div>
-                    <div>
-                      <p>Job Description</p>
-                      <input></input>
-                    </div>
-                    <div>
-                      <p>Location</p>
-                      <input></input>
-                    </div>
-                    <div>
-                      <p>Salary</p>
-                      <input></input>
-                    </div>
-                    <div>
-                      <p>Job Link</p>
-                      <input></input>
-                    </div>
-                    <div>
-                      <p>Notes</p>
-                      <input></input>
-                    </div>
-                    <div>
-                      <button>Save</button>
-                      <button>Cancel</button>
-                    </div>
-
-                    <div className="">
+                    <Form close={close} />
+                    {/* <div className="">
                       <button
                         className="button"
                         onClick={() => {
@@ -69,7 +39,7 @@ function ApplicationList(props) {
                       >
                         close
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               )}
