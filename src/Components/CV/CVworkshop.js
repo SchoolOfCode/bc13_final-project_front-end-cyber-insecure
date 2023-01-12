@@ -66,18 +66,18 @@ export default function CVworkshop() {
           UX / UI Designer
         </button>
       </div>
-      <div>
+      <div className="cvExamples">
         {frontEnd && <img src={frontEndDeveloper} alt="frontend portfolio" />}
       </div>
-      <div>
+      <div className="cvExamples">
         {fullStack && (
           <img src={fullstackPortfolio} alt="fullstack portfolio" />
         )}
       </div>
-      <div>
+      <div className="cvExamples">
         {backend && <img src={backendPortfolio} alt="backend portfolio" />}
       </div>
-      <div>{uxUi && <img src={uxuiPortfolioPage} alt="ux/ui portfolio" />}</div>
+      <div className="cvExamples">{uxUi && <img src={uxuiPortfolioPage} alt="ux/ui portfolio" />}</div>
     </div>,
   ];
 }

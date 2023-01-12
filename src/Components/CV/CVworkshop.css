@@ -1,7 +1,54 @@
+
+
+:root {
+    --primary_colour: #94c296;
+    --secondary_colour: #E5BE83;
+    
+  }
+  
+body {
+    background-color: var(--primary_colour);
+    overflow-x: hidden;
+    
+  }
+
+/* html {
+    background-color: var(--primary_colour);
+} */
+
+
 .cvworkshop-container{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     gap: 1vh;
+
 }
+
+.cvButtonContainer {
+    gap: 50px;
+    display: flex;
+}
+
+.cvButtonStyles {
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    background-color: beige;
+  
+}
+
+.cvButtonStyles:hover {
+    background-color: var(--secondary_colour);
+  }
+
+
+  .cvExamples  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    
+  }
