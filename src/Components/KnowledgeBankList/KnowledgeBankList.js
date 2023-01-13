@@ -3,6 +3,8 @@ import Navbar from '../Navbar/Navbar'
 import KnowledgeBankItem from './KnowledgeBankItem'
 import './KnowledgeBank.css'
 
+const url = process.env.REACT_APP_BACKEND_URL
+
 export default function KnowledgeBankList() {
 
   const [knowledge, setKnowledge] = useState([])
@@ -14,7 +16,7 @@ export default function KnowledgeBankList() {
 
   useEffect(() => {
     async function getAllKnowledge() {
-      const titleObject = await fetch(`http://localhost:3001/api/knowledgeBank`);
+      const titleObject = await fetch(`${url}/api/knowledgeBank`);
       let data = await titleObject.json();
       setKnowledge(data.payload);
     }
@@ -22,7 +24,7 @@ export default function KnowledgeBankList() {
   }, [])
 
   async function getByTitle() {
-    const titleObject = await fetch(`http://localhost:3001/api/knowledgeBank/${input}`);
+    const titleObject = await fetch(`${url}/api/knowledgeBank/${input}`);
     let data = await titleObject.json();
     setKnowledge(data.payload);
   }
