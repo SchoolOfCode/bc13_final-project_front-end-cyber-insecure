@@ -77,6 +77,13 @@ function ApplicationList(props) {
               jobLink={app.jobLink}
               notes={app.notes}
               progress={app.progress}
+              // defaultJobDescription={app.jobDescription}
+              // defaultCompany={app.company}
+              // defaultJobTitle={app.jobTitle}
+              // defaultLocation={app.location}
+              // defaultSalary={app.salary}
+              // defaultJobLink={app.jobLink}
+              // defaultNotes={app.notes}
             />
           );
         })}

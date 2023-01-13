@@ -112,13 +112,13 @@ function Application(props) {
                 <div className="app-popup">
                   <Form 
                     close={close} 
-                    defaultJobDescription={dummyJobsApplications[0].jobDescription}
-                    defaultCompany={dummyJobsApplications[0].company}
-                    defaultJobTitle={dummyJobsApplications[0].jobTitle}
-                    defaultLocation={dummyJobsApplications[0].location}
-                    defaultSalary={dummyJobsApplications[0].salary}
-                    defaultJobLink={dummyJobsApplications[0].jobLink}
-                    defaultNotes={dummyJobsApplications[0].notes}
+                    defaultJobDescription={props.jobDescription}
+                    defaultCompany={props.company}
+                    defaultJobTitle={props.jobTitle}
+                    defaultLocation={props.location}
+                    defaultSalary={props.salary}
+                    defaultJobLink={props.jobLink}
+                    defaultNotes={props.notes}
                     />
                 </div>
               </div>
