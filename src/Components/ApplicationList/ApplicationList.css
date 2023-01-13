@@ -16,6 +16,9 @@
   height: 15vh;
   gap: 2vh;
 }
+.applications-header p{
+  border-bottom: 1px solid;
+}
 .applications-buttons{
   display: flex;
   flex-direction: row;
