@@ -74,7 +74,7 @@ function ApplicationList(props) {
         application = applications[i]
       }
     }
-    if (application.progress > 1) {
+    if (application.progress >= 1) {
       for (let i = 0; i < applications.length; i++) {
         if (applications[i].id === id) {
           await fetch(`${url}/api/jobApplications/${id}`, {
