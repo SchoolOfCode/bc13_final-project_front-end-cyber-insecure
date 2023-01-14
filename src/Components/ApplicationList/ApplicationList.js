@@ -15,6 +15,8 @@ function ApplicationList(props) {
   const [applications, setApplications] = useState([])
   const { currentUser } = useAuth();
 
+  console.log(applications)
+
   // useEffect calls below getAllApplications function 
   useEffect(() => {
     getAllApplications()
@@ -146,6 +148,10 @@ function ApplicationList(props) {
           </div>
         </div>
       </div>
+      {applications.length < 1 && 
+      <h1>No current applications</h1>
+      }
+      {applications && 
       <ul className="applications-main">
         {applications.map((app) => {
           return (
@@ -169,6 +175,7 @@ function ApplicationList(props) {
           );
         })}
       </ul>
+      }
     </div>,
   ];
 }
