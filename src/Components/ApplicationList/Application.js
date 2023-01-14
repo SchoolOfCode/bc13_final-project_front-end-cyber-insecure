@@ -1,12 +1,32 @@
-import { React } from "react";
+import { React, useState } from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FiExternalLink } from "react-icons/fi";
 import { AiFillEdit, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import Popup from "reactjs-popup";
 import Form from "../Form/Form";
-import dummyJobsApplications from "./dummyData";
+
+const url = process.env.REACT_APP_BACKEND_URL
 
 function Application(props) {
+
+  const [editing, setEditing] = useState()
+
+  // function that sets editing state to true - passed to Form component and tells it to run a PATCH request
+  function editingNotAdding() {
+    setEditing(true)
+    props.setAdding(false)
+  }
+
+  // function that sends a PATCH request - sent to Form component and runs when form button is clicked. Only runs when editing state is TRUE
+  async function handleEditWholeApplication(id, edits) {
+    await fetch(`${url}/api/jobApplications/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(edits)
+    })
+    props.getAllApplications();
+  }
+
   let progressStage;
   switch (props.progress) {
     case 1:
@@ -42,7 +62,7 @@ function Application(props) {
             <p>Job Title</p>
           </div>
           <div className="app-section-footer">
-            <p2>{props.jobTitle}</p2>
+            <p2>{props.job_title}</p2>
           </div>
         </div>
         <div className="app-section7">
@@ -58,7 +78,7 @@ function Application(props) {
             <p>Job Description</p>
           </div>
           <div className="app-section-footer">
-            <p2>{props.jobDescription}</p2>
+            <p2>{props.job_description}</p2>
           </div>
         </div>
         <div className="app-section7">
@@ -84,7 +104,7 @@ function Application(props) {
           <div className="app-section-footer">
             <button
               onClick={() => {
-                window.open(props.jobLink, "_blank").focus();
+                window.open(props.job_link, "_blank").focus();
               }}
             >
               <FiExternalLink />
@@ -100,7 +120,7 @@ function Application(props) {
           </div>
         </div>
         <div className="app-section" id="app-section-buttons">
-          <Popup
+          <Popup onOpen={editingNotAdding}
             trigger={
               <button>
                 <AiFillEdit />
@@ -110,21 +130,24 @@ function Application(props) {
             {(close) => (
               <div className="app-popup-container">
                 <div className="app-popup">
-                  <Form 
-                    close={close} 
-                    defaultJobDescription={props.jobDescription}
+                  <Form
+                    handleEditWholeApplication={handleEditWholeApplication}
+                    editing={editing}
+                    close={close}
+                    id={props.id}
+                    defaultJobDescription={props.job_description}
                     defaultCompany={props.company}
-                    defaultJobTitle={props.jobTitle}
+                    defaultJobTitle={props.job_title}
                     defaultLocation={props.location}
                     defaultSalary={props.salary}
-                    defaultJobLink={props.jobLink}
+                    defaultJobLink={props.job_link}
                     defaultNotes={props.notes}
-                    />
+                  />
                 </div>
               </div>
             )}
           </Popup>
-          <button>
+          <button onClick={props.handleDelete}>
             <RiDeleteBinLine />
           </button>
         </div>
@@ -136,10 +159,10 @@ function Application(props) {
           </div>
         </div>
         <div className="app-progress-button">
-          <button onClick={props.progressPlus}>
+          <button onClick={props.handleEditRemoveProgress}>
             <AiOutlineMinus />
           </button>
-          <button onClick={props.progressMinus}>
+          <button onClick={props.handleEditAddProgress}>
             <AiOutlinePlus />
           </button>
         </div>
