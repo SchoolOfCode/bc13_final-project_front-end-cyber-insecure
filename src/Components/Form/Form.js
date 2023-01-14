@@ -19,9 +19,11 @@ export default function Form(props) {
   // onSubmit for form
 
   const onSubmit = (data) => {
+    // if adding state is true - run the POST request
     if (props.adding === true) { 
       props.handleAddNewApplication({...data, user_email: currentUser.email})
       alert('your application has been successfully added.')
+    // if editing state is true - run the PATCH request
     } if (props.editing === true) {
       props.handleEditWholeApplication(props.id, data)
       alert('your application has been successfully edited.')
