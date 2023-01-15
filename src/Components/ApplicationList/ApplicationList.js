@@ -44,9 +44,8 @@ function ApplicationList() {
     getAllApplications();
   }
 
-  // PATCH request adds 1 to the progress bar. Need to first fetch the data to get the correct progress, edit the progress, and then fetch the data again so it is shown on screen
+  // PATCH request adds 1 to the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
   async function handleEditAddProgress(id, application) {
-    getAllApplications();
     for (let i = 0; i < applications.length; i++) {
       if (applications[i].id === id) {
         application = applications[i]
@@ -62,9 +61,8 @@ function ApplicationList() {
     getAllApplications();
   }
 
-  // PATCH request removes 1 from the progress bar. Need to first fetch the data to get the correct progress, edit the progress, and then fetch the data again so it is shown on screen
+  // PATCH request removes 1 from the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
   async function handleEditRemoveProgress(id, application) {
-    getAllApplications();
     for (let i = 0; i < applications.length; i++) {
       if (applications[i].id === id) {
         application = applications[i]
@@ -172,6 +170,7 @@ function ApplicationList() {
                 handleEditAddProgress={() => handleEditAddProgress(app.id, app)}
                 handleEditRemoveProgress={() => handleEditRemoveProgress(app.id, app)}
                 id={app.id}
+                key={app.id}
                 adding={app}
                 setAdding={setAdding}
                 job_title={app.job_title}
