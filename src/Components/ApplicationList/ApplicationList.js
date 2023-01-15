@@ -34,28 +34,24 @@ function ApplicationList() {
 
   // DELETE specific application by ID and update it on screen
   async function handleDelete(id) {
-    for (let i = 0; i < applications.length; i++) {
-      if (applications[i].id === id) {
-        await fetch(`${url}/api/jobApplications/${id}`, {
-          method: "DELETE"
-        })
-      }
-    }
+    // array filter to find the application with specific id (same as doing a for loop)
+    id = applications.filter(appToDelete => { return appToDelete.id === id })
+    await fetch(`${url}/api/jobApplications/${id[0].id}`, {
+      method: "DELETE"
+    })
     getAllApplications();
   }
 
   // PATCH request adds 1 to the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
   async function handleEditAddProgress(id, application) {
-    for (let i = 0; i < applications.length; i++) {
-      if (applications[i].id === id) {
-        application = applications[i]
-      }
-    }
-    if (application.progress < 7) {
+    // array filter to find the application with specific id (same as doing a for loop)
+    application = applications.filter(appToEdit => { return appToEdit.id === id })
+    // if progress less than 7, run the PATCH request
+    if (application[0].progress < 7) {
       await fetch(`${url}/api/jobApplications/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ progress: application.progress + 1 })
+        body: JSON.stringify({ progress: application[0].progress + 1 })
       })
     }
     getAllApplications();
@@ -63,16 +59,14 @@ function ApplicationList() {
 
   // PATCH request removes 1 from the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
   async function handleEditRemoveProgress(id, application) {
-    for (let i = 0; i < applications.length; i++) {
-      if (applications[i].id === id) {
-        application = applications[i]
-      }
-    }
-    if (application.progress > 1) {
+    // array filter to find the application with specific id (same as doing a for loop)
+    application = applications.filter(appToEdit => { return appToEdit.id === id })
+    // if progress greater than 1, run the PATCH request
+    if (application[0].progress > 1) {
       await fetch(`${url}/api/jobApplications/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ progress: application.progress - 1 })
+        body: JSON.stringify({ progress: application[0].progress - 1 })
       })
     }
     getAllApplications();
