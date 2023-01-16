@@ -32,46 +32,6 @@ function ApplicationList() {
     setApplications(data.payload);
   }
 
-  // DELETE specific application by ID and update it on screen
-  async function handleDelete(id) {
-    // array filter to find the application with specific id (same as doing a for loop)
-    id = applications.filter(appToDelete => { return appToDelete.id === id })
-    await fetch(`${url}/api/jobApplications/${id[0].id}`, {
-      method: "DELETE"
-    })
-    getAllApplications();
-  }
-
-  // PATCH request adds 1 to the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
-  async function handleEditAddProgress(id, application) {
-    // array filter to find the application with specific id (same as doing a for loop)
-    application = applications.filter(appToEdit => { return appToEdit.id === id })
-    // if progress less than 7, run the PATCH request
-    if (application[0].progress < 7) {
-      await fetch(`${url}/api/jobApplications/${id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ progress: application[0].progress + 1 })
-      })
-    }
-    getAllApplications();
-  }
-
-  // PATCH request removes 1 from the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
-  async function handleEditRemoveProgress(id, application) {
-    // array filter to find the application with specific id (same as doing a for loop)
-    application = applications.filter(appToEdit => { return appToEdit.id === id })
-    // if progress greater than 1, run the PATCH request
-    if (application[0].progress > 1) {
-      await fetch(`${url}/api/jobApplications/${id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ progress: application[0].progress - 1 })
-      })
-    }
-    getAllApplications();
-  }
-
   // function that sends a POST request - sent to Form component and runs when form button is clicked. Only runs when adding state is TRUE
   async function handleAddNewApplication(newApplication) {
     await fetch(`${url}/api/jobApplications`, {
@@ -160,12 +120,11 @@ function ApplicationList() {
             return (
               <Application
                 getAllApplications={getAllApplications}
-                handleDelete={() => handleDelete(app.id)}
-                handleEditAddProgress={() => handleEditAddProgress(app.id, app)}
-                handleEditRemoveProgress={() => handleEditRemoveProgress(app.id, app)}
                 id={app.id}
                 key={app.id}
-                adding={app}
+                app={app}
+                applications={applications}
+                setApplications={setApplications}
                 setAdding={setAdding}
                 job_title={app.job_title}
                 company={app.company}

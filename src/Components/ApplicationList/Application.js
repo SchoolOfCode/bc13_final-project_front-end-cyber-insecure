@@ -27,6 +27,42 @@ function Application(props) {
     props.getAllApplications();
   }
 
+  // PATCH request adds 1 to the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
+  async function handleEditAddProgress(id, currentProgress) {
+    // if progress less than 7, run the PATCH request
+    if (currentProgress < 7) {
+      await fetch(`${url}/api/jobApplications/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ progress: currentProgress + 1 })
+      })
+    }
+    props.getAllApplications();
+  }
+
+  // PATCH request removes 1 from the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
+  async function handleEditRemoveProgress(id, currentProgress) {
+    // if progress greater than 1, run the PATCH request
+    if (currentProgress > 1) {
+      await fetch(`${url}/api/jobApplications/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ progress: currentProgress - 1 })
+      })
+    }
+    props.getAllApplications();
+  }
+
+  // DELETE specific application by ID and update it on screen
+  async function handleDelete(id) {
+    // array filter to find the application with specific id (same as doing a for loop)
+    console.log(id)
+    await fetch(`${url}/api/jobApplications/${id}`, {
+      method: "DELETE"
+    })
+  }
+
+
   let progressStage;
   let progressStageDisplay;
   switch (props.progress) {
@@ -156,7 +192,7 @@ function Application(props) {
               </div>
             )}
           </Popup>
-          <button onClick={props.handleDelete}>
+          <button onClick={() => handleDelete(props.id)}>
             <RiDeleteBinLine />
           </button>
         </div>
@@ -168,10 +204,10 @@ function Application(props) {
           </div>
         </div>
         <div className="app-progress-button">
-          <button onClick={props.handleEditRemoveProgress}>
+          <button onClick={() => handleEditRemoveProgress(props.id, props.progress)}>
             <AiOutlineMinus />
           </button>
-          <button onClick={props.handleEditAddProgress}>
+          <button onClick={() => handleEditAddProgress(props.id, props.progress)}>
             <AiOutlinePlus />
           </button>
         </div>
