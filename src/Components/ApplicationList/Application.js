@@ -28,30 +28,39 @@ function Application(props) {
   }
 
   let progressStage;
+  let progressStageDisplay;
   switch (props.progress) {
     case 1:
       progressStage = "Research";
+      progressStageDisplay = "Research";
       break;
     case 2:
       progressStage = "Ready_to_Apply";
+      progressStageDisplay = "Ready to Apply";
       break;
     case 3:
       progressStage = "Applied";
+      progressStageDisplay = "Applied";
       break;
     case 4:
       progressStage = "Interview_Date";
+      progressStageDisplay = "Interview Date";
       break;
     case 5:
       progressStage = "Initial_Interview_Done";
+      progressStageDisplay = "Initial Interview Done";
       break;
     case 6:
       progressStage = "Second_Interview_Done";
+      progressStageDisplay = "Second Interview Done";
       break;
     case 7:
       progressStage = "Completed";
+      progressStageDisplay = "Completed";
       break;
     default:
       progressStage = "Research";
+      progressStageDisplay = "Research";
   }
 
   return [
@@ -155,7 +164,7 @@ function Application(props) {
       <div className="app-progress-container">
         <div className="app-progress-bar-container">
           <div className={progressStage}>
-            <p>{progressStage}</p>
+            <p>{progressStageDisplay}</p>
           </div>
         </div>
         <div className="app-progress-button">

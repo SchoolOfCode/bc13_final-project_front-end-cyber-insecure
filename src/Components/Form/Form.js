@@ -131,18 +131,9 @@ export default function Form(props) {
                   type="text"
                   name="salary"
                   {...register("salary", {
-                    required: true,
-                    minLength: 5,
+                    required: false,
                   })}
                 ></textarea>
-                {errors.salary && errors.salary.type === "required" && (
-                  <p className="error">Salary must not be blank</p>
-                )}
-                {errors.salary && errors.salary.type === "minLength" && (
-                  <p className="error">
-                    Salary must have at least 5 characters
-                  </p>
-                )}
               </div>
               <div className="form-jobLink">
                 <label>Job Link</label>
@@ -174,16 +165,10 @@ export default function Form(props) {
                 type="text"
                 name="notes"
                 {...register("notes", {
-                  required: true,
-                  minLength: 5,
+                  required: false,
+
                 })}
               ></textarea>
-              {errors.notes && errors.notes.type === "required" && (
-                <p className="error">Notes must not be blank</p>
-              )}
-              {errors.notes && errors.notes.type === "minLength" && (
-                <p className="error">Notes must have at least 5 characters</p>
-              )}
             </div>
           </div>
           <div className="form-buttons">
