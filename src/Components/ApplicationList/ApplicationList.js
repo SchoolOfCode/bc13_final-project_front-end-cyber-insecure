@@ -123,8 +123,6 @@ function ApplicationList() {
                 id={app.id}
                 key={app.id}
                 app={app}
-                applications={applications}
-                setApplications={setApplications}
                 setAdding={setAdding}
                 job_title={app.job_title}
                 company={app.company}

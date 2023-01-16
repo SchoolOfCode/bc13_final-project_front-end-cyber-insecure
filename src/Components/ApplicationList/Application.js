@@ -27,7 +27,7 @@ function Application(props) {
     props.getAllApplications();
   }
 
-  // PATCH request adds 1 to the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
+  // PATCH request adds 1 to the progress bar. Need to edit the progress and then fetch the data again so it is shown on screen
   async function handleEditAddProgress(id, currentProgress) {
     // if progress less than 7, run the PATCH request
     if (currentProgress < 7) {
@@ -40,7 +40,7 @@ function Application(props) {
     props.getAllApplications();
   }
 
-  // PATCH request removes 1 from the progress bar. Need to first locate the application to edit, edit the progress, and then fetch the data again so it is shown on screen
+  // PATCH request removes 1 from the progress bar. Need to edit the progress and then fetch the data again so it is shown on screen
   async function handleEditRemoveProgress(id, currentProgress) {
     // if progress greater than 1, run the PATCH request
     if (currentProgress > 1) {
