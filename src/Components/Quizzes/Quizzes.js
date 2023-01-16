@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { GiH2O } from 'react-icons/gi';
 import Navbar from '../Navbar/Navbar'
 import { questionsJavaScript, questionsReact, placeholderQuestion, questionsCSS, questionsTypeScript, questionsPython, questionsNode } from './questions'
@@ -52,16 +52,22 @@ export default function Quizzes() {
   function questionClicked(isCorrect) {
     if (isCorrect) {
       setScore(score + 1);
-    }
+    } 
     if (currentQuestion + 1 < allQuestions.length) {
       setCurrentQuestion(currentQuestion + 1);
-    } else {
+    } 
+    else {
       setResults(true);
-      if (score === 4 && !badgesArray.includes(currentTopic)) {
-        setBadgesArray([...badgesArray, currentTopic])
-      }
     }
   };
+
+  useEffect(() => {
+    if (score === 5 && !badgesArray.includes(currentTopic)) {
+      setBadgesArray([...badgesArray, currentTopic])
+    }
+    console.log(score);
+  }, [score]);
+
 
   function restartQuiz() {
     setScore(0);
