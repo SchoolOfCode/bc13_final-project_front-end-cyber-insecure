@@ -4,6 +4,8 @@ import { FiExternalLink } from "react-icons/fi";
 import { AiFillEdit, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import Popup from "reactjs-popup";
 import Form from "../Form/Form";
+import "./Application.css"
+import "./ProgressBar.css"
 
 const url = process.env.REACT_APP_BACKEND_URL
 
