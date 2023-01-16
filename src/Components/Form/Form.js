@@ -1,13 +1,14 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./Form.css";
-import Popup from "reactjs-popup";
 import {ImCancelCircle} from 'react-icons/im';
 import {GrCheckmark} from 'react-icons/gr';
+import { useAuth } from "../contexts/AuthContext";
 
 export default function Form(props) {
   const { close } = props;
-
+  const { currentUser } = useAuth();
+  
   const {
     register,
     handleSubmit,
@@ -18,8 +19,17 @@ export default function Form(props) {
   // onSubmit for form
 
   const onSubmit = (data) => {
-    console.log(data);
+    // if adding state is true - run the POST request
+    if (props.adding === true) { 
+      props.handleAddNewApplication({...data, user_email: currentUser.email})
+      alert('your application has been successfully added.')
+    // if editing state is true - run the PATCH request
+    } if (props.editing === true) {
+      props.handleEditWholeApplication(props.id, data)
+      alert('your application has been successfully edited.')
+    }
     reset();
+    props.getAllApplications()
   };
 
   return (
@@ -31,18 +41,18 @@ export default function Form(props) {
             <textarea
               defaultValue={props.defaultJobDescription}
               type="text"
-              name="jobDescription"
-              {...register("jobDescription", {
+              name="job_description"
+              {...register("job_description", {
                 required: true,
                 minLength: 20,
               })}
             ></textarea>
-            {errors.jobDescription &&
-              errors.jobDescription.type === "required" && (
+            {errors.job_description &&
+              errors.job_description.type === "required" && (
                 <p className="error">Job Description must not be blank</p>
               )}
-            {errors.jobDescription &&
-              errors.jobDescription.type === "minLength" && (
+            {errors.job_description &&
+              errors.job_description.type === "minLength" && (
                 <p className="error">
                   Job Description must have at least 20 characters
                 </p>
@@ -77,16 +87,16 @@ export default function Form(props) {
                 <textarea 
                   defaultValue={props.defaultJobTitle}
                   type="text"
-                  name="jobTitle"
-                  {...register("jobTitle", {
+                  name="job_title"
+                  {...register("job_title", {
                     required: true,
                     minLength: 5,
                   })}
                 ></textarea>
-                {errors.jobTitle && errors.jobTitle.type === "required" && (
+                {errors.job_title && errors.job_title.type === "required" && (
                   <p className="error">Job title must not be blank</p>
                 )}
-                {errors.jobTitle && errors.jobTitle.type === "minLength" && (
+                {errors.job_title && errors.job_title.type === "minLength" && (
                   <p className="error">
                     Job Title must have at least 5 characters
                   </p>
@@ -121,34 +131,25 @@ export default function Form(props) {
                   type="text"
                   name="salary"
                   {...register("salary", {
-                    required: true,
-                    minLength: 5,
+                    required: false,
                   })}
                 ></textarea>
-                {errors.salary && errors.salary.type === "required" && (
-                  <p className="error">Salary must not be blank</p>
-                )}
-                {errors.salary && errors.salary.type === "minLength" && (
-                  <p className="error">
-                    Salary must have at least 5 characters
-                  </p>
-                )}
               </div>
               <div className="form-jobLink">
                 <label>Job Link</label>
                 <textarea
                   defaultValue={props.defaultJobLink}
                   type="text"
-                  name="jobLink"
-                  {...register("jobLink", {
+                  name="job_link"
+                  {...register("job_link", {
                     required: true,
                     minLength: 5,
                   })}
                 ></textarea>
-                {errors.jobLink && errors.jobLink.type === "required" && (
+                {errors.job_link && errors.job_link.type === "required" && (
                   <p className="error">Job Link must not be blank</p>
                 )}
-                {errors.jobLink && errors.jobLink.type === "minLength" && (
+                {errors.job_link && errors.job_link.type === "minLength" && (
                   <p className="error">
                     Job Link must have at least 5 characters
                   </p>
@@ -164,16 +165,10 @@ export default function Form(props) {
                 type="text"
                 name="notes"
                 {...register("notes", {
-                  required: true,
-                  minLength: 5,
+                  required: false,
+
                 })}
               ></textarea>
-              {errors.notes && errors.notes.type === "required" && (
-                <p className="error">Notes must not be blank</p>
-              )}
-              {errors.notes && errors.notes.type === "minLength" && (
-                <p className="error">Notes must have at least 5 characters</p>
-              )}
             </div>
           </div>
           <div className="form-buttons">
