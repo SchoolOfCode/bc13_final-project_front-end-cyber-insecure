@@ -1,33 +1,31 @@
-import "./InterviewPrepPage.css";
-import { useState } from "react";
-import React from "react";
+import './InterviewPrepPage.css';
+import { useState } from 'react';
+import React from 'react';
 // import Popup from '../Popup/Popup';
-import Navbar from "../Navbar/Navbar";
-import Popup from "reactjs-popup";
-import Card from "./Card/Card";
-
+import Navbar from '../Navbar/Navbar';
+import Popup from 'reactjs-popup';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 1500 },
-    items: 5,
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 3
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
+    items: 2
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
+    items: 1
+  }
 };
+
 
 function InterviewPrepPage(props) {
   // 1. Onclick event handler showing a popup card of a good answer structure to each question when clicked
@@ -45,35 +43,150 @@ function InterviewPrepPage(props) {
         <section className="interviewQuestionsSection">
           <h2>General Questions from Interviewers</h2>
           <div className="questionsList">
-          <div className="carousel">
-            <Carousel responsive={responsive}>
-              <div className="questionStyling">
-                <Card
-                  question={"Why did you choose to be a developer 1?"}
-                  answer={"I want to!"}
-                />
+            <div className="questionStyling">
+              <div className="">
+                <h3>Why did you choose to be a developer?</h3>
+                <br />
+                <br />
               </div>
-              <div className="questionStyling">
-                <Card
-                  question={"Why did you choose to be a developer 2?"}
-                  answer={"I want to 2!"}
-                />
+              <div>
+                <Popup
+                  trigger={
+                    <button className="exampleButton">Answer Example</button>
+                  }
+                >
+                  {(close) => (
+                    <div className="popup">
+                      <div className="popup-inner">
+                        <p>
+                          As a developer, I have a passion for using technology
+                          to solve problems and improve people's lives.
+                          <br />I enjoy the process of creating and building
+                          software, from understanding user needs and defining
+                          requirements, to designing and implementing solutions,
+                          to testing and maintaining the final product.
+                          <br />I find it particularly satisfying to see the
+                          impact of my work on users and the positive difference
+                          it can make in their lives.
+                          <br />
+                          Additionally, I am constantly learning new
+                          technologies, methodologies, and best practices which
+                          make the job challenging and enjoyable.
+                        </p>
+                        {/* <button className="close-btn" onClick={() => props.setTrigger(false)}>Close</button>  */}
+                        <button
+                          className="button"
+                          onClick={() => {
+                            console.log('modal closed ');
+                            close();
+                          }}
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </Popup>
               </div>
-              <div className="questionStyling">
-                <Card
-                  question={"Why did you choose to be a developer 3?"}
-                  answer={"I want to 3!"}
-                />
-              </div>
-              <div className="questionStyling">
-                <Card
-                  question={"Why did you choose to be a developer 4?"}
-                  answer={"I want to! 4"}
-                />
-              </div>
-            </Carousel>
-          </div>
-          
+            </div>
+
+            <div className="questionStyling">
+              <h3>
+                Do you like to work in a team? What would be a perfect team for
+                you?
+              </h3>
+              <br />
+              <br />
+              <Popup
+                trigger={
+                  <button className="exampleButton">Answer Example</button>
+                }
+              >
+                {(close) => (
+                  <div className="popup">
+                    <div className="popup-inner">
+                      {/* <button className="close-btn" onClick={() => props.setTrigger(false)}>Close</button>  */}
+                      <p>
+                        I think it's important for developers to be able to work
+                        well in teams.
+                        <br />
+                        Working in a team allows for different perspectives and
+                        ideas to be shared, which can lead to better solutions.
+                        <br />
+                        It also allows for more efficient problem-solving, as
+                        team members can divide up the work and leverage each
+                        other's strengths.
+                        <br />
+                        Additionally, working in a team environment can be more
+                        enjoyable and motivating than working alone.
+                        <br />
+                        So it is important for a developer to be able to
+                        communicate effectively and be able to work together
+                        with others.
+                      </p>
+                      <button
+                        className="button"
+                        onClick={() => {
+                          console.log('modal closed ');
+                          close();
+                        }}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </Popup>
+            </div>
+
+            <div className="questionStyling">
+              <h3>What is your motivation for joining the @companyname?</h3>
+              <br />
+              <br />
+              <Popup
+                trigger={
+                  <button className="exampleButton">Answer Example</button>
+                }
+              >
+                {(close) => (
+                  <div className="popup">
+                    <div className="popup-inner">
+                      <p>
+                        Express your excitement about the company's mission,
+                        values, and industry leadership.
+                        <br />
+                        <br />
+                        You may also highlight specific projects or initiatives
+                        that the company is working on that align with your own
+                        interests and experience.
+                        <br />
+                        <br />
+                        Additionally, you may discuss how you believe your
+                        skills and experiences can contribute to the company's
+                        success and how you are looking forward to being a part
+                        of the team.
+                        <br />
+                        <br />
+                        Finally you may express that you want to work with the
+                        team members and grow your skills, and that you
+                        appreciate the opportunities that the company can offer
+                        you to achieve your professional and personal goals.
+                      </p>
+                      {/* <button className="close-btn" onClick={() => props.setTrigger(false)}>Close</button>  */}
+                      <button
+                        className="button"
+                        onClick={() => {
+                          console.log('modal closed ');
+                          close();
+                        }}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </Popup>
+            </div>
           </div>
         </section>
 
@@ -140,7 +253,7 @@ function InterviewPrepPage(props) {
                       <button
                         className="button"
                         onClick={() => {
-                          console.log("modal closed ");
+                          console.log('modal closed ');
                           close();
                         }}
                       >
@@ -200,7 +313,7 @@ function InterviewPrepPage(props) {
                       <button
                         className="button"
                         onClick={() => {
-                          console.log("modal closed ");
+                          console.log('modal closed ');
                           close();
                         }}
                       >
@@ -256,7 +369,7 @@ function InterviewPrepPage(props) {
                       <button
                         className="button"
                         onClick={() => {
-                          console.log("modal closed ");
+                          console.log('modal closed ');
                           close();
                         }}
                       >
@@ -308,7 +421,7 @@ function InterviewPrepPage(props) {
                       <button
                         className="button"
                         onClick={() => {
-                          console.log("modal closed ");
+                          console.log('modal closed ');
                           close();
                         }}
                       >
@@ -352,7 +465,7 @@ function InterviewPrepPage(props) {
                       <button
                         className="button"
                         onClick={() => {
-                          console.log("modal closed ");
+                          console.log('modal closed ');
                           close();
                         }}
                       >
@@ -414,7 +527,7 @@ function InterviewPrepPage(props) {
                       <button
                         className="button"
                         onClick={() => {
-                          console.log("modal closed ");
+                          console.log('modal closed ');
                           close();
                         }}
                       >

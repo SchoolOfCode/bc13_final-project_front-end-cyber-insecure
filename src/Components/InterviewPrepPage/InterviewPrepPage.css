@@ -31,6 +31,7 @@ body {
 
 /* Individual Question Sections */
 .interviewQuestionsSection {
+  background-color: blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +41,8 @@ body {
 .questionsList {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   width: 90%;
 }
@@ -125,4 +128,14 @@ body {
       width: 300px;
       margin-right: 0;
   }
+}
+
+
+
+
+.carousel {
+  background-color: red;
+  width: 1500px;
+  max-width: 100%;
+  
 }
