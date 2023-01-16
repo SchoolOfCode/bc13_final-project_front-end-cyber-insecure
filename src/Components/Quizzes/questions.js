@@ -156,3 +156,147 @@ export const questionsJavaScript = [
       ],
     },
   ];
+
+  export const questionsTypeScript = [
+    {
+      question: "Which of the following is not a valid type in TypeScript?",
+      options: [
+        { id: 0, question: "String", isCorrect: false },
+        { id: 1, question: "Integer", isCorrect: true },
+        { id: 2, question: "Boolean", isCorrect: false },
+        { id: 3, question: "Object", isCorrect: false },
+      ],
+    },
+    {
+      question: "What is the definition of a type alias in TypeScript?",
+      options: [
+        { id: 0, question: "A type that creates an alias for a primitive type", isCorrect: false },
+        { id: 1, question: "A type that creates an alias for an object type", isCorrect: false},
+        { id: 2, question: "A type that creates an alias for another type", isCorrect: true },
+        { id: 3, question: "A type that creates an alias for a function type", isCorrect: false },
+      ],
+    },
+    {
+      question: "In TypeScript, what is the purpose of the 'any' type?",
+      options: [
+        { id: 0, question: "To represent a value that can be of any type", isCorrect: true },
+        { id: 1, question: "To represent a value that can be of any primitive type", isCorrect: false },
+        { id: 2, question: "To represent a value that can be of any object type", isCorrect: false },
+        { id: 3, question: "To represent a value that can be of any function type", isCorrect: false },
+      ],
+    },
+    {
+      question: "What does the 'readonly' keyword do in TypeScript?",
+      options: [
+        { id: 0, question: "Makes a property writable", isCorrect: false },
+        { id: 1, question: "Makes a property read-only", isCorrect: true },
+        { id: 2, question: "Makes a property accessible from outside the class", isCorrect: false },
+        { id: 3, question: "Makes a property accessible only within the class", isCorrect: false },
+      ],
+    },
+    {
+      question: "Which of the following is not a valid TypeScript compiler option?",
+      options: [
+        { id: 0, question: "--module", isCorrect: false },
+        { id: 1, question: "--compile", isCorrect: true },
+        { id: 2, question: "--target", isCorrect: false },
+        { id: 3, question: "--outDir", isCorrect: false },
+      ],
+    },
+  ];
+
+  export const questionsPython = [
+    {
+      question: "What is the purpose of the 'pass' keyword in Python?",
+      options: [
+        { id: 0, question: "To create a loop", isCorrect: false },
+        { id: 1, question: "To define a function without a body", isCorrect: true },
+        { id: 2, question: "To exit a loop", isCorrect: false },
+        { id: 3, question: "To move to the next line", isCorrect: false },
+      ],
+    },
+    {
+      question: "What is the correct syntax for a for loop in Python?",
+      options: [
+        { id: 0, question: "for i in range():", isCorrect: false },
+        { id: 1, question: "for (i=0; i<10; i++)", isCorrect: false },
+        { id: 2, question: "for i in range(10):", isCorrect: true },
+        { id: 3, question: "for i=1 to 10", isCorrect: false },
+      ],
+    },
+    {
+      question: "What data type is used to represent a single character in Python?",
+      options: [
+        { id: 0, question: "String", isCorrect: false },
+        { id: 1, question: "Char", isCorrect: false },
+        { id: 2, question: "Boolean", isCorrect: false },
+        { id: 3, question: "String of length 1", isCorrect: true },
+      ],
+    },
+    {
+      question: "What is the correct syntax for a while loop in Python?",
+      options: [
+        { id: 0, question: "while (i<10; i++)", isCorrect: false },
+        { id: 1, question: "while i = 1 to 10", isCorrect: false },
+        { id: 2, question: "while (i<10)", isCorrect: false },
+        { id: 3, question: "while i < 10:", isCorrect: true },
+      ],
+    },
+    {
+      question: "What is the purpose of the 'break' keyword in Python?",
+      options: [
+        { id: 0, question: "To create a loop", isCorrect: false },
+        { id: 1, question: "To define a function without a body", isCorrect: false },
+        { id: 2, question: "To exit a loop", isCorrect: true },
+        { id: 3, question: "To move to the next line", isCorrect: false },
+      ],
+    },
+  ];
+
+  export const questionsNode = [
+    {
+      question: "What is the purpose of Node.js?",
+      options: [
+        { id: 0, question: "To develop web-based applications", isCorrect: true },
+        { id: 1, question: "To develop server-side applications", isCorrect: true },
+        { id: 2, question: "To develop mobile-based applications", isCorrect: false },
+        { id: 3, question: "To develop desktop-based applications", isCorrect: false },
+      ],
+    },
+    {
+      question: "What is the syntax to create a function in Node.js?",
+      options: [
+        { id: 0, question: "function = myFunction()", isCorrect: false },
+        { id: 1, question: "myFunction = function()", isCorrect: false },
+        { id: 2, question: "function myFunction()", isCorrect: true },
+        { id: 3, question: "myFunction() = function", isCorrect: false },
+      ],
+    },
+    {
+      question: "Which of the following is not a Node.js module?",
+      options: [
+        { id: 0, question: "http", isCorrect: false },
+        { id: 1, question: "crypto", isCorrect: false },
+        { id: 2, question: "fs", isCorrect: false },
+        { id: 3, question: "mysql", isCorrect: true },
+      ],
+    },
+    {
+      question: "What is the syntax to read a file in Node.js?",
+      options: [
+        { id: 0, question: "fs.readFile(file)", isCorrect: true },
+        { id: 1, question: "file.readFile(fs)", isCorrect: false },
+        { id: 2, question: "fs.read(file)", isCorrect: false },
+        { id: 3, question: "file.read(fs)", isCorrect: false },
+      ],
+    },
+    {
+      question: "What is the syntax to include a module in Node.js?",
+      options: [
+        { id: 0, question: "include module", isCorrect: false },
+        { id: 1, question: "import module", isCorrect: false },
+        { id: 2, question: "require module", isCorrect: true },
+        { id: 3, question: "load module", isCorrect: false },
+      ],
+    },
+  ];

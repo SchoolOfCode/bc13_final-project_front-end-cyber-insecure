@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { GiH2O } from 'react-icons/gi';
 import Navbar from '../Navbar/Navbar'
-import { questionsJavaScript, questionsReact, placeholderQuestion, questionsCSS } from './questions'
+import { questionsJavaScript, questionsReact, placeholderQuestion, questionsCSS, questionsTypeScript, questionsPython, questionsNode } from './questions'
 import './Quizzes.css'
 
 export default function Quizzes() {
@@ -9,19 +10,42 @@ export default function Quizzes() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [allQuestions, setallQuestions] = useState(placeholderQuestion)
+  const [badgesArray, setBadgesArray] = useState([])
+  const [currentTopic, setCurrentTopic] = useState()
 
   function chooseJavaScriptQuestions() {
     setallQuestions(questionsJavaScript);
+    setCurrentTopic("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg")
     restartQuiz()
   }
 
   function chooseReactQuestions() {
     setallQuestions(questionsReact);
+    setCurrentTopic("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg")
     restartQuiz()
   }
 
   function chooseCSSQuestions() {
     setallQuestions(questionsCSS);
+    setCurrentTopic("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg")
+    restartQuiz()
+  }
+
+  function choosequestionsTypeScript() {
+    setallQuestions(questionsTypeScript);
+    setCurrentTopic("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg")
+    restartQuiz()
+  }
+
+  function choosequestionsPython() {
+    setallQuestions(questionsPython);
+    setCurrentTopic("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg")
+    restartQuiz()
+  }
+
+  function choosequestionsNode() {
+    setallQuestions(questionsNode);
+    setCurrentTopic("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg")
     restartQuiz()
   }
 
@@ -33,6 +57,9 @@ export default function Quizzes() {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setResults(true);
+      if (score === 4 && !badgesArray.includes(currentTopic)) {
+        setBadgesArray([...badgesArray, currentTopic])
+      }
     }
   };
 
@@ -46,12 +73,17 @@ export default function Quizzes() {
     <Navbar />,
 
     <div className='quiz-container'>
-      <h1>Take part in quizzes to improve your technical skills </h1>
+      <div className='quiz-container-header'>
+        <h1>Take part in quizzes to improve your technical skills </h1>
+      </div>
 
       <div className='quiz-buttons-div'>
-        <button className='quiz-question-buttons' onClick={chooseJavaScriptQuestions}>JavaScript Questions</button>
-        <button className='quiz-question-buttons' onClick={chooseReactQuestions}>React Questions</button>
-        <button className='quiz-question-buttons' onClick={chooseCSSQuestions}>CSS Questions</button>
+        <button className='quiz-question-buttons' onClick={chooseJavaScriptQuestions}>JavaScript</button>
+        <button className='quiz-question-buttons' onClick={chooseReactQuestions}>React</button>
+        <button className='quiz-question-buttons' onClick={chooseCSSQuestions}>CSS</button>
+        <button className='quiz-question-buttons' onClick={choosequestionsTypeScript}>TypeScript</button>
+        <button className='quiz-question-buttons' onClick={choosequestionsPython}>Python</button>
+        <button className='quiz-question-buttons' onClick={choosequestionsNode}>Node</button>
       </div>
 
       {results ? (
@@ -65,14 +97,22 @@ export default function Quizzes() {
       ) : (
 
         <div className="quiz-question-card">
-          <h2>Question: {currentQuestion + 1} out of {allQuestions.length}</h2>
+          <div className='quiz-question-card-header'>
+            {allQuestions === questionsJavaScript && <img className='lang-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt='' />}
+            {allQuestions === questionsReact && <img className='lang-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt='' />}
+            {allQuestions === questionsCSS && <img className='lang-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt='' />}
+            {allQuestions === questionsTypeScript && <img className='lang-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt='' />}
+            {allQuestions === questionsPython && <img className='lang-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt='' />}
+            {allQuestions === questionsNode && <img className='lang-icon' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt='' />}
+            <h2>Question: {currentQuestion + 1} out of {allQuestions.length}</h2>
+          </div>
 
           <h3 className="quiz-question-text">{allQuestions[currentQuestion].question}</h3>
 
           <ul className='quiz-ul'>
             {allQuestions[currentQuestion].options.map((option) => {
               return (
-                <li className='quiz-li'key={option.id} onClick={() => questionClicked(option.isCorrect)}>{option.question}</li>
+                <li className='quiz-li' key={option.id} onClick={() => questionClicked(option.isCorrect)}>{option.question}</li>
               );
             })}
           </ul>
@@ -80,6 +120,20 @@ export default function Quizzes() {
           <h2>Score: {score}</h2>
         </div>
       )}
+      <div>
+      {badgesArray.length === 6 && <h2>Congratulations! You have all of the badges.</h2>}
+        <div className='whole-badge-container'>
+          <h1> My badges 🏆 </h1>
+          {badgesArray.length === 0 && <p> Complete quizzes to get badges! </p>}
+          <ul className='badge-container'>
+            {badgesArray.map((badge) => {
+              return (
+                <img className='lang-icon' src={badge} alt='' />
+              )
+            })}
+          </ul>
+        </div>
+      </div>
     </div>
 
   ]
