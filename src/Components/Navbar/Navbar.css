@@ -39,7 +39,7 @@
     gap: 8px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
     .hamburger {
         display: none;
     }
@@ -57,7 +57,7 @@
         gap: 8px;
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .navbar-open{
         display: flex;
         flex-direction: column;
