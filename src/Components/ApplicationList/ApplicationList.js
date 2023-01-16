@@ -32,6 +32,12 @@ function ApplicationList() {
     setApplications(data.payload);
   }
 
+  async function getAllApplicationsForFilter() {
+    const titleObject = await fetch(`${url}/api/jobApplications/${currentUser.email}`);
+    let data = await titleObject.json();
+    return data.payload;
+  }
+
   // function that sends a POST request - sent to Form component and runs when form button is clicked. Only runs when adding state is TRUE
   async function handleAddNewApplication(newApplication) {
     await fetch(`${url}/api/jobApplications`, {
@@ -58,6 +64,48 @@ function ApplicationList() {
     } if (e.target.value === "Salary low-high") {
       let lowProgress = [...applications].sort((a, b) => parseInt(a.salary) - parseInt(b.salary))
       setApplications(lowProgress)
+    }
+  }
+
+  // function for filtering - need to fetch all applications, filter for specific progress value and update application state 
+  async function filterApplications(e) {
+    if (e.target.value === "Display All") {
+      await getAllApplications()
+
+    } if (e.target.value === "Research Stage") {
+      let display = await getAllApplicationsForFilter();
+      display = display.filter(application => {return application.progress === 1})
+      setApplications(display);
+
+    } if (e.target.value === "Ready to Apply") {
+      let display = await getAllApplicationsForFilter();
+      display = display.filter(application => {return application.progress === 2})
+      setApplications(display)
+
+    } if (e.target.value === "Applied") {
+      let display = await getAllApplicationsForFilter();
+      display = display.filter(application => {return application.progress === 3})
+      setApplications(display)
+
+    } if (e.target.value === "Interview Date") {
+      let display = await getAllApplicationsForFilter();
+      display = display.filter(application => {return application.progress === 4})
+      setApplications(display)
+
+    } if (e.target.value === "Initial Interview Done") {
+      let display = await getAllApplicationsForFilter();
+      display = display.filter(application => {return application.progress === 5})
+      setApplications(display)
+
+    } if (e.target.value === "Second Interview Done") {
+      let display = await getAllApplicationsForFilter();
+      display = display.filter(application => {return application.progress === 6})
+      setApplications(display)
+
+    } if (e.target.value === "Completed") {
+      let display = await getAllApplicationsForFilter();
+      display = display.filter(application => {return application.progress === 7})
+      setApplications(display)
     }
   }
 
@@ -98,15 +146,15 @@ function ApplicationList() {
               <option value="Progress high-low">Progress high-low</option>
               <option value="Progress low-high">Progress low-high</option>
             </select>
-            <select>
-              <option value="">Display All</option>
-              <option value="">Research Stage</option>
-              <option value="">Ready to Apply</option>
-              <option value="">Applied</option>
-              <option value="">Interview Date</option>
-              <option value="">Initial Interview Done</option>
-              <option value="">Second Interview Done</option>
-              <option value="">Completed</option>
+            <select onChange={filterApplications}>
+              <option value="Display All">Display All</option>
+              <option value="Research Stage">Research Stage</option>
+              <option value="Ready to Apply">Ready to Apply</option>
+              <option value="Applied">Applied</option>
+              <option value="Interview Date">Interview Date</option>
+              <option value="Initial Interview Done">Initial Interview Done</option>
+              <option value="Second Interview Done">Second Interview Done</option>
+              <option value="Completed">Completed</option>
             </select>
           </div>
         </div>
