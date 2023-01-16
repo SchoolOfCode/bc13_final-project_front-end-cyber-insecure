@@ -55,13 +55,11 @@ function Application(props) {
 
   // DELETE specific application by ID and update it on screen
   async function handleDelete(id) {
-    // array filter to find the application with specific id (same as doing a for loop)
-    console.log(id)
     await fetch(`${url}/api/jobApplications/${id}`, {
       method: "DELETE"
     })
+    props.getAllApplications();
   }
-
 
   let progressStage;
   let progressStageDisplay;
