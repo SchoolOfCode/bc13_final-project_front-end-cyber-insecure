@@ -1,96 +1,74 @@
 import React from 'react';
 import { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
-import frontEndDeveloper from '../../cvImages/frontendDeveloper.png';
-import uxuiPortfolioPage from '../../cvImages/uxuiPortfolioPage.png';
-import backendPortfolio from '../../cvImages/backend.png';
-import fullstackPortfolio from '../../cvImages/fullstack.png';
+import frontEndDeveloper from '../../Images/frontendDeveloper.png';
+import uxuiPortfolioPage from '../../Images/uxuiPortfolioPage.png';
+import backendPortfolio from '../../Images/backend.png';
+import fullstackPortfolio from '../../Images/fullstack.png';
 import './CVworkshop.css';
 
 export default function CVworkshop() {
-  // Frontend CVs state
-  const [frontEnd, setFrontEnd] = useState(false);
 
-  // Fullstack CVs state
-  const [fullStack, setFullStack] = useState(false);
-
-  // Backend CVs state
-  const [backend, setBackend] = useState(false);
-
-  // UX / UI
-  const [uxUi, setUxUi] = useState(false);
+  const [CVonScreen, setCVonScreen] = useState('');
 
   function handleFrontEnd() {
-    setFrontEnd(true);
-    setBackend(false);
-    setFullStack(false);
-    setUxUi(false);
+    setCVonScreen(frontEndDeveloper)
   }
 
   function handleFullStack() {
-    setFullStack(true);
-    setBackend(false);
-    setFrontEnd(false);
-    setUxUi(false);
+    setCVonScreen(fullstackPortfolio)
   }
 
   function handleBackend() {
-    setBackend(true);
-    setFrontEnd(false);
-    setFullStack(false);
-    setUxUi(false);
+    setCVonScreen(backendPortfolio)
   }
 
   function handleUxUi() {
-    setUxUi(true);
-    setFrontEnd(false);
-    setBackend(false);
-    setFullStack(false);
+    setCVonScreen(uxuiPortfolioPage)
   }
 
   return [
     <Navbar />,
     <div className="cvworkshop-container">
-      <h1>CV Templates and Suggestions</h1>
+      <h1>Perfect your CV using our best-practice examples</h1>
       <div className="cvButtonContainer">
-        <button onClick={handleFrontEnd} className="cvButtonStyles">
-          Frontend Developer
-        </button>
-        <button onClick={handleFullStack} className="cvButtonStyles">
-          Fullstack Developer
-        </button>
-        <button onClick={handleBackend} className="cvButtonStyles">
-          Backend Developer
-        </button>
-        <button onClick={handleUxUi} className="cvButtonStyles">
-          UX / UI Designer
-        </button>
+        <button onClick={handleFrontEnd} className="cvButtonStyles">Frontend Developer</button>
+        <button onClick={handleFullStack} className="cvButtonStyles">Fullstack Developer</button>
+        <button onClick={handleBackend} className="cvButtonStyles">Backend Developer</button>
+        <button onClick={handleUxUi} className="cvButtonStyles">UX / UI Designer</button>
       </div>
       <div className="cvExamples">
-        {frontEnd && <img src={frontEndDeveloper} alt="frontend portfolio" />}
-        {frontEnd && <img src={frontEndDeveloper} alt="frontend portfolio" />}
-        {frontEnd && <img src={frontEndDeveloper} alt="frontend portfolio" />}
-      </div>
-      <div className="cvExamples">
-        {fullStack && (
-          <img src={fullstackPortfolio} alt="fullstack portfolio" />
-        )}
-        {fullStack && (
-          <img src={fullstackPortfolio} alt="fullstack portfolio" />
-        )}
-        {fullStack && (
-          <img src={fullstackPortfolio} alt="fullstack portfolio" />
-        )}
-      </div>
-      <div className="cvExamples">
-        {backend && <img src={backendPortfolio} alt="backend portfolio" />}
-        {backend && <img src={backendPortfolio} alt="backend portfolio" />}
-        {backend && <img src={backendPortfolio} alt="backend portfolio" />}
-      </div>
-      <div className="cvExamples">
-        {uxUi && <img src={uxuiPortfolioPage} alt="ux/ui portfolio" />}
-        {uxUi && <img src={uxuiPortfolioPage} alt="ux/ui portfolio" />}
-        {uxUi && <img src={uxuiPortfolioPage} alt="ux/ui portfolio" />}
+        {CVonScreen &&
+          <div className='individual-cv-examples'>
+            <div className='individual-cv-left'>
+              <img className='cv-image' src={CVonScreen} alt="frontend portfolio" />
+            </div>
+            {CVonScreen === frontEndDeveloper &&
+              <div className='individual-cv-right'>
+                <p className='cv-p'> FRONTEND Placeholder text (why the CV is good) </p>
+                <button className="cvButtonStyles" onClick={() => window.open(require('../../CV-pdfs/frontendcv.pdf'), '_none')}>View and download</button>
+              </div>
+            }
+            {CVonScreen === fullstackPortfolio &&
+              <div className='individual-cv-right'>
+                <p className='cv-p'> FULLSTACK Placeholder text (why the CV is good) </p>
+                <button className="cvButtonStyles" onClick={() => window.open(require('../../CV-pdfs/fullstackcv.pdf'), '_none')}>View and download</button>
+              </div>
+            }
+            {CVonScreen === backendPortfolio &&
+              <div className='individual-cv-right'>
+                <p className='cv-p'> BACKEND Placeholder text (why the CV is good) </p>
+                <button className="cvButtonStyles" onClick={() => window.open(require('../../CV-pdfs/backendcv.pdf'), '_none')}>View and download</button>
+              </div>
+            }
+            {CVonScreen === uxuiPortfolioPage &&
+              <div className='individual-cv-right'>
+                <p className='cv-p'> UI/UX Placeholder text (why the CV is good) </p>
+                <button className="cvButtonStyles" onClick={() => window.open(require('../../CV-pdfs/uiuxcv.pdf'), '_none')}>View and download</button>
+              </div>
+            }
+          </div>
+        }
       </div>
     </div>,
   ];
