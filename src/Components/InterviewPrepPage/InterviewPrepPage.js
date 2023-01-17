@@ -5,6 +5,7 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import Popup from 'reactjs-popup';
 import Card from './Card/Card';
+import interviewQuestions from './dummyData/dummyData';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -46,31 +47,14 @@ function InterviewPrepPage(props) {
           <h2>General Questions from Interviewers</h2>
           <div className="questionsList">
             <div className="carousel">
-              <Carousel responsive={responsive}>
-                <div className="questionStyling">
-                  <Card
-                    question={'Why did you choose to be a developer 1?'}
-                    answer={'I want to!'}
-                  />
-                </div>
-                <div className="questionStyling">
-                  <Card
-                    question={'Why did you choose to be a developer 2?'}
-                    answer={'I want to 2!'}
-                  />
-                </div>
-                <div className="questionStyling">
-                  <Card
-                    question={'Why did you choose to be a developer 3?'}
-                    answer={'I want to 3!'}
-                  />
-                </div>
-                <div className="questionStyling">
-                  <Card
-                    question={'Why did you choose to be a developer 4?'}
-                    answer={'I want to! 4'}
-                  />
-                </div>
+              <Carousel responsive={responsive} infinite={true}>
+                {interviewQuestions.map((item) => {
+                  return (
+                    <div className="react-multi-carousel-item">
+                      <Card question={item.question} answer={item.answer} />
+                    </div>
+                  );
+                })}
               </Carousel>
             </div>
           </div>
