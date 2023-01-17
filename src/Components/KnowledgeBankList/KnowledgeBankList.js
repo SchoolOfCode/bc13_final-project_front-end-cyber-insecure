@@ -9,15 +9,15 @@ export default function KnowledgeBankList() {
 
   const [knowledge, setKnowledge] = useState([])
   const [input, setInput] = useState('')
-  
+
   function handleChange(e) {
     setInput(e.target.value);
   }
 
   useEffect(() => {
     async function getAllKnowledge() {
-      const titleObject = await fetch(`${url}/api/knowledgeBank`);
-      let data = await titleObject.json();
+      const knowledge = await fetch(`${url}/api/knowledgeBank`);
+      let data = await knowledge.json();
       setKnowledge(data.payload);
     }
     getAllKnowledge()
@@ -27,15 +27,60 @@ export default function KnowledgeBankList() {
     const titleObject = await fetch(`${url}/api/knowledgeBank/${input}`);
     let data = await titleObject.json();
     setKnowledge(data.payload);
+    setInput('')
+  }
+
+  async function showAll() {
+    const knowledge = await fetch(`${url}/api/knowledgeBank`);
+    let data = await knowledge.json();
+    setKnowledge(data.payload);
+  }
+
+  async function showJS() {
+    const knowledge = await fetch(`${url}/api/knowledgeBank/category/JavaScript`);
+    let data = await knowledge.json();
+    setKnowledge(data.payload);
+  }
+
+  async function showGeneral() {
+    const knowledge = await fetch(`${url}/api/knowledgeBank/category/General`);
+    let data = await knowledge.json();
+    setKnowledge(data.payload);
+  }
+
+  async function showHTML() {
+    const knowledge = await fetch(`${url}/api/knowledgeBank/category/HTML`);
+    let data = await knowledge.json();
+    setKnowledge(data.payload);
+  }
+
+  async function showCSS() {
+    const knowledge = await fetch(`${url}/api/knowledgeBank/category/CSS`);
+    let data = await knowledge.json();
+    setKnowledge(data.payload);
+  }
+
+  async function showReact() {
+    const knowledge = await fetch(`${url}/api/knowledgeBank/category/React`);
+    let data = await knowledge.json();
+    setKnowledge(data.payload);
   }
 
   return [
     <Navbar />,
     <div className='knowledge-bank-container'>
-      <h1>This is the Knowledge Bank component</h1>
+      <h1>Refresh your knowledge using our comprehensive knowledge bank</h1>
       <div className='input-container'>
-        <input onChange={handleChange} />
-        <button onClick={getByTitle}>Search</button>
+        <input value={input} onChange={handleChange} />
+        <button className='knowledge-buttons' onClick={getByTitle}>Search</button>
+      </div>
+      <div className='knowledge-category-buttons'>
+        <button className='knowledge-buttons' onClick={showAll}> Show all </button>
+        <button className='knowledge-buttons' onClick={showGeneral}> General </button>
+        <button className='knowledge-buttons' onClick={showJS}> JavaScript </button>
+        <button className='knowledge-buttons' onClick={showHTML}> HTML </button>
+        <button className='knowledge-buttons' onClick={showCSS}> CSS </button>
+        <button className='knowledge-buttons' onClick={showReact}> React </button>
       </div>
       <ul className="object-list-container">
         {knowledge.map((item) => {
