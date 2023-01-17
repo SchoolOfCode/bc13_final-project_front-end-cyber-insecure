@@ -4,19 +4,19 @@ import { FiExternalLink } from "react-icons/fi";
 import { AiFillEdit, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import Popup from "reactjs-popup";
 import Form from "../Form/Form";
-import "./Application.css"
-import "./ProgressBar.css"
+import "./Application.css";
+import "./ProgressBar.css";
+import ApplicationDisplayed from "./ApplicationDisplayed";
 
-const url = process.env.REACT_APP_BACKEND_URL
+const url = process.env.REACT_APP_BACKEND_URL;
 
 function Application(props) {
-
-  const [editing, setEditing] = useState()
+  const [editing, setEditing] = useState();
 
   // function that sets editing state to true - passed to Form component and tells it to run a PATCH request
   function editingNotAdding() {
-    setEditing(true)
-    props.setAdding(false)
+    setEditing(true);
+    props.setAdding(false);
   }
 
   // function that sends a PATCH request - sent to Form component and runs when form button is clicked. Only runs when editing state is TRUE
@@ -24,8 +24,8 @@ function Application(props) {
     await fetch(`${url}/api/jobApplications/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(edits)
-    })
+      body: JSON.stringify(edits),
+    });
     props.getAllApplications();
   }
 
@@ -36,8 +36,8 @@ function Application(props) {
       await fetch(`${url}/api/jobApplications/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ progress: currentProgress + 1 })
-      })
+        body: JSON.stringify({ progress: currentProgress + 1 }),
+      });
     }
     props.getAllApplications();
   }
@@ -49,8 +49,8 @@ function Application(props) {
       await fetch(`${url}/api/jobApplications/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ progress: currentProgress - 1 })
-      })
+        body: JSON.stringify({ progress: currentProgress - 1 }),
+      });
     }
     props.getAllApplications();
   }
@@ -58,8 +58,8 @@ function Application(props) {
   // DELETE specific application by ID and update it on screen
   async function handleDelete(id) {
     await fetch(`${url}/api/jobApplications/${id}`, {
-      method: "DELETE"
-    })
+      method: "DELETE",
+    });
     props.getAllApplications();
   }
 
@@ -100,119 +100,144 @@ function Application(props) {
   }
 
   return [
-    <div className="application-container">
-      <div className="app-sections">
-        <div className="app-section7" id="app-job-title">
-          <div className="app-section-header">
-            <p>Job Title</p>
-          </div>
-          <div className="app-section-footer">
-            <p2>{props.job_title}</p2>
-          </div>
-        </div>
-        <div className="app-section7">
-          <div className="app-section-header">
-            <p>Company</p>
-          </div>
-          <div className="app-section-footer">
-            <p2>{props.company}</p2>
-          </div>
-        </div>
-        <div className="app-section32">
-          <div className="app-section-header">
-            <p>Job Description</p>
-          </div>
-          <div className="app-section-footer">
-            <p2>{props.job_description}</p2>
-          </div>
-        </div>
-        <div className="app-section7">
-          <div className="app-section-header">
-            <p>Location</p>
-          </div>
-          <div className="app-section-footer">
-            <p2>{props.location}</p2>
-          </div>
-        </div>
-        <div className="app-section">
-          <div className="app-section-header">
-            <p>Salary</p>
-          </div>
-          <div className="app-section-footer">
-            <p2>£{props.salary}</p2>
-          </div>
-        </div>
-        <div className="app-section">
-          <div className="app-section-header">
-            <p>Job Link</p>
-          </div>
-          <div className="app-section-footer">
-            <button
-              onClick={() => {
-                window.open(props.job_link, "_blank").focus();
-              }}
-            >
-              <FiExternalLink />
-            </button>
-          </div>
-        </div>
-        <div className="app-section32">
-          <div className="app-section-header">
-            <p>Notes</p>
-          </div>
-          <div className="app-section-footer">
-            <p2>{props.notes}</p2>
-          </div>
-        </div>
-        <div className="app-section" id="app-section-buttons">
-          <Popup onOpen={editingNotAdding}
-            trigger={
-              <button>
-                <AiFillEdit />
-              </button>
-            }
-          >
-            {(close) => (
-              <div className="app-popup-container">
-                <div className="app-popup">
-                  <Form
-                    handleEditWholeApplication={handleEditWholeApplication}
-                    editing={editing}
-                    close={close}
-                    id={props.id}
-                    defaultJobDescription={props.job_description}
-                    defaultCompany={props.company}
-                    defaultJobTitle={props.job_title}
-                    defaultLocation={props.location}
-                    defaultSalary={props.salary}
-                    defaultJobLink={props.job_link}
-                    defaultNotes={props.notes}
-                  />
-                </div>
+    <Popup
+      onOpen={editingNotAdding}
+      trigger={
+        <div className="application-container">
+          <div className="app-sections">
+            <div className="app-section7" id="app-job-title">
+              <div className="app-section-header">
+                <p>Job Title</p>
               </div>
-            )}
-          </Popup>
-          <button onClick={() => handleDelete(props.id)}>
-            <RiDeleteBinLine />
-          </button>
-        </div>
-      </div>
-      <div className="app-progress-container">
-        <div className="app-progress-bar-container">
-          <div className={progressStage}>
-            <p>{progressStageDisplay}</p>
+              <div className="app-section-footer">
+                <p2>{props.job_title}</p2>
+              </div>
+            </div>
+            <div className="app-section7">
+              <div className="app-section-header">
+                <p>Company</p>
+              </div>
+              <div className="app-section-footer">
+                <p2>{props.company}</p2>
+              </div>
+            </div>
+            <div className="app-section32">
+              <div className="app-section-header">
+                <p>Job Description</p>
+              </div>
+              <div className="app-section-footer">
+                <p2>{props.job_description}</p2>
+              </div>
+            </div>
+            <div className="app-section7">
+              <div className="app-section-header">
+                <p>Location</p>
+              </div>
+              <div className="app-section-footer">
+                <p2>{props.location}</p2>
+              </div>
+            </div>
+            <div className="app-section">
+              <div className="app-section-header">
+                <p>Salary</p>
+              </div>
+              <div className="app-section-footer">
+                <p2>£{props.salary}</p2>
+              </div>
+            </div>
+            <div className="app-section">
+              <div className="app-section-header">
+                <p>Job Link</p>
+              </div>
+              <div className="app-section-footer">
+                <button
+                  onClick={() => {
+                    window.open(props.job_link, "_blank").focus();
+                  }}
+                >
+                  <FiExternalLink />
+                </button>
+              </div>
+            </div>
+            <div className="app-section32">
+              <div className="app-section-header">
+                <p>Notes</p>
+              </div>
+              <div className="app-section-footer">
+                <p2>{props.notes}</p2>
+              </div>
+            </div>
+            <div className="app-section" id="app-section-buttons">
+              <Popup
+                onOpen={editingNotAdding}
+                trigger={
+                  <button>
+                    <AiFillEdit />
+                  </button>
+                }
+              >
+                {(close) => (
+                  <div className="app-popup-container">
+                    <div className="app-popup">
+                      <Form
+                        handleEditWholeApplication={handleEditWholeApplication}
+                        editing={editing}
+                        close={close}
+                        id={props.id}
+                        defaultJobDescription={props.job_description}
+                        defaultCompany={props.company}
+                        defaultJobTitle={props.job_title}
+                        defaultLocation={props.location}
+                        defaultSalary={props.salary}
+                        defaultJobLink={props.job_link}
+                        defaultNotes={props.notes}
+                      />
+                    </div>
+                  </div>
+                )}
+              </Popup>
+              <button onClick={() => handleDelete(props.id)}>
+                <RiDeleteBinLine />
+              </button>
+            </div>
+          </div>
+          <div className="app-progress-container">
+            <div className="app-progress-button">
+              <button
+                onClick={() =>
+                  handleEditRemoveProgress(props.id, props.progress)
+                }
+              >
+                <AiOutlineMinus />
+              </button>
+              <button
+                onClick={() => handleEditAddProgress(props.id, props.progress)}
+              >
+                <AiOutlinePlus />
+              </button>
+            </div>
+            <div className="app-progress-bar-container">
+              <div className={progressStage}>
+                <p>{progressStageDisplay}</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="app-progress-button">
-          <button onClick={() => handleEditRemoveProgress(props.id, props.progress)}>
-            <AiOutlineMinus />
-          </button>
-          <button onClick={() => handleEditAddProgress(props.id, props.progress)}>
-            <AiOutlinePlus />
-          </button>
-        </div>
-      </div>
-    </div>,
+      }
+    >
+      {(close) => (
+        <ApplicationDisplayed
+          company={props.company}
+          job_title={props.job_title}
+          location={props.location}
+          salary={props.salary}
+          job_description={props.job_description}
+          notes={props.notes}
+          job_link={props.job_link}
+          close={close}
+        />
+      )}
+    </Popup>,
   ];
 }
 export default Application;

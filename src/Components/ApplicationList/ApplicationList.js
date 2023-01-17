@@ -12,6 +12,7 @@ const url = process.env.REACT_APP_BACKEND_URL
 function ApplicationList() {
 
   const [adding, setAdding] = useState()
+  const [displaying, setDisplaying] = useState()
   const [applications, setApplications] = useState([])
   const { currentUser } = useAuth();
 
@@ -24,6 +25,7 @@ function ApplicationList() {
   function addingNotEditing() {
     setAdding(true);
   }
+  
 
   // GET request for all applications for specific email address logged in
   async function getAllApplications() {
@@ -121,7 +123,7 @@ function ApplicationList() {
             <Popup onOpen={addingNotEditing}
               trigger={
                 <button >
-                  <AiOutlinePlus /> Application
+                  <AiOutlinePlus />
                 </button>
               }
             >
