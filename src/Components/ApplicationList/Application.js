@@ -101,7 +101,7 @@ function Application(props) {
 
   return [
     <Popup
-      onOpen={editingNotAdding}
+      // onOpen={editingNotAdding}
       trigger={
         <div className="application-container">
           <div className="app-sections">
