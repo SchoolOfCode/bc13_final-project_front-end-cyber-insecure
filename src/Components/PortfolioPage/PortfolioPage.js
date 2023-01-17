@@ -57,7 +57,6 @@ function PortfolioPage(props) {
           // centerMode={true}
           responsive={responsive}
           infinite={true}
-
         >
           {/* {portfolioPageData.map((card) => {
             return (
