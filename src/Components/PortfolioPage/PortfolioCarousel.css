@@ -1,6 +1,6 @@
 .PortfolioCarousel-container{
     width: 100vw;
-    min-height: 80%;
+    height: 80vh;
     /* max-height: 100vh; */
     /* background-color: brown; */
     display: flex;

@@ -19,19 +19,22 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./PortfolioCarousel.css";
 
+import PortfolioCard from "./PortfolioCard";
+import { portfolioPageData } from "./PortfolioCardData";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 1,
+    items: 3,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 1,
+    items: 2,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 1,
+    items: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -54,25 +57,40 @@ function PortfolioPage(props) {
           // centerMode={true}
           responsive={responsive}
           infinite={true}
+
         >
-          <div className="PortfolioPage-examples">
+          {/* {portfolioPageData.map((card) => {
+            return (
+              <PortfolioCard
+                headerH2={card.headerH2}
+                iconLink={card.iconLink}
+                plainSrc={card.plainSrc}
+                popSrc={card.popSrc}
+              />
+            );
+          })} */}
+          {/* <div className="PortfolioPage-examples"> */}
             <div className="PorfolioPage-example-item">
-              {/* <div className="PorfolioPage-example-item-header">
-                <h2 className="portfolio-h1">GitHub page</h2>
-                <SocialIcon
-                  className="icon"
-                  url="https://github.com/Jordaneddielinton93"
-                  target="_blank"
-                  rel="noreferrer"
-                />
-              </div> */}
+              <div className="PorfolioPage-example-item-header">
+                <h2 className="portfolio-h1">
+                  GitHub page
+                  <SocialIcon
+                    className="icon"
+                    url="https://github.com/Jordaneddielinton93"
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                </h2>
+              </div>
               <Popup
                 trigger={
-                  <img
-                    className="portfolio-plain-image"
-                    src={jordanGithubPlain}
-                    alt=""
-                  />
+                  <div className="PorfolioPage-example-item-image-container">
+                    <img
+                      className="portfolio-plain-image"
+                      src={jordanGithubPlain}
+                      alt=""
+                    />
+                  </div>
                 }
               >
                 <img
@@ -84,22 +102,26 @@ function PortfolioPage(props) {
             </div>
 
             <div className="PorfolioPage-example-item">
-              {/* <div className="PorfolioPage-example-item-header">
-                <h2 className="portfolio-h1">Portfolio page</h2>
-                <SocialIcon
-                  className="icon"
-                  url="https://jordansfreelancing.co.uk/"
-                  target="_blank"
-                  rel="noreferrer"
-                />
-              </div> */}
+              <div className="PorfolioPage-example-item-header">
+                <h2 className="portfolio-h1">
+                  Portfolio page
+                  <SocialIcon
+                    className="icon"
+                    url="https://jordansfreelancing.co.uk/"
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                </h2>
+              </div>
               <Popup
                 trigger={
-                  <img
-                    className="portfolio-plain-image"
-                    src={jordanPortfolioPlain}
-                    alt=""
-                  />
+                  <div className="PorfolioPage-example-item-image-container">
+                    <img
+                      className="portfolio-plain-image"
+                      src={jordanPortfolioPlain}
+                      alt=""
+                    />
+                  </div>
                 }
               >
                 <img
@@ -109,25 +131,29 @@ function PortfolioPage(props) {
                 />
               </Popup>
             </div>
-          </div>
-          <div className="PortfolioPage-examples">
+          {/* </div> */}
+          {/* <div className="PortfolioPage-examples"> */}
             <div className="PorfolioPage-example-item">
-              {/* <div className="PorfolioPage-example-item-header">
-                <h2 className="portfolio-h1">GitHub page</h2>
-                <SocialIcon
-                  className="icon"
-                  url="https://github.com/Lakorthus"
-                  target="_blank"
-                  rel="noreferrer"
-                />
-              </div> */}
+              <div className="PorfolioPage-example-item-header">
+                <h2 className="portfolio-h1">
+                  GitHub page
+                  <SocialIcon
+                    className="icon"
+                    url="https://github.com/Lakorthus"
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                </h2>
+              </div>
               <Popup
                 trigger={
-                  <img
-                    className="portfolio-plain-image"
-                    src={julioGithubPlain}
-                    alt=""
-                  />
+                  <div className="PorfolioPage-example-item-image-container">
+                    <img
+                      className="portfolio-plain-image"
+                      src={julioGithubPlain}
+                      alt=""
+                    />
+                  </div>
                 }
               >
                 <img
@@ -137,24 +163,27 @@ function PortfolioPage(props) {
                 />
               </Popup>
             </div>
-
             <div className="PorfolioPage-example-item">
-              {/* <div className="PorfolioPage-example-item-header">
-                <h2 className="portfolio-h1">Portfolio page</h2>
-                <SocialIcon
-                  className="icon"
-                  url="https://react-portafolio-two.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                />
-              </div> */}
+              <div className="PorfolioPage-example-item-header">
+                <h2 className="portfolio-h1">
+                  Portfolio page
+                  <SocialIcon
+                    className="icon"
+                    url="https://react-portafolio-two.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                </h2>
+              </div>
               <Popup
                 trigger={
-                  <img
-                    className="portfolio-plain-image"
-                    src={julioPortfolioPlain}
-                    alt=""
-                  />
+                  <div className="PorfolioPage-example-item-image-container">
+                    <img
+                      className="portfolio-plain-image"
+                      src={julioPortfolioPlain}
+                      alt=""
+                    />
+                  </div>
                 }
               >
                 <img
@@ -164,25 +193,29 @@ function PortfolioPage(props) {
                 />
               </Popup>
             </div>
-          </div>
-          <div className="PortfolioPage-examples">
+          {/* </div> */}
+          {/* <div className="PortfolioPage-examples"> */}
             <div className="PorfolioPage-example-item">
-              {/* <div className="PorfolioPage-example-item-header">
-                <h2 className="portfolio-h1">GitHub page</h2>
-                <SocialIcon
-                  className="icon"
-                  url="https://github.com/aakashsh1999"
-                  target="_blank"
-                  rel="noreferrer"
-                />
-              </div> */}
+              <div className="PorfolioPage-example-item-header">
+                <h2 className="portfolio-h1">
+                  GitHub page
+                  <SocialIcon
+                    className="icon"
+                    url="https://github.com/aakashsh1999"
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                </h2>
+              </div>
               <Popup
                 trigger={
-                  <img
-                    className="portfolio-plain-image"
-                    src={aakashGithubPlain}
-                    alt=""
-                  />
+                  <div className="PorfolioPage-example-item-image-container">
+                    <img
+                      className="portfolio-plain-image"
+                      src={aakashGithubPlain}
+                      alt=""
+                    />
+                  </div>
                 }
               >
                 <img
@@ -193,22 +226,26 @@ function PortfolioPage(props) {
               </Popup>
             </div>
             <div className="PorfolioPage-example-item">
-              {/* <div className="PorfolioPage-example-item-header">
-                <h2 className="portfolio-h1">Portfolio page</h2>
-                <SocialIcon
-                  className="icon"
-                  url="https://aakash-sharma.netlify.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                />
-              </div> */}
+              <div className="PorfolioPage-example-item-header">
+                <h2 className="portfolio-h1">
+                  Portfolio page
+                  <SocialIcon
+                    className="icon"
+                    url="https://aakash-sharma.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                </h2>
+              </div>
               <Popup
                 trigger={
-                  <img
-                    className="portfolio-plain-image"
-                    src={aakashPortfolioPlain}
-                    alt=""
-                  />
+                  <div className="PorfolioPage-example-item-image-container">
+                    <img
+                      className="portfolio-plain-image"
+                      src={aakashPortfolioPlain}
+                      alt=""
+                    />
+                  </div>
                 }
               >
                 <img
@@ -218,7 +255,7 @@ function PortfolioPage(props) {
                 />
               </Popup>
             </div>
-          </div>
+          {/* </div> */}
         </Carousel>
       </div>
     </div>,
