@@ -81,6 +81,9 @@ body {
 
 .popup-inner {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 32px;
   width: 100%;
   max-width: 640px;
@@ -97,6 +100,10 @@ body {
   height: 30px;
   border-radius: 5px;
   background-color: #E5BE83;
+}
+
+.close-button:hover {
+  background-color: #bb8f6a;
 }
 
 /* .popup-inner .close-btn {
