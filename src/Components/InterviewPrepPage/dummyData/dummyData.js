@@ -1,19 +1,9 @@
 const interviewQuestions = [
   {
-    question: 'Why did you choose to be a developer?',
-    answer: `As a developer, I have a passion for using technology
-          to solve problems and improve people's lives.
-          <br />I enjoy the process of creating and building
-          software, from understanding user needs and defining
-          requirements, to designing and implementing solutions,
-          to testing and maintaining the final product.
-          <br />I find it particularly satisfying to see the
-          impact of my work on users and the positive difference
-          it can make in their lives.
-          <br />
-          Additionally, I am constantly learning new
-          technologies, methodologies, and best practices which
-          make the job challenging and enjoyable.`,
+    question:
+      'Can you tell us about your programming experience and background?',
+    answer:
+      'I have been studying software developer for {your answer } and have experience in programming languages such as {your tech }. I have also completed several projects such as a web scraping tool and a small game using Java."
   },
 
   {
