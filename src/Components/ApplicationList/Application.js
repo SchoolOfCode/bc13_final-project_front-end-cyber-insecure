@@ -198,11 +198,6 @@ function Application(props) {
         </div>
       </div>
       <div className="app-progress-container">
-        <div className="app-progress-bar-container">
-          <div className={progressStage}>
-            <p>{progressStageDisplay}</p>
-          </div>
-        </div>
         <div className="app-progress-button">
           <button onClick={() => handleEditRemoveProgress(props.id, props.progress)}>
             <AiOutlineMinus />
@@ -210,6 +205,11 @@ function Application(props) {
           <button onClick={() => handleEditAddProgress(props.id, props.progress)}>
             <AiOutlinePlus />
           </button>
+        </div>
+        <div className="app-progress-bar-container">
+          <div className={progressStage}>
+            <p>{progressStageDisplay}</p>
+          </div>
         </div>
       </div>
     </div>,

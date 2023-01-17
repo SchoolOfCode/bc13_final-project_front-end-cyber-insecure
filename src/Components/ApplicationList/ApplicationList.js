@@ -121,7 +121,7 @@ function ApplicationList() {
             <Popup onOpen={addingNotEditing}
               trigger={
                 <button >
-                  <AiOutlinePlus /> Application
+                  <AiOutlinePlus />
                 </button>
               }
             >
