@@ -1,0 +1,8 @@
+.PortfolioCarousel-container{
+    width: 100vw;
+    min-height: 80vh;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

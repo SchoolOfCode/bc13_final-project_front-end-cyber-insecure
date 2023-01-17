@@ -4,8 +4,36 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-height: 100vh;
+}
+.PortfolioPage-container-header{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.PortfolioPage-examples {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 90%;
+  align-items: center;
+  justify-content: center;
+}
+.PorfolioPage-example-item{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+}
+.portfolio-plain-image {
+  width: 90%;
+  height: 90%;
 }
 
+/* 
 .portfolio-main-h1 {
   margin: 2%;
 }
@@ -60,4 +88,4 @@
 
 .portfolio-h1 {
   text-align: center;
-}
+} */
