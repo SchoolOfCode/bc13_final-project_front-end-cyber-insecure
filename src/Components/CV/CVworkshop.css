@@ -1,54 +1,89 @@
-
-
 :root {
-    --primary_colour: #94c296;
-    --secondary_colour: #E5BE83;
-    
-  }
-  
+  --primary_colour: #94c296;
+  --secondary_colour: #e5be83;
+}
+
 body {
-    background-color: var(--primary_colour);
-    overflow-x: hidden;
-    
-  }
+  background-color: var(--primary_colour);
+  overflow-x: hidden;
+}
 
 /* html {
     background-color: var(--primary_colour);
 } */
 
-
-.cvworkshop-container{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    gap: 1vh;
-    margin-top: 50px;
-
+.cvworkshop-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  gap: 1vh;
+  margin-top: 50px;
+  width: 100%;
 }
 
 .cvButtonContainer {
-    gap: 50px;
-    display: flex;
+  gap: 50px;
+  display: flex;
 }
 
 .cvButtonStyles {
-    padding: 5px;
-    border-radius: 5px;
-    width: 200px;
-    height: 50px;
-    background-color: beige;
-    font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  background-color: beige;
+  font-size: 20px;
 }
 
 .cvButtonStyles:hover {
-    background-color: var(--secondary_colour);
-  }
+  background-color: var(--secondary_colour);
+}
 
+.cvExamples {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
 
-  .cvExamples  {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1vh;
-  }
+.individual-cv-examples {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 20px;
+  margin-top: 2%;
+}
+.individual-cv-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual-cv-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 800px;
+  background-color: white;
+  border-radius: 5px;
+  padding-bottom: 5px;
+}
+
+.cv-image {
+  width: 600px;
+  height: 800px;
+}
+
+.cv-p {
+  width: 400px;
+  height: 800px;
+  border-radius: 5px;
+}
+
