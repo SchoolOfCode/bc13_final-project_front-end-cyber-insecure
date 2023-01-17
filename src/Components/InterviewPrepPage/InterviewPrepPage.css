@@ -84,14 +84,28 @@ body {
   padding: 32px;
   width: 100%;
   max-width: 640px;
-  background-color: #fff;
+  background-color: #94c296;
+  border-radius: 10px;
+  border: solid 2px black;
+  /* -webkit-box-shadow: 0px 0px 5px 5px #e5be83;
+  box-shadow: 0px 0px 5px 5px #e5be83c0;
+  border:1px solid #bb8f6a; */
 }
 
-.popup-inner .close-btn {
+.close-button {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #E5BE83;
+}
+
+/* .popup-inner .close-btn {
   position: absolute;
   top: 16px;
   right: 16px;
-}
+  width: 80px;
+  padding: 20px;
+} */
 
 
 /* Media Queries */

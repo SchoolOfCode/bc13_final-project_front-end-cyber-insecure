@@ -19,7 +19,7 @@ function Card(props) {
                 <p>{props.answer}</p>
                 {/* <button className="close-btn" onClick={() => props.setTrigger(false)}>Close</button>  */}
                 <button
-                  className="button"
+                  className="close-button"
                   onClick={() => {
                     console.log('modal closed ');
                     close();
