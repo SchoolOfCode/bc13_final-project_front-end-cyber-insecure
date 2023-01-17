@@ -41,14 +41,16 @@
     width: 300px;
     min-height: 350px;
     border-radius: 5px;
-    border: 1px solid #E5BE83;
+    border: 2px solid #E5BE83;
+    /* -webkit-box-shadow: 0px 0px 5px 5px #ffa805;  */
+    box-shadow: 0px 0px 5px 5px #937e5e8a;
 }
 
 
 .dashboard-card:hover{
     transform: scale(1.1);
     -webkit-box-shadow: 0px 0px 5px 5px #e5be8382; 
-    box-shadow: 0px 0px 5px 5px #e5be8367;
+    box-shadow: 0px 0px 5px 5px #e5be83b1;
     cursor: pointer;
     color: black;
     border: 1px solid;
