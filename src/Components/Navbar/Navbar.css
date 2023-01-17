@@ -4,6 +4,10 @@
     align-items: center;
     gap: 20px;
     justify-content: center;
+    border-bottom: 1px solid #E5BE83;
+    background-color: #94c296;
+    position:sticky;
+    top:0;
 }
 .navbar-container button{
     border: none;

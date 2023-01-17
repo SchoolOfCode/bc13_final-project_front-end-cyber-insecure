@@ -71,6 +71,17 @@
   max-height: 80%;
   margin-left: 20px;
 }
+.portfolio-popup-image {
+  width: 95%;
+  height: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fbf0a2;
+  -webkit-box-shadow: 0px 0px 5px 5px #e5be83;
+  box-shadow: 0px 0px 5px 5px rgba(155, 140, 118, 0.667);
+}
 /* 
 .portfolio-main-h1 {
   margin: 2%;
