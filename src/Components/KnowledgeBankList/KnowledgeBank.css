@@ -112,3 +112,16 @@
 .knowledge-bank-text {
   font-size: large;
 }
+
+.knowledge-category-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.knowledge-buttons {
+  width: 100px;
+  border-radius: 5px;
+}
