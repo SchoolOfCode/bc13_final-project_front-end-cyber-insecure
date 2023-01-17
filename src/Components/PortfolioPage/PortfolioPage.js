@@ -49,7 +49,12 @@ function PortfolioPage(props) {
         </h1>
       </div>
       <div className="PortfolioCarousel-container">
-        <Carousel responsive={responsive} infinite={true}>
+        <Carousel
+          containerClass="PortfolioCarousel-container"
+          // centerMode={true}
+          responsive={responsive}
+          infinite={true}
+        >
           <div className="PortfolioPage-examples">
             <div className="PorfolioPage-example-item">
               {/* <div className="PorfolioPage-example-item-header">
