@@ -31,11 +31,12 @@ body {
 
 /* Individual Question Sections */
 .interviewQuestionsSection {
-  background-color: blue;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  
 }
 
 .questionsList {
@@ -128,19 +129,32 @@ body {
   border-radius: 10px;
   padding: 10px;
   height: 300px;
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .question {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+  align-items: flex-end;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 10px;
   margin: 0;
-  background-color: grey;
+  
   min-width: 100%;
   min-height: 80%;
 }
+
+.question h5 {
+  background-color: #94c296;
+  
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+}
+
 
 .answer-button {
   display: flex;
@@ -149,9 +163,11 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
-  background-color: grey;
+  
   min-width: 100%;
   min-height: 20%;
+  max-width: 100%;
+  max-height: 20%;
 }
 
 
@@ -161,5 +177,6 @@ body {
   /* background-color: red; */
   width: 1500px;
   max-width: 100%;
+  
   
 }

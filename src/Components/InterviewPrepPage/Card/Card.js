@@ -6,6 +6,7 @@ function Card(props) {
   return (
     <div className="cardStyling">
       <div className="question">
+        <h5>{props.number}</h5>
         <h3>{props.question}</h3>
       </div>
       <div className="answer-button">

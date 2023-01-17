@@ -51,7 +51,11 @@ function InterviewPrepPage(props) {
                 {interviewQuestions[0].map((item) => {
                   return (
                     <div className="react-multi-carousel-item">
-                      <Card question={item.question} answer={item.answer} />
+                      <Card
+                        question={item.question}
+                        answer={item.answer}
+                        number={item.number}
+                      />
                     </div>
                   );
                 })}
@@ -68,7 +72,11 @@ function InterviewPrepPage(props) {
                 {interviewQuestions[1].map((item) => {
                   return (
                     <div className="react-multi-carousel-item">
-                      <Card question={item.question} answer={item.answer} />
+                      <Card
+                        question={item.question}
+                        answer={item.answer}
+                        number={item.number}
+                      />
                     </div>
                   );
                 })}
@@ -85,7 +93,11 @@ function InterviewPrepPage(props) {
                 {interviewQuestions[2].map((item) => {
                   return (
                     <div className="react-multi-carousel-item">
-                      <Card question={item.question} answer={item.answer} />
+                      <Card
+                        question={item.question}
+                        answer={item.answer}
+                        number={item.number}
+                      />
                     </div>
                   );
                 })}
