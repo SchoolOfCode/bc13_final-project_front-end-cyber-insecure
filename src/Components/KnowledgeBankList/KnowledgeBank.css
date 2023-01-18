@@ -151,8 +151,13 @@
   animation: spin-anim 1.2s linear infinite;
 }
 
+@media (max-width: 1300px) {
+  .knowledge-bank-text {
+    font-size: medium;
+  }
+}
+
 @media (max-width: 1000px) { 
-  @media (max-width: 1000px) {
     .knowledge-buttons{
       font-size: smaller;
     }
@@ -309,9 +314,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      /* position: fixed; */
-      /* background: rgba(0, 0, 0, 0.834); */
-      /* z-index: 1; */
     }
   
     .spinner {
@@ -323,4 +325,3 @@
       animation: spin-anim 1.2s linear infinite;
     }
   }
-}
