@@ -29,7 +29,9 @@ export default function CVworkshop() {
   return [
     <Navbar />,
     <div className="cvworkshop-container">
+      <div className='cvworkshop-container-header'>
       <h1>Perfect your CV using our best-practice examples</h1>
+      </div>
       <div className="cvButtonContainer">
         <button onClick={handleFrontEnd} className="cvButtonStyles">
           Frontend Developer
@@ -59,7 +61,6 @@ export default function CVworkshop() {
                 <h2 className="cv-p"> Front-end CV breakdown </h2>
                 <h3>Objective / Personal Statement</h3>
                 <p className="cv-p">
-                  {' '}
                   This CV is a good example for other aspiring junior full-stack
                   developers because it demonstrates a range of experiences and
                   skills that are relevant to the role. For example, in the
@@ -87,7 +88,7 @@ export default function CVworkshop() {
                   professional setting. Overall, this CV is a good example for
                   aspiring junior full-stack developers because it demonstrates
                   a range of experiences and skills that are relevant to the
-                  role.{' '}
+                  role.
                 </p>
                 <button
                   className="cvButtonStyles"

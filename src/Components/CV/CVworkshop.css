@@ -18,13 +18,25 @@ body {
   min-height: 100vh;
   align-items: center;
   gap: 1vh;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   width: 100%;
+  min-height: 100vh;
 }
-
+.cvworkshop-container-header{
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .cvButtonContainer {
   gap: 50px;
   display: flex;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .cvButtonStyles {
@@ -53,28 +65,47 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80%;
+width: 90%;
+  min-height: 100vh;
   gap: 20px;
-  margin-top: 2%;
+  /* margin-top: 2%; */
 }
 .individual-cv-left {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 55%;
+  height: 100%;
 }
 
 .individual-cv-right {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 400px;
+  justify-content: space-around;
+  width: 40%;
+  /* height: 100%; */
   height: 800px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.36);
   border-radius: 5px;
   padding-bottom: 5px;
+  text-align: left;
+  gap: 1%;
 }
+/* .individual-cv-right h3{
+  background-color: bisque;
+  width: 95%;
+  text-align: center;
+  border-bottom: 1px solid #e5be83;
+
+}
+.individual-cv-right p{
+  background-color: bisque;
+  width: 95%;
+  text-align: center;
+  border-bottom: 1px solid #e5be83;
+} */
 
 .card-container {
   display: flex;
