@@ -79,7 +79,9 @@ export default function KnowledgeBankList() {
     <Navbar />,
     <div className='knowledge-bank-container'>
       <div className='knowledge-bank-header'>
-        <h1>Refresh your knowledge using our comprehensive knowledge bank</h1>
+        <div className='knowledge-bank-header-text'>
+          <h1>Refresh your knowledge using our comprehensive knowledge bank</h1>
+        </div>
         <div className='input-container'>
           <input value={input} onChange={handleChange} />
           <button className='knowledge-buttons' onClick={getByTitle}>Search</button>
