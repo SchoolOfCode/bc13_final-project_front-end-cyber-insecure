@@ -51,7 +51,7 @@ export default function CVworkshop() {
             }
             {CVonScreen === fullstackPortfolio &&
               <div className='individual-cv-right'>
-                <p className='cv-p'> FULLSTACK Placeholder texts (why the CV is good) </p>
+                <p className='cv-p'> FULLSTACK Placeholder text (why the CV is good) </p>
                 <button className="cvButtonStyles" onClick={() => window.open(require('../../CV-pdfs/fullstackcv.pdf'), '_none')}>View and download</button>
               </div>
             }
