@@ -92,5 +92,11 @@ height: 100%;
   }
 }
 
+@media (max-width: 950px) {
+  #add-application-button{
+    font-size: smaller;
+    white-space: nowrap;
+  }
+}
 
 

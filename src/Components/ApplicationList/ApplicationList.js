@@ -122,8 +122,8 @@ function ApplicationList() {
           <div className="app-buttons-left">
             <Popup onOpen={addingNotEditing}
               trigger={
-                <button >
-                  <AiOutlinePlus />
+                <button id="add-application-button">
+                + Application
                 </button>
               }
             >
