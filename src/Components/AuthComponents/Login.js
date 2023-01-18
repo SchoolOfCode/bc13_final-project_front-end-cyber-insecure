@@ -32,7 +32,7 @@ export default function Login() {
         <h1> deVault </h1>
         <p>
           Polish your Portfolio. Cultivate your CV. Organize and optimize your
-          job search through. All in one place.
+          job search. All in one place.
         </p>
       </div>
       <div className="login-container">

@@ -15,6 +15,15 @@ function ApplicationList() {
   const [displaying, setDisplaying] = useState()
   const [applications, setApplications] = useState([])
   const { currentUser } = useAuth();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
 
   // useEffect calls below getAllApplications function 
   useEffect(() => {
@@ -25,7 +34,7 @@ function ApplicationList() {
   function addingNotEditing() {
     setAdding(true);
   }
-  
+
 
   // GET request for all applications for specific email address logged in
   async function getAllApplications() {
@@ -76,37 +85,37 @@ function ApplicationList() {
 
     } if (e.target.value === "Research Stage") {
       let display = await getAllApplicationsForFilter();
-      display = display.filter(application => {return application.progress === 1})
+      display = display.filter(application => { return application.progress === 1 })
       setApplications(display);
 
     } if (e.target.value === "Ready to Apply") {
       let display = await getAllApplicationsForFilter();
-      display = display.filter(application => {return application.progress === 2})
+      display = display.filter(application => { return application.progress === 2 })
       setApplications(display)
 
     } if (e.target.value === "Applied") {
       let display = await getAllApplicationsForFilter();
-      display = display.filter(application => {return application.progress === 3})
+      display = display.filter(application => { return application.progress === 3 })
       setApplications(display)
 
     } if (e.target.value === "Interview Date") {
       let display = await getAllApplicationsForFilter();
-      display = display.filter(application => {return application.progress === 4})
+      display = display.filter(application => { return application.progress === 4 })
       setApplications(display)
 
     } if (e.target.value === "Initial Interview Done") {
       let display = await getAllApplicationsForFilter();
-      display = display.filter(application => {return application.progress === 5})
+      display = display.filter(application => { return application.progress === 5 })
       setApplications(display)
 
     } if (e.target.value === "Second Interview Done") {
       let display = await getAllApplicationsForFilter();
-      display = display.filter(application => {return application.progress === 6})
+      display = display.filter(application => { return application.progress === 6 })
       setApplications(display)
 
     } if (e.target.value === "Completed") {
       let display = await getAllApplicationsForFilter();
-      display = display.filter(application => {return application.progress === 7})
+      display = display.filter(application => { return application.progress === 7 })
       setApplications(display)
     }
   }
@@ -123,7 +132,7 @@ function ApplicationList() {
             <Popup onOpen={addingNotEditing}
               trigger={
                 <button id="add-application-button">
-                + Application
+                  + Application
                 </button>
               }
             >
@@ -161,12 +170,12 @@ function ApplicationList() {
           </div>
         </div>
       </div>
-      {applications.length < 1 &&
-         <div className="loader-container">
-         <div className="spinner"></div>
-       </div>
-      }
-      {applications &&
+
+      {loading ? (
+        <div className="loader-container">
+          <div className="spinner"></div>
+        </div>
+      ) : (
         <ul className="applications-main">
           {applications.map((app) => {
             return (
@@ -188,7 +197,7 @@ function ApplicationList() {
             );
           })}
         </ul>
-      }
+      )}
     </div>,
   ];
 }
