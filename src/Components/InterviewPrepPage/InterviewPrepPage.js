@@ -39,7 +39,7 @@ function InterviewPrepPage(props) {
     <Navbar />,
     <div className="interviewPrepPage_container">
       <div className='interviewPrepPage_container-header'>
-      <h1>Interview Preparation</h1>
+      <h1>Become job-ready by following our interview preparation advice </h1>
       <h2>Key Interview Questions and Answers</h2>
       </div>
       <div className="allQuestions_container">

@@ -7,7 +7,7 @@
   width: 100%;
   text-align: center;
 }
-.applications-header{
+.applications-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,14 +16,14 @@
   min-height: 15vh;
   gap: 2vh;
 }
-.applications-header p{
+.applications-header p {
   border-bottom: 1px solid;
 }
-.applications-title{
-  width: 100%;
+.applications-title {
   height: 80%;
+  border-bottom: 1px solid;
 }
-.applications-buttons{
+.applications-buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -31,7 +31,7 @@
   justify-content: space-between;
   height: 20%;
 }
-.applications-buttons button{
+.applications-buttons button {
   background-color: #bb8f6a;
   border: none;
   border-radius: 5px;
@@ -42,15 +42,15 @@
   -webkit-box-shadow: 0px 0px 5px 5px #e5be83;
   box-shadow: 0px 0px 5px 5px #e5be83d4;
 }
-.applications-buttons select{
+.applications-buttons select {
   border-radius: 5px;
 }
-.app-buttons-right{
-display: flex;
-gap: 5px;
-height: 100%;
+.app-buttons-right {
+  display: flex;
+  gap: 5px;
+  height: 100%;
 }
-.app-buttons-left{
+.app-buttons-left {
   display: flex;
   height: 100%;
 }
@@ -61,7 +61,6 @@ height: 100%;
   width: 100%;
   gap: 1vh;
   padding: 0;
-
 }
 .loader-container {
   width: 100%;
@@ -69,34 +68,29 @@ height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: fixed; */
-  /* background: rgba(0, 0, 0, 0.834); */
-  /* z-index: 1; */
 }
 
 .spinner {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-color: #bb8f6a transparent #bb8f6a transparent;
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
 }
 
 @keyframes spin-anim {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @media (max-width: 950px) {
-  #add-application-button{
+  #add-application-button {
     font-size: smaller;
     white-space: nowrap;
   }
 }
-
-

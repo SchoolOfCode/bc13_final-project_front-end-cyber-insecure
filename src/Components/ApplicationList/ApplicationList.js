@@ -116,7 +116,7 @@ function ApplicationList() {
     <div className="applications-container">
       <div className="applications-header">
         <div className="applications-title">
-          <h1>My Applications</h1>
+          <h1>Keep on top of your job applications with our tracker </h1>
         </div>
         <div className="applications-buttons">
           <div className="app-buttons-left">

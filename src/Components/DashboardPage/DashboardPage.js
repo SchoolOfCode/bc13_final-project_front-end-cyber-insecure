@@ -11,31 +11,31 @@ import quiz from '../../Images/quiz.png'
 
 
 export default function DashboardPage() {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const navigateApplications = () => {
-    navigate('/applications', { replace: true });
-  };
+    const navigateApplications = () => {
+        navigate('/applications', { replace: true });
+    };
 
-  const navigateInterviewPrep = () => {
-    navigate('/interviewprep', { replace: true });
-  };
+    const navigateInterviewPrep = () => {
+        navigate('/interviewprep', { replace: true });
+    };
 
-  const navigatePortfolio = () => {
-    navigate('/portfolio', { replace: true });
-  };
+    const navigatePortfolio = () => {
+        navigate('/portfolio', { replace: true });
+    };
 
-  const navigateCV = () => {
-    navigate('/cv-workshop', { replace: true });
-  };
+    const navigateCV = () => {
+        navigate('/cv-workshop', { replace: true });
+    };
 
-  const navigateKnowledgebank = () => {
-    navigate('/knowledge-bank', { replace: true });
-  };
+    const navigateKnowledgebank = () => {
+        navigate('/knowledge-bank', { replace: true });
+    };
 
-  const navigateQuizzes = () => {
-    navigate('/quizzes', { replace: true });
-  };
+    const navigateQuizzes = () => {
+        navigate('/quizzes', { replace: true });
+    };
 
     return [
         <Navbar />,
@@ -122,7 +122,7 @@ export default function DashboardPage() {
                         </div>
                     </a>
                 </div>
-      </div>
-    </div>,
-  ];
+            </div>
+        </div>,
+    ];
 }

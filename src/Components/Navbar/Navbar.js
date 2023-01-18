@@ -2,10 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import { useState } from 'react';
-// import ReorderIcon from "material-ui/icons/Reorder"
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useAuth } from '../contexts/AuthContext';
 import { Alert } from 'react-bootstrap';
+import deVault from '../../Images/deVault.png'
 
 export default function Navbar() {
   const [hamburger, setHamburger] = useState(true);
@@ -61,7 +61,7 @@ export default function Navbar() {
           <GiHamburgerMenu />
         </button>
       </div>
-      <h1>DeVault</h1>
+      <img className='devault-icon' src={deVault} alt=''/>
       <div className={hamburger ? 'navbar-links' : 'hamburger-open'}>
         <button onClick={navigateHome}> Dashboard </button>
         <button onClick={navigateApplications}> My applications</button>

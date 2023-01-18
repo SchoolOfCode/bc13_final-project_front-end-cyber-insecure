@@ -1,12 +1,11 @@
 /* CSS Variables */
 :root {
   --primary_colour: #94c296;
-  --secondary_colour: #E5BE83;
+  --secondary_colour: #e5be83;
 }
 
 body {
   background-color: var(--primary_colour);
-  
 }
 
 /* Page Container */
@@ -20,13 +19,17 @@ body {
   width: 100vw;
   min-height: 100vh;
 }
-.interviewPrepPage_container-header{
+.interviewPrepPage_container-header {
   width: 100%;
   height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+.interviewPrepPage_container-header h1 {
+  border-bottom: 1px solid;
 }
 /* Questions Section */
 .allQuestions_container {
@@ -47,12 +50,11 @@ body {
   width: 100%;
   height: 33%;
   min-height: 500px;
-  
 }
-#card-carousel{
+#card-carousel {
   height: 400px;
 }
-.interviewQuestionsSection h2{
+.interviewQuestionsSection h2 {
   border-bottom: 1px solid #bb8f6a;
 }
 
@@ -69,18 +71,15 @@ body {
 
 /* Individual Questions Styling */
 
-
 /* Answer Example Button */
 .exampleButton {
   padding: 3px;
   border-radius: 5px;
-  
 }
 
 .exampleButton:hover {
   background-color: var(--primary_colour);
 }
-
 
 /* Pop Up CSS Section */
 
@@ -94,9 +93,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-
 
 .popup-inner {
   position: relative;
@@ -118,7 +115,7 @@ body {
   width: 80px;
   height: 30px;
   border-radius: 5px;
-  background-color: #E5BE83;
+  background-color: #e5be83;
 }
 
 .close-button:hover {
@@ -133,23 +130,22 @@ body {
   padding: 20px;
 } */
 
-
 /* Media Queries */
-
 
 .cardStyling {
   background-color: var(--secondary_colour);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:flex-start;
+  justify-content: flex-start;
   font-size: 1.2em;
   /* margin-right: 20px; */
   border-radius: 10px;
   padding: 7px;
   height: 300px;
   max-width: 400px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   margin: 20px;
 }
 
@@ -161,20 +157,19 @@ body {
   text-align: center;
   padding: 10px;
   margin: 0;
-  
+
   min-width: 100%;
   min-height: 80%;
 }
 
 .question h5 {
   background-color: #94c296;
-  
+
   width: 25px;
   height: 25px;
   border-radius: 50%;
   /* box-shadow: 0px 0px 5px 5px #937e5e8a; */
 }
-
 
 .answer-button {
   display: flex;
@@ -183,15 +178,12 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
-  
+
   min-width: 100%;
   min-height: 20%;
   max-width: 100%;
   max-height: 20%;
 }
-
-
-
 
 .carousel {
   /* background-color: red; */
@@ -203,17 +195,14 @@ body {
 }
 
 @media (max-width: 900px) {
-
-.cardStyling h3{
-  font-size: smaller;
-}
-.cardStyling button{
-  font-size: small;
-}
-.cardStyling{
-  min-height: 200px;
-  max-width: 300px;
-}
-
-
+  .cardStyling h3 {
+    font-size: smaller;
+  }
+  .cardStyling button {
+    font-size: small;
+  }
+  .cardStyling {
+    min-height: 200px;
+    max-width: 300px;
+  }
 }
