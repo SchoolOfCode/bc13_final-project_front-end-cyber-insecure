@@ -1,7 +1,12 @@
-import { Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./DashboardPage.css";
+import cv from '../../Images/cv.png'
+import applications from '../../Images/applications.png'
+import interviewprep from '../../Images/interviewprep.png'
+import knowledge from '../../Images/knowledge.png'
+import portfolio from '../../Images/portfolio.png'
+import quiz from '../../Images/quiz.png'
 
 export default function DashboardPage() {
     const navigate = useNavigate();
@@ -42,7 +47,7 @@ export default function DashboardPage() {
                         <h1> Interview Prep </h1>
                     </div>
                     <div className="dashboard-card-main">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+                        <img src={interviewprep} />
                     </div>
                     <div className="dashboard-card-footer">
                         <p>
@@ -57,7 +62,7 @@ export default function DashboardPage() {
                         <h1> My applications </h1>
                     </div>
                     <div className="dashboard-card-main">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+                        <img src={applications} />
                     </div>
                     <div className="dashboard-card-footer">
                         <p>Track all of your job applications easily and in one place </p>
@@ -69,7 +74,7 @@ export default function DashboardPage() {
                         <h1> Perfect your portfolio </h1>
                     </div>
                     <div className="dashboard-card-main">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+                        <img src={portfolio} />
                     </div>
                     <div className="dashboard-card-footer">
                         <p>Learn all you need to perfect your portfolio before you apply</p>
@@ -84,7 +89,7 @@ export default function DashboardPage() {
                             <h1> Knowledge Bank </h1>
                         </div>
                         <div className="dashboard-card-main">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+                            <img src={knowledge} />
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our knowledge bank to sharpen up on particular topics</p>
@@ -96,7 +101,7 @@ export default function DashboardPage() {
                             <h1> CV Workshop </h1>
                         </div>
                         <div className="dashboard-card-main">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+                            <img src={cv} />
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our CV tips to make yours stand out from the crowd</p>
@@ -108,7 +113,7 @@ export default function DashboardPage() {
                             <h1>Quizzes</h1>
                         </div>
                         <div className="dashboard-card-main">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+                            <img src={quiz} />
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our wide range of quizzes to master your understanding</p>
