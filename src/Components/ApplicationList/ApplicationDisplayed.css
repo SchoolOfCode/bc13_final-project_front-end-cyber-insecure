@@ -59,7 +59,7 @@
 .AppDisplayed-top-section-bottom{
     width: 100%;
     height: 77%;
-    overflow: scroll;
+    overflow: auto;
 }
 .AppDisplayed-main{
     width: 95%;
@@ -82,7 +82,7 @@
 .AppDisplayed-main-section-bottom{
     max-height: 85%;
     width: 100%;
-    overflow: scroll;
+    overflow: auto;
 }
 .AppDisplayed-bottom{
     width: 100%;

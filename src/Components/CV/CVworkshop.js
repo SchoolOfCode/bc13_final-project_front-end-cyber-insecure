@@ -62,13 +62,12 @@ export default function CVworkshop() {
                   <h3>Objective / Personal Statement</h3>
                   <p className="cv-p">
                     This CV is a good example for other aspiring junior
-                    full-stack developers because it demonstrates a range of
+                    front-end developers because it demonstrates a range of
                     experiences and skills that are relevant to the role. For
-                    example, in the objective/personal statement, the applicant
-                    mentions their passion for coding, their experience
+                    example, the applicant mentions their passion for coding, their experience
                     attending a coding bootcamp, and how they are able to
                     collaborate with senior developers and take on extra
-                    responsibilities when necessary.
+                    responsibility.
                   </p>
                 </div>
 
@@ -76,10 +75,10 @@ export default function CVworkshop() {
                   <h3>Skills</h3>
                   <p className="cv-p">
                     In terms of skills, the applicant includes a range of
-                    technical skills such as HTML, CSS, React, Node.js,
+                    technical skills such as HTML, CSS, React,
                     Mocha/Chai, Jest, and GIT/GitHub. This shows that they have
                     a good understanding of the tools and technologies used in
-                    full-stack development.
+                    front-end development.
                   </p>
                 </div>
 
@@ -87,7 +86,7 @@ export default function CVworkshop() {
                   <h3>Work Experience</h3>
                   <p className="cv-p">
                     The work experience section details two specific positions
-                    the applicant held that are relevant to full-stack
+                    the applicant held that are relevant to front-end
                     development. These include tasks such as setting up a
                     testing framework, working in an agile environment,
                     reviewing code, and developing user interfaces. This shows
