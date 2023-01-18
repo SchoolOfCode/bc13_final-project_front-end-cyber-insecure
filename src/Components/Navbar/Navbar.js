@@ -1,67 +1,68 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./Navbar.css";
-import { useState } from "react";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Navbar.css';
+import { useState } from 'react';
 // import ReorderIcon from "material-ui/icons/Reorder"
-import { GiHamburgerMenu } from "react-icons/gi"
-import { useAuth } from "../contexts/AuthContext";
-import { Alert } from "react-bootstrap";
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { useAuth } from '../contexts/AuthContext';
+import { Alert } from 'react-bootstrap';
 
 export default function Navbar() {
   const [hamburger, setHamburger] = useState(true);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const { logOut } = useAuth();
 
   const navigate = useNavigate();
 
-      async function handleLogout() {
-        setError("");
+  async function handleLogout() {
+    setError('');
 
-        try {
-            await logOut();
-            navigate("/login", { replace: true });
-        } catch {
-            setError("Failed to log out");
-        }
+    try {
+      await logOut();
+      navigate('/login', { replace: true });
+    } catch {
+      setError('Failed to log out');
     }
+  }
 
   const navigateHome = () => {
-    navigate("/", { replace: true });
+    navigate('/', { replace: true });
   };
 
   const navigateApplications = () => {
-    navigate("/applications", { replace: true });
+    navigate('/applications', { replace: true });
   };
 
   const navigateInterviewPrep = () => {
-    navigate("/interviewprep", { replace: true });
+    navigate('/interviewprep', { replace: true });
   };
 
   const navigateCV = () => {
-    navigate("/cv-workshop", { replace: true });
+    navigate('/cv-workshop', { replace: true });
   };
 
   const navigateKnowledgebank = () => {
-    navigate("/knowledge-bank", { replace: true });
+    navigate('/knowledge-bank', { replace: true });
   };
 
   const navigateQuizzes = () => {
-    navigate("/quizzes", { replace: true });
+    navigate('/quizzes', { replace: true });
   };
 
   const navigatePortfolio = () => {
-    navigate("/portfolio", { replace: true });
+    navigate('/portfolio', { replace: true });
   };
 
   return (
-    <div className={hamburger ? "navbar-container" : "navbar-open"}>
-    {error && <Alert variant="danger">{error}</Alert>}
+    <div className={hamburger ? 'navbar-container' : 'navbar-open'}>
+      {error && <Alert variant="danger">{error}</Alert>}
       <div className="hamburger">
         <button onClick={() => setHamburger(!hamburger)} id="hamburger">
           <GiHamburgerMenu />
         </button>
       </div>
-      <div className={hamburger ? "navbar-links" : "hamburger-open"}>
+      <h1>DeVault</h1>
+      <div className={hamburger ? 'navbar-links' : 'hamburger-open'}>
         <button onClick={navigateHome}> Dashboard </button>
         <button onClick={navigateApplications}> My applications</button>
         <button onClick={navigateInterviewPrep}> Interview Prep</button>
