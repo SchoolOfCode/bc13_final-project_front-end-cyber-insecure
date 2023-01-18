@@ -9,6 +9,15 @@ export default function KnowledgeBankList() {
 
   const [knowledge, setKnowledge] = useState([])
   const [input, setInput] = useState('')
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
 
   function handleChange(e) {
     setInput(e.target.value);
@@ -69,24 +78,35 @@ export default function KnowledgeBankList() {
   return [
     <Navbar />,
     <div className='knowledge-bank-container'>
-      <h1>Refresh your knowledge using our comprehensive knowledge bank</h1>
-      <div className='input-container'>
-        <input value={input} onChange={handleChange} />
-        <button className='knowledge-buttons' onClick={getByTitle}>Search</button>
+      <div className='knowledge-bank-header'>
+        <div className='knowledge-bank-header-text'>
+          <h1>Refresh your knowledge using our comprehensive knowledge bank</h1>
+        </div>
+        <div className='input-container'>
+          <input value={input} onChange={handleChange} />
+          <button className='knowledge-buttons' onClick={getByTitle}>Search</button>
+        </div>
+        <div className='knowledge-category-buttons'>
+          <button className='knowledge-buttons' onClick={showAll}> Show all </button>
+          <button className='knowledge-buttons' onClick={showGeneral}> General </button>
+          <button className='knowledge-buttons' onClick={showJS}> JavaScript </button>
+          <button className='knowledge-buttons' onClick={showHTML}> HTML </button>
+          <button className='knowledge-buttons' onClick={showCSS}> CSS </button>
+          <button className='knowledge-buttons' onClick={showReact}> React </button>
+        </div>
       </div>
-      <div className='knowledge-category-buttons'>
-        <button className='knowledge-buttons' onClick={showAll}> Show all </button>
-        <button className='knowledge-buttons' onClick={showGeneral}> General </button>
-        <button className='knowledge-buttons' onClick={showJS}> JavaScript </button>
-        <button className='knowledge-buttons' onClick={showHTML}> HTML </button>
-        <button className='knowledge-buttons' onClick={showCSS}> CSS </button>
-        <button className='knowledge-buttons' onClick={showReact}> React </button>
-      </div>
-      <ul className="object-list-container">
-        {knowledge.map((item) => {
-          return (<KnowledgeBankItem key={item.id} title={item.title} definition={item.definition} image={item.image} article_link_one={item.article_link_one} article_link_two={item.article_link_two} video_link={item.video_link} />)
-        })}
-      </ul>
+      {loading ? (
+        <div className="loader-container">
+          <div className="spinner"></div>
+        </div>
+      ) : (
+        <ul className="object-list-container">
+          {knowledge.map((item) => {
+            return (<KnowledgeBankItem key={item.id} title={item.title} definition={item.definition} image={item.image} article_link_one={item.article_link_one} article_link_two={item.article_link_two} video_link={item.video_link} />)
+          })}
+        </ul>
+      )}
     </div>
+
   ]
 }
