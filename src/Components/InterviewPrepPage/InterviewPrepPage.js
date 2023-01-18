@@ -14,14 +14,14 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 5,
+    items: 4,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1150, min: 464 },
     items: 2,
   },
   mobile: {
@@ -38,19 +38,19 @@ function InterviewPrepPage(props) {
   return [
     <Navbar />,
     <div className="interviewPrepPage_container">
+      <div className='interviewPrepPage_container-header'>
       <h1>Interview Preparation</h1>
-      <br />
       <h2>Key Interview Questions and Answers</h2>
-      <br />
+      </div>
       <div className="allQuestions_container">
         <section className="interviewQuestionsSection">
           <h2>General Interview Questions</h2>
           <div className="questionsList">
             <div className="carousel">
-              <Carousel responsive={responsive} infinite={true}>
+              <Carousel responsive={responsive} infinite={true} centerMode={true}>
                 {interviewQuestions[0].map((item) => {
                   return (
-                    <div className="react-multi-carousel-item">
+                    <div className="react-multi-carousel-item" id="card-carousel">
                       <Card
                         question={item.question}
                         answer={item.answer}
@@ -68,10 +68,10 @@ function InterviewPrepPage(props) {
           <h2>Technical Questions</h2>
           <div className="questionsList">
             <div className="carousel">
-              <Carousel responsive={responsive} infinite={true}>
+              <Carousel responsive={responsive} infinite={true} centerMode={true}>
                 {interviewQuestions[1].map((item) => {
                   return (
-                    <div className="react-multi-carousel-item">
+                    <div className="react-multi-carousel-item" id="card-carousel">
                       <Card
                         question={item.question}
                         answer={item.answer}
@@ -89,10 +89,10 @@ function InterviewPrepPage(props) {
           <h2>Questions to ask after the Interview</h2>
           <div className="questionsList">
             <div className="carousel">
-              <Carousel responsive={responsive} infinite={true}>
+              <Carousel responsive={responsive} infinite={true} centerMode={true}>
                 {interviewQuestions[2].map((item) => {
                   return (
-                    <div className="react-multi-carousel-item">
+                    <div className="react-multi-carousel-item" id="card-carousel">
                       <Card
                         question={item.question}
                         answer={item.answer}
