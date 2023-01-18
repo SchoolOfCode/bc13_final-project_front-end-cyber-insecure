@@ -162,7 +162,9 @@ function ApplicationList() {
         </div>
       </div>
       {applications.length < 1 &&
-        <h1>No current applications</h1>
+         <div className="loader-container">
+         <div className="spinner"></div>
+       </div>
       }
       {applications &&
         <ul className="applications-main">
