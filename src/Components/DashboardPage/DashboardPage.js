@@ -31,10 +31,12 @@ export default function DashboardPage() {
 
 
     async function apply() {
+        let count = 0
         let data = await getAllApplications()
         for (let i = 0; i < data.length; i++) {
             if (data[i].progress === 2) {
-                setReadyToApply(readyToApply + 1)
+                count++
+                setReadyToApply(count)
             }
         }
     }
