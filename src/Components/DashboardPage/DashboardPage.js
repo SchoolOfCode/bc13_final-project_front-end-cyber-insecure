@@ -9,8 +9,44 @@ import knowledge from '../../Images/knowledge.png'
 import portfolio from '../../Images/portfolio.png'
 import quiz from '../../Images/quiz.png'
 
+import { useAuth } from "../contexts/AuthContext";
+import React, { useState, useEffect } from "react";
+
+const url = process.env.REACT_APP_BACKEND_URL
+
 
 export default function DashboardPage() {
+
+    const { currentUser } = useAuth();
+    const [currentApp, setCurrentApp] = useState([])
+    const [readyToApply, setReadyToApply] = useState(0)
+
+    console.log("This is our current APP", currentApp);
+
+    // useEffect calls below getAllApplications function 
+  useEffect(() => {
+    getAllApplications()
+    apply()
+  }, [])
+
+
+  function apply (){
+    getAllApplications()
+    console.log("This is the test",currentApp);
+    for (let i = 0; i<currentApp.length; i++){
+        if (currentApp[i].progress === 2){
+            setReadyToApply(readyToApply + 1)
+        }
+    }
+  }
+
+  // GET request for all applications for specific email address logged in
+  async function getAllApplications() {
+    const titleObject = await fetch(`${url}/api/jobApplications/${currentUser.email}`);
+    let data = await titleObject.json();
+    setCurrentApp(data.payload);
+  }
+
     const navigate = useNavigate();
 
     const navigateApplications = () => {
@@ -37,6 +73,9 @@ export default function DashboardPage() {
         navigate('/quizzes', { replace: true });
     };
 
+
+
+
     return [
         <Navbar />,
         <div className="dashboard-page-cont">
@@ -49,7 +88,8 @@ export default function DashboardPage() {
                         <h1> Interview Prep </h1>
                     </div>
                     <div className="dashboard-card-main">
-                        <img src={interviewprep} />
+                        <img className="dashboard-cards-icons" src={interviewprep} />
+                        <p className="dashboard-cards-text">This is our text </p>
                     </div>
                     <div className="dashboard-card-footer">
                         <p>
@@ -64,8 +104,10 @@ export default function DashboardPage() {
                         <h1> My applications </h1>
                     </div>
                     <div className="dashboard-card-main">
-                        <img src={applications} />
+                        <img className="dashboard-cards-icons" src={applications} />
+                        <p className="dashboard-cards-text">You have {currentApp.length} applications and you are ready to apply for {readyToApply} jobs!</p>
                     </div>
+
                     <div className="dashboard-card-footer">
                         <p>Track all of your job applications easily and in one place </p>
                     </div>
@@ -76,7 +118,8 @@ export default function DashboardPage() {
                         <h1> Perfect your portfolio </h1>
                     </div>
                     <div className="dashboard-card-main">
-                        <img src={portfolio} />
+                        <img className="dashboard-cards-icons" src={portfolio} />
+                        <p className="dashboard-cards-text">This is our text </p>
                     </div>
                     <div className="dashboard-card-footer">
                         <p>Learn all you need to perfect your portfolio before you apply</p>
@@ -91,7 +134,8 @@ export default function DashboardPage() {
                             <h1> Knowledge Bank </h1>
                         </div>
                         <div className="dashboard-card-main">
-                            <img src={knowledge} />
+                            <img className="dashboard-cards-icons" src={knowledge} />
+                            <p className="dashboard-cards-text">This is our text </p>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our knowledge bank to sharpen up on particular topics</p>
@@ -103,7 +147,8 @@ export default function DashboardPage() {
                             <h1> CV Workshop </h1>
                         </div>
                         <div className="dashboard-card-main">
-                            <img src={cv} />
+                            <img className="dashboard-cards-icons" src={cv} />
+                            <p className="dashboard-cards-text">This is our text </p>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our CV tips to make yours stand out from the crowd</p>
@@ -115,7 +160,8 @@ export default function DashboardPage() {
                             <h1>Quizzes</h1>
                         </div>
                         <div className="dashboard-card-main">
-                            <img src={quiz} />
+                            <img className="dashboard-cards-icons" src={quiz} />
+                            <p className="dashboard-cards-text">This is our text </p>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our wide range of quizzes to master your understanding</p>

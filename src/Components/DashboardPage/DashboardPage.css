@@ -55,6 +55,31 @@
     color: black;
     border: 1px solid;
     border-color: #FBF0A2;
+
+    transition: all 0.5s;
+    background: rgba(182, 182, 182, 0.9);
+
+    
+}
+
+.dashboard-card:hover .dashboard-cards-icons{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.dashboard-cards-text{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    width: 90%;
+    opacity: 0;
+}
+
+.dashboard-card:hover .dashboard-cards-text{
+    opacity: 100;
+    transition: all 0.5s;
 }
 
 .dashboard-card img {
@@ -77,6 +102,14 @@
     width: 100%;
     height: 40%;
 }
+
+/* .dashboard-card-main:hover{
+    width: 100%;
+    height: 40%;
+    opacity: 0;
+
+} */
+
 .dashboard-card-footer{
     display: flex;
     flex-direction: column;
@@ -84,6 +117,11 @@
     justify-content: center;
     width: 90%;
     height: 40%;
+}
+
+.dashboard-card:hover .dashboard-card-footer{
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 .dashboard-other-container{
