@@ -20,32 +20,38 @@ export default function DashboardPage() {
     const { currentUser } = useAuth();
     const [currentApp, setCurrentApp] = useState([])
     const [readyToApply, setReadyToApply] = useState(0)
-
-    console.log("This is our current APP", currentApp);
+    const [quizzesCompleted, setQuizzesCompleted] = useState(0)
 
     // useEffect calls below getAllApplications function 
-  useEffect(() => {
-    getAllApplications()
-    apply()
-  }, [])
+    useEffect(() => {
+        getAllApplications()
+        apply()
+        checkEmailForQuiz()
+    }, [])
 
 
-  function apply (){
-    getAllApplications()
-    console.log("This is the test",currentApp);
-    for (let i = 0; i<currentApp.length; i++){
-        if (currentApp[i].progress === 2){
-            setReadyToApply(readyToApply + 1)
+    async function apply() {
+        let data = await getAllApplications()
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].progress === 2) {
+                setReadyToApply(readyToApply + 1)
+            }
         }
     }
-  }
 
-  // GET request for all applications for specific email address logged in
-  async function getAllApplications() {
-    const titleObject = await fetch(`${url}/api/jobApplications/${currentUser.email}`);
-    let data = await titleObject.json();
-    setCurrentApp(data.payload);
-  }
+    // GET request for all applications for specific email address logged in
+    async function getAllApplications() {
+        const titleObject = await fetch(`${url}/api/jobApplications/${currentUser.email}`);
+        let data = await titleObject.json();
+        setCurrentApp(data.payload);
+        return data.payload;
+    }
+
+    async function checkEmailForQuiz() {
+        const titleObject = await fetch(`${url}/api/quizzes/${currentUser.email}`);
+        let data = await titleObject.json();
+        setQuizzesCompleted(data.payload[0].completed)
+    }
 
     const navigate = useNavigate();
 
@@ -89,7 +95,7 @@ export default function DashboardPage() {
                     </div>
                     <div className="dashboard-card-main">
                         <img className="dashboard-cards-icons" src={interviewprep} />
-                        <p className="dashboard-cards-text">This is our text </p>
+                        <p className="dashboard-cards-text">Learn how to answer general questions, technical questions and ask effective questions to employers.  </p>
                     </div>
                     <div className="dashboard-card-footer">
                         <p>
@@ -105,7 +111,7 @@ export default function DashboardPage() {
                     </div>
                     <div className="dashboard-card-main">
                         <img className="dashboard-cards-icons" src={applications} />
-                        <p className="dashboard-cards-text">You have {currentApp.length} applications and you are ready to apply for {readyToApply} jobs!</p>
+                        <p className="dashboard-cards-text">You have {currentApp.length} job application(s) and you're ready to apply for {readyToApply}.</p>
                     </div>
 
                     <div className="dashboard-card-footer">
@@ -119,7 +125,7 @@ export default function DashboardPage() {
                     </div>
                     <div className="dashboard-card-main">
                         <img className="dashboard-cards-icons" src={portfolio} />
-                        <p className="dashboard-cards-text">This is our text </p>
+                        <p className="dashboard-cards-text"> Use our annotated examples of GitHub pages and portfolio sites for inspiration. </p>
                     </div>
                     <div className="dashboard-card-footer">
                         <p>Learn all you need to perfect your portfolio before you apply</p>
@@ -135,7 +141,7 @@ export default function DashboardPage() {
                         </div>
                         <div className="dashboard-card-main">
                             <img className="dashboard-cards-icons" src={knowledge} />
-                            <p className="dashboard-cards-text">This is our text </p>
+                            <p className="dashboard-cards-text">Brush up on a variety of topics, including: JavaScript, HTML, CSS and much more. </p>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our knowledge bank to sharpen up on particular topics</p>
@@ -148,7 +154,7 @@ export default function DashboardPage() {
                         </div>
                         <div className="dashboard-card-main">
                             <img className="dashboard-cards-icons" src={cv} />
-                            <p className="dashboard-cards-text">This is our text </p>
+                            <p className="dashboard-cards-text">Look at our annotated CV examples across job roles to improve your job chances. </p>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our CV tips to make yours stand out from the crowd</p>
@@ -161,7 +167,7 @@ export default function DashboardPage() {
                         </div>
                         <div className="dashboard-card-main">
                             <img className="dashboard-cards-icons" src={quiz} />
-                            <p className="dashboard-cards-text">This is our text </p>
+                            <p className="dashboard-cards-text">Quizzes completed: {quizzesCompleted}</p>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our wide range of quizzes to master your understanding</p>

@@ -55,11 +55,9 @@
     color: black;
     border: 1px solid;
     border-color: #FBF0A2;
-
     transition: all 0.5s;
-    background: rgba(182, 182, 182, 0.9);
-
-    
+    background: rgba(231, 230, 230, 0.9);
+    opacity: 80%;
 }
 
 .dashboard-card:hover .dashboard-cards-icons{
