@@ -3,6 +3,9 @@ import { GiH2O } from 'react-icons/gi';
 import Navbar from '../Navbar/Navbar'
 import { questionsJavaScript, questionsReact, placeholderQuestion, questionsCSS, questionsTypeScript, questionsPython, questionsNode } from './questions'
 import './Quizzes.css'
+import { useAuth } from "../contexts/AuthContext";
+
+const url = process.env.REACT_APP_BACKEND_URL
 
 export default function Quizzes() {
 
@@ -12,6 +15,53 @@ export default function Quizzes() {
   const [allQuestions, setallQuestions] = useState(placeholderQuestion)
   const [badgesArray, setBadgesArray] = useState([])
   const [currentTopic, setCurrentTopic] = useState()
+  const { currentUser } = useAuth();
+
+  useEffect(() => {
+    if (score === 5) {
+      addToCompleted();
+    }
+    if (score === 5 && !badgesArray.includes(currentTopic)) {
+      setBadgesArray([...badgesArray, currentTopic]);
+    }
+  }, [score]);
+
+  useEffect(() => {
+    checkEmailForQuiz();
+  }, [])
+
+  async function checkEmailForQuiz() {
+    const titleObject = await fetch(`${url}/api/quizzes/${currentUser.email}`);
+    let data = await titleObject.json();
+    if (data.payload.length === 0) {
+      handleAddNewQuiz();
+    } else {
+      return;
+    }
+  }
+
+  const initialSetUp = {
+    user_email: currentUser.email,
+    completed: 0
+  }
+
+  async function handleAddNewQuiz() {
+    await fetch(`${url}/api/quizzes`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(initialSetUp)
+    })
+  }
+
+  async function addToCompleted() {
+    const titleObject = await fetch(`${url}/api/quizzes/${currentUser.email}`);
+    let data = await titleObject.json();
+    await fetch(`${url}/api/quizzes/${currentUser.email}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({user_email: currentUser.email, completed: data.payload[0].completed + 1}),
+    });
+  }
 
   function chooseJavaScriptQuestions() {
     setallQuestions(questionsJavaScript);
@@ -52,23 +102,16 @@ export default function Quizzes() {
   function questionClicked(isCorrect) {
     if (isCorrect) {
       setScore(score + 1);
-    } 
+    }
     if (currentQuestion + 1 < allQuestions.length) {
       setCurrentQuestion(currentQuestion + 1);
-    } 
+    }
     else {
       setResults(true);
     }
   };
 
-  useEffect(() => {
-    if (score === 5 && !badgesArray.includes(currentTopic)) {
-      setBadgesArray([...badgesArray, currentTopic])
-    }
-    console.log(score);
-  }, [score]);
-
-
+ 
   function restartQuiz() {
     setScore(0);
     setCurrentQuestion(0);
@@ -127,7 +170,7 @@ export default function Quizzes() {
         </div>
       )}
       <div>
-      {badgesArray.length === 6 && <h2>Congratulations! You have all of the badges.</h2>}
+        {badgesArray.length === 6 && <h2>Congratulations! You have all of the badges.</h2>}
         <div className='whole-badge-container'>
           <h1> My badges 🏆 </h1>
           {badgesArray.length === 0 && <p> Complete quizzes to get badges! </p>}
