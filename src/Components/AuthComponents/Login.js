@@ -4,6 +4,11 @@ import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 import devault from '../../Images/deVault.png';
+import apptrackerscreen from "../../Images/apptracker-screen.png"
+import appnotesscreen from "../../Images/appnotes-screen.png"
+import appkeyinformationscreen from "../../Images/appkeyinformation-screen.png"
+import appportfolioscreen from "../../Images/appportfolio-screen.png"
+import appinterviewscreen from "../../Images/appinterview-screen.png"
 
 export default function Login() {
   const emailRef = useRef();
@@ -78,15 +83,15 @@ export default function Login() {
       </div>
       <div className="login-second-section-main">
         <div className="second-ex">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+          <img src={apptrackerscreen} />
           <p>Create your job application and edit it in real time!</p>
         </div>
         <div className="second-ex">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+          <img src={appnotesscreen} />
           <p>Make notes on how you did in your application! </p>
         </div>
         <div className="second-ex">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+          <img src={appkeyinformationscreen} />
           <p>Check key information on the jobs you have applied to!</p>
         </div>
       </div>
@@ -100,12 +105,12 @@ export default function Login() {
         </p>
       </div>
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg"
+        src={appportfolioscreen}
         alt=""
       />
     </div>,
     <div className="login-fourth-section-container">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
+      <img src={appinterviewscreen} />
       <div className="login-fourth-section-header">
         <h1>Perfect your Portfolio</h1>
         <p>
