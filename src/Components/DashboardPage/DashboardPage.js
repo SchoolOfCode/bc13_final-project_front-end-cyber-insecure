@@ -25,12 +25,12 @@ export default function DashboardPage() {
     // useEffect calls below getAllApplications function 
     useEffect(() => {
         getAllApplications()
-        apply()
+        appsReadyToApplyFor()
         checkEmailForQuiz()
     }, [])
 
 
-    async function apply() {
+    async function appsReadyToApplyFor() {
         let count = 0
         let data = await getAllApplications()
         for (let i = 0; i < data.length; i++) {
@@ -81,9 +81,6 @@ export default function DashboardPage() {
         navigate('/quizzes', { replace: true });
     };
 
-
-
-
     return [
         <Navbar />,
         <div className="dashboard-page-cont">
@@ -91,12 +88,12 @@ export default function DashboardPage() {
                 <h1>Everything you need for job preparation in one place</h1>
             </div>
             <div className="dashboard-cards">
-                <a className="dashboard-card" onClick={navigateInterviewPrep}>
+                <div className="dashboard-card" onClick={navigateInterviewPrep}>
                     <div className="dashboard-card-header">
                         <h1> Interview Prep </h1>
                     </div>
                     <div className="dashboard-card-main">
-                        <img className="dashboard-cards-icons" src={interviewprep} />
+                        <img className="dashboard-cards-icons" src={interviewprep} alt='' />
                         <p className="dashboard-cards-text">Learn how to answer general questions, technical questions and ask effective questions to employers.  </p>
                     </div>
                     <div className="dashboard-card-footer">
@@ -105,76 +102,76 @@ export default function DashboardPage() {
                             junior developer interview
                         </p>
                     </div>
-                </a>
+                </div>
 
-                <a className="dashboard-card" onClick={navigateApplications}>
+                <div className="dashboard-card" onClick={navigateApplications}>
                     <div className="dashboard-card-header">
                         <h1> My applications </h1>
                     </div>
                     <div className="dashboard-card-main">
-                        <img className="dashboard-cards-icons" src={applications} />
+                        <img className="dashboard-cards-icons" src={applications} alt='' />
                         <p className="dashboard-cards-text">You have {currentApp.length} job application(s) and you're ready to apply for {readyToApply}.</p>
                     </div>
 
                     <div className="dashboard-card-footer">
                         <p>Track all of your job applications easily and in one place </p>
                     </div>
-                </a>
+                </div>
 
-                <a className="dashboard-card" onClick={navigatePortfolio}>
+                <div className="dashboard-card" onClick={navigatePortfolio}>
                     <div className="dashboard-card-header">
                         <h1> Perfect your portfolio </h1>
                     </div>
                     <div className="dashboard-card-main">
-                        <img className="dashboard-cards-icons" src={portfolio} />
+                        <img className="dashboard-cards-icons" src={portfolio} alt='' />
                         <p className="dashboard-cards-text"> Use our annotated examples of GitHub pages and portfolio sites for inspiration. </p>
                     </div>
                     <div className="dashboard-card-footer">
                         <p>Learn all you need to perfect your portfolio before you apply</p>
                     </div>
-                </a>
+                </div>
             </div>
 
             <div className="dashboard-other-container">
                 <div className="dashboard-cards">
-                    <a className="dashboard-card" onClick={navigateKnowledgebank}>
+                    <div className="dashboard-card" onClick={navigateKnowledgebank}>
                         <div className="dashboard-card-header">
                             <h1> Knowledge Bank </h1>
                         </div>
                         <div className="dashboard-card-main">
-                            <img className="dashboard-cards-icons" src={knowledge} />
+                            <img className="dashboard-cards-icons" src={knowledge} alt='' />
                             <p className="dashboard-cards-text">Brush up on a variety of topics, including: JavaScript, HTML, CSS and much more. </p>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our knowledge bank to sharpen up on particular topics</p>
                         </div>
-                    </a>
+                    </div>
 
-                    <a className="dashboard-card" onClick={navigateCV}>
+                    <div className="dashboard-card" onClick={navigateCV}>
                         <div className="dashboard-card-header">
                             <h1> CV Workshop </h1>
                         </div>
                         <div className="dashboard-card-main">
-                            <img className="dashboard-cards-icons" src={cv} />
+                            <img className="dashboard-cards-icons" src={cv} alt='' />
                             <p className="dashboard-cards-text">Look at our annotated CV examples across job roles to improve your job chances. </p>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our CV tips to make yours stand out from the crowd</p>
                         </div>
-                    </a>
+                    </div>
 
-                    <a className="dashboard-card" onClick={navigateQuizzes}>
+                    <div className="dashboard-card" onClick={navigateQuizzes}>
                         <div className="dashboard-card-header">
                             <h1>Quizzes</h1>
                         </div>
                         <div className="dashboard-card-main">
-                            <img className="dashboard-cards-icons" src={quiz} />
+                            <img className="dashboard-cards-icons" src={quiz} alt='' />
                             <p className="dashboard-cards-text">Quizzes completed: {quizzesCompleted}</p>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our wide range of quizzes to master your understanding</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>,
