@@ -21,7 +21,7 @@ body {
 }
 .interviewPrepPage_container-header {
   width: 100%;
-  height: 25vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
