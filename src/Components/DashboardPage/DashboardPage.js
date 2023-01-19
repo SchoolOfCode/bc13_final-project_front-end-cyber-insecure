@@ -182,7 +182,7 @@ export default function DashboardPage() {
                         <div className="dashboard-card-main">
                             <img className="dashboard-cards-icons" src={quiz} alt='' />
                             <div className="dashboard-cards-text">
-                            <p> Our current quiz topics: </p>
+                                <p> Our current quiz topics: </p>
                                 <div className="stack-icon-dashboard">
                                     <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' alt='' />
                                     <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' alt='' />
@@ -191,7 +191,7 @@ export default function DashboardPage() {
                                     <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' alt='' />
                                     <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' alt='' />
                                 </div>
-                                <hr/>
+                                <hr />
                                 <p>Quizzes completed: {quizzesCompleted}</p>
                             </div>
                         </div>
