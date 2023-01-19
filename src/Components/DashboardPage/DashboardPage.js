@@ -41,7 +41,7 @@ export default function DashboardPage() {
             if (data[i].progress === 2) {
                 countTwo++
                 setReadyToApply(countTwo)
-            } if (data[i].progress === 3 || (data[i].progress === 4) || (data[i].progress === 6)) {
+            } if (data[i].progress === 3 || (data[i].progress === 5) || (data[i].progress === 6)) {
                 countThreeFiveSix++
                 setWaiting(countThreeFiveSix)
             } if (data[i].progress === 7) {
