@@ -54,7 +54,7 @@ export default function DashboardPage() {
                     <div className="dashboard-card-footer">
                         <p>
                             Find all the essential knowledge and material you need for a
-                            junior developer interview
+                            junior developer interviews
                         </p>
                     </div>
                 </a>
