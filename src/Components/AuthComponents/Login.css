@@ -31,9 +31,30 @@
     border: 1px solid;
     border-color: #FBF0A2;
 }
-.title-container h1{
+
+.login-container a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Sign Up Section*/
+#sign-up-button {
+    background-color: #e5be83;
+    border-color: #FBF0A2;
+}
+/* ============== */
+
+/* Reset Password Button */
+#reset-password-button {
+    background-color: #e5be83;
+    border-color: #FBF0A2;
+}    
+
+.title-container img {
+    height: 110px;
+    padding-bottom: 10px;
     font-size: 100px;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #BB8F6A;
 }
 .login-second-section-container{
     max-width: 75vw;
@@ -52,7 +73,7 @@
     justify-content: center;
 }
 .login-second-section-header h1{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #BB8F6A;
 }
 .login-second-section-main{
     display: flex;
@@ -91,7 +112,7 @@ max-width: 200px;
     flex-direction: column;
 }
 .login-third-section-header h1{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #BB8F6A;
 }
 .login-third-section-container img{
     max-height: 100px;
@@ -107,7 +128,7 @@ max-width: 200px;
     gap: 20px;
 }
 .login-fourth-section-container h1{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #BB8F6A;
 }
 .login-fourth-section-container img{
     max-height: 100px;

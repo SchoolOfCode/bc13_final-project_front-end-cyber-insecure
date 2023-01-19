@@ -1,14 +1,15 @@
-import React, { useRef, useState } from "react";
-import { Form, Button, Card, Alert } from "react-bootstrap";
-import { useAuth } from "../contexts/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
-import "./Login.css";
+import React, { useRef, useState } from 'react';
+import { Form, Button, Card, Alert } from 'react-bootstrap';
+import { useAuth } from '../contexts/AuthContext';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
+import devault from '../../Images/deVault.png';
 
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const { logIn } = useAuth();
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -16,12 +17,12 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      setError("");
+      setError('');
       setLoading(true);
       await logIn(emailRef.current.value, passwordRef.current.value);
-      navigate("/", { replace: true });
+      navigate('/', { replace: true });
     } catch {
-      setError("Incorrect email or password");
+      setError('Incorrect email or password');
     }
     setLoading(false);
   }
@@ -29,7 +30,7 @@ export default function Login() {
   return [
     <div className="login-component">
       <div className="title-container">
-        <h1> deVault </h1>
+        <img class="devaultLogo" src={devault} alt="project logo" />
         <p>
           Polish your Portfolio. Cultivate your CV. Organize and optimize your
           job search. All in one place.
@@ -51,7 +52,12 @@ export default function Login() {
                 <Form.Control type="password" ref={passwordRef} required />
               </Form.Group>
 
-              <Button disabled={loading} id="login-button" className="mt-4 w-100" type="submit">
+              <Button
+                disabled={loading}
+                id="login-button"
+                className="mt-4 w-100"
+                type="submit"
+              >
                 Log In
               </Button>
             </Form>
@@ -60,7 +66,7 @@ export default function Login() {
             </div>
           </Card.Body>
         </Card>
-        <div className="w-100 text-center mt-2">
+        <div className="w-100 text-center mt-2 pb-1">
           Need an account? <Link to="/signup">Sign Up</Link>
         </div>
       </div>
@@ -101,11 +107,11 @@ export default function Login() {
     <div className="login-fourth-section-container">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" />
       <div className="login-fourth-section-header">
-      <h1>Perfect your Portfolio</h1>
-      <p>
-        Use our portfolio tool to optimize yours to meet the requirements for
-        each job you are applying for!
-      </p>
+        <h1>Perfect your Portfolio</h1>
+        <p>
+          Use our portfolio tool to optimize yours to meet the requirements for
+          each job you are applying for!
+        </p>
       </div>
     </div>,
   ];
