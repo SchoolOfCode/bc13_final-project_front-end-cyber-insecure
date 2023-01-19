@@ -40,7 +40,8 @@ function ApplicationList() {
   async function getAllApplications() {
     const titleObject = await fetch(`${url}/api/jobApplications/${currentUser.email}`);
     let data = await titleObject.json();
-    setApplications(data.payload);
+    let dataInOrder = data.payload.sort((a, b) => b.id - a.id)
+    setApplications(dataInOrder);
   }
 
   async function getAllApplicationsForFilter() {
