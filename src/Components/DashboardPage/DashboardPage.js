@@ -20,6 +20,8 @@ export default function DashboardPage() {
     const { currentUser } = useAuth();
     const [currentApp, setCurrentApp] = useState([])
     const [readyToApply, setReadyToApply] = useState(0)
+    const [waiting, setWaiting] = useState(0)
+    const [completed, setCompleted] = useState(0)
     const [quizzesCompleted, setQuizzesCompleted] = useState(0)
 
     // useEffect calls below getAllApplications function 
@@ -31,12 +33,20 @@ export default function DashboardPage() {
 
 
     async function appsReadyToApplyFor() {
-        let count = 0
+        let countTwo = 0
+        let countThreeFiveSix = 0
+        let countSeven = 0
         let data = await getAllApplications()
         for (let i = 0; i < data.length; i++) {
             if (data[i].progress === 2) {
-                count++
-                setReadyToApply(count)
+                countTwo++
+                setReadyToApply(countTwo)
+            } if (data[i].progress === 3 || (data[i].progress === 4) || (data[i].progress === 6)) {
+                countThreeFiveSix++
+                setWaiting(countThreeFiveSix)
+            } if (data[i].progress === 7) {
+                countSeven++
+                setCompleted(countSeven)
             }
         }
     }
@@ -110,7 +120,12 @@ export default function DashboardPage() {
                     </div>
                     <div className="dashboard-card-main">
                         <img className="dashboard-cards-icons" src={applications} alt='' />
-                        <p className="dashboard-cards-text">You have {currentApp.length} job application(s) and you're ready to apply for {readyToApply}.</p>
+                        <div className="dashboard-cards-text">
+                            <p> Job application(s): {currentApp.length}</p>
+                            <p> Ready to apply for: {readyToApply} job(s)</p>
+                            <p> Waiting to hear from: {waiting} employer(s).</p>
+                            <p> Completed: {completed} job application(s).</p>
+                        </div>
                     </div>
 
                     <div className="dashboard-card-footer">
@@ -166,7 +181,9 @@ export default function DashboardPage() {
                         </div>
                         <div className="dashboard-card-main">
                             <img className="dashboard-cards-icons" src={quiz} alt='' />
-                            <p className="dashboard-cards-text">Quizzes completed: {quizzesCompleted}</p>
+                            <div>
+                                <p className="dashboard-cards-text">Quizzes completed: {quizzesCompleted}</p>
+                            </div>
                         </div>
                         <div className="dashboard-card-footer">
                             <p>Use our wide range of quizzes to master your understanding</p>

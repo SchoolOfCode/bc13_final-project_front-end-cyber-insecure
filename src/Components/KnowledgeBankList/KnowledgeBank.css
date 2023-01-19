@@ -1,9 +1,9 @@
 .knowledge-bank-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 100vh;
   max-width: 1900px;
 }
 
@@ -33,10 +33,16 @@
 }
 
 .knowledge-buttons {
-  background-color: #fbf0a2;
-  border-radius: 10px;
-  padding: 7px;
-  width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  background-color: beige;
+  font-size: 20px;
+}
+
+.knowledge-buttons:hover {
+  background-color: rgb(226, 226, 211);
 }
 
 .input-container input {
