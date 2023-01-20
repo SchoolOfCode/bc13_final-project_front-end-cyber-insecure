@@ -106,10 +106,10 @@ export default function Login() {
           annoying interview questions!
         </p>
       </div>
-      <img src={appPortfolioScreen} alt="" />
+      <img src={appInterviewScreen} alt="" />
     </div>,
     <div className="login-fourth-section-container">
-      <img src={appInterviewScreen} />
+      <img src={appPortfolioScreen} />
       <div className="login-fourth-section-header">
         <h1>Perfect your Portfolio</h1>
         <p>
