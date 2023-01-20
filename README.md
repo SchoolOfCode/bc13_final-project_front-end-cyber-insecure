@@ -103,7 +103,6 @@ yarn add react-hook-form
 
 ## ⚙️ Backend development and testing libraries
 <div align="center">
-<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> 
 <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a>
 <a href="https://jestjs.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg" alt="jest" width="40" height="40"/> </a> 
 <a href="https://www.npmjs.com/package/@babel/core" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/78863735/213687264-0fc1be72-b25a-45b9-a126-b92d52c24b2f.png" alt="babel" width="40" height="40"/> </a>
