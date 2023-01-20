@@ -8,7 +8,6 @@ import interviewprep from '../../Images/interviewprep.png'
 import knowledge from '../../Images/knowledge.png'
 import portfolio from '../../Images/portfolio.png'
 import quiz from '../../Images/quiz.png'
-
 import { useAuth } from "../contexts/AuthContext";
 import React, { useState, useEffect } from "react";
 

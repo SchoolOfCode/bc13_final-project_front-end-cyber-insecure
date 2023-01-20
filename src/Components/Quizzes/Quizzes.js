@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { GiH2O } from 'react-icons/gi';
 import Navbar from '../Navbar/Navbar'
 import { questionsJavaScript, questionsReact, placeholderQuestion, questionsCSS, questionsTypeScript, questionsPython, questionsNode } from './questions'
 import './Quizzes.css'

@@ -17,7 +17,6 @@ function Card(props) {
             <div className="popup">
               <div className="popup-inner">
                 <p>{props.answer}</p>
-                {/* <button className="close-btn" onClick={() => props.setTrigger(false)}>Close</button>  */}
                 <button
                   className="close-button"
                   onClick={() => {

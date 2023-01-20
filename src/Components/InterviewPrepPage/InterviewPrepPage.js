@@ -1,7 +1,5 @@
 import './InterviewPrepPage.css';
-import { useState } from 'react';
 import React from 'react';
-// import Popup from '../Popup/Popup';
 import Navbar from '../Navbar/Navbar';
 import Popup from 'reactjs-popup';
 import Card from './Card/Card';
@@ -31,9 +29,6 @@ const responsive = {
 };
 
 function InterviewPrepPage(props) {
-  // 1. Onclick event handler showing a popup card of a good answer structure to each question when clicked
-  // 2. I think we need to use, the useState hook in order for this to work.
-  // 3. Check chatGt
 
   return [
     <Navbar />,

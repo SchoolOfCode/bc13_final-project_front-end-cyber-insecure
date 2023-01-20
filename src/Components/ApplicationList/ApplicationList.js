@@ -12,7 +12,6 @@ const url = process.env.REACT_APP_BACKEND_URL
 function ApplicationList() {
 
   const [adding, setAdding] = useState()
-  const [displaying, setDisplaying] = useState()
   const [applications, setApplications] = useState([])
   const { currentUser } = useAuth();
   const [loading, setLoading] = useState(false);
