@@ -140,7 +140,7 @@ export default function Quizzes() {
           {(close) => (
             <div className="popup">
               <div className="popup-inner">
-                <p>This app is designed to help you test youknowledge on a variety of topics, such as JavaScript, React, 
+                <p>This app is designed to help you test your knowledge on a variety of topics, such as JavaScript, React, 
                 CSS, TypeScript, Python, and Node. To get started, simply click on the quiz topic of your choice. 
                 <br/><br/>
                 Once you have completed the quiz, you will be rewarded with a badge for your success. 
