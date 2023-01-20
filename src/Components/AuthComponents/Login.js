@@ -98,7 +98,7 @@ export default function Login() {
     </div>,
     <div className="login-third-section-container">
       <div className="login-third-section-header">
-        <h1>Interview Prep</h1>
+        <h1>Interview Prep </h1>
         <p>
           Key tips and examples of how to best answer the most difficult and
           annoying interview questions!
