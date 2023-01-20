@@ -143,4 +143,16 @@ yarn add react-hook-form
 
 ![devaultjobapps](https://user-images.githubusercontent.com/78863735/213723057-caaa0681-72a4-4851-9604-bccd8e4f4761.gif)
 
+![devaultIntervPrep](https://user-images.githubusercontent.com/78863735/213725020-48d2faa1-fefd-4e91-b114-a5112740e7c1.gif)
+
+![devaultCvWorkshop](https://user-images.githubusercontent.com/78863735/213726109-7c1ab764-1dc9-42b2-b206-1a72ca72da40.gif)
+
+![devaultKnowledgeBank](https://user-images.githubusercontent.com/78863735/213726450-e4465741-1308-45ec-938e-e348ca839cb7.gif)
+
+![devaultQuizzes](https://user-images.githubusercontent.com/78863735/213726634-bab49316-9b18-400b-9752-3a26a23f7952.gif)
+
+
+
+
+
 
