@@ -15,11 +15,13 @@ export default function Quizzes() {
   const [allQuestions, setallQuestions] = useState(placeholderQuestion)
   const [badgesArray, setBadgesArray] = useState([])
   const [currentTopic, setCurrentTopic] = useState()
+  const [quizzesCompleted, setQuizzesCompleted] = useState(0)
   const { currentUser } = useAuth();
 
   useEffect(() => {
     if (score === 5) {
       addToCompleted();
+      checkQuiz();
     }
     if (score === 5 && !badgesArray.includes(currentTopic)) {
       setBadgesArray([...badgesArray, currentTopic]);
@@ -28,6 +30,7 @@ export default function Quizzes() {
 
   useEffect(() => {
     checkEmailForQuiz();
+    checkQuiz();
   }, [])
 
   async function checkEmailForQuiz() {
@@ -62,6 +65,12 @@ export default function Quizzes() {
       body: JSON.stringify({user_email: currentUser.email, completed: data.payload[0].completed + 1}),
     });
   }
+
+  async function checkQuiz() {
+    const titleObject = await fetch(`${url}/api/quizzes/${currentUser.email}`);
+    let data = await titleObject.json();
+    setQuizzesCompleted(data.payload[0].completed)
+}
 
   function chooseJavaScriptQuestions() {
     setallQuestions(questionsJavaScript);
@@ -167,6 +176,7 @@ export default function Quizzes() {
           </ul>
 
           <h2>Score: {score}</h2>
+          <h2> Quizzes completed: {quizzesCompleted}</h2>
         </div>
       )}
       <div>
