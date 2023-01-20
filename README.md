@@ -46,11 +46,58 @@ Introducing DeVault, the ultimate tool for junior developers! DeVault enables yo
 </div>
 
 ⚛ [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)  
+``` 
+npm install --save-dev @testing-library/react
+
+yarn add --dev @testing-library/react
+```
+
 ⚛ [React Icons](https://react-icons.github.io/react-icons/)  
+```
+npm install react-icons --save
+
+yarn add react-icons
+```
 ⚛ [React multi carousel](https://www.npmjs.com/package/react-multi-carousel)  
+```
+$ npm install react-multi-carousel --save
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+or alternatively:
+
+yarn add react-multi-carousel
+```
+
 ⚛ [React social icons](https://www.npmjs.com/package/react-social-icons)  
-⚛ [ReactJs popup](https://www.npmjs.com/package/reactjs-popup)  
+```
+npm install react-social-icons
+
+or alternatively:
+
+yarn add react-icons
+```
+⚛ [ReactJs popup](https://www.npmjs.com/package/reactjs-popup) 
+```
+npm install reactjs-popup --save
+
+or alternatively:
+
+yarn add reactjs-popup
+```
 ⚛ [React hook form](https://react-hook-form.com/)
+```
+npm i react-hook-form
+
+or alternatively:
+
+yarn add react-hook-form
+```
+
+
+
+
 
 
 ## ⚙️ Backend development and testing libraries
@@ -61,15 +108,16 @@ Introducing DeVault, the ultimate tool for junior developers! DeVault enables yo
 <a href="https://www.npmjs.com/package/@babel/core" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/78863735/213687264-0fc1be72-b25a-45b9-a126-b92d52c24b2f.png" alt="babel" width="40" height="40"/> </a>
 <a href="https://www.cypress.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/6e46ec1fc23b60c8fd0d2f2ff46db82e16dbd75f/icons/cypress.svg" alt="cypress" width="40" height="40"/> </a>
 <a href="https://www.npmjs.com/package/nodemon" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/78863735/213686543-7e4c1571-c252-45d7-9175-bedfd6a99472.png" alt="nodemon" width="40" height="40"/> </a>
-
+<a href="https://www.postman.com/automated-testing/" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/78863735/213710289-3a470262-051e-487b-b002-ffd4c7ca2e7c.png" alt="postman" width="40" height="40"/> </a>
+  
+  
 </div>
 
 ⚛ [Jest v29.3.1](https://jestjs.io/)  
 ⚛ [Cypress v12.3.0](https://www.cypress.io/)   
 ⚛ [Nodemon v2.0.20](https://www.npmjs.com/package/nodemon)  
 ⚛ [Babel v7.18.6](https://www.npmjs.com/package/@babel/core)  
-
-
+⚛ [Postman](https://www.postman.com/automated-testing/)  
 
 
 
