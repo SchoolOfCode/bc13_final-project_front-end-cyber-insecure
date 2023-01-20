@@ -65,7 +65,7 @@
 
 .dashboard-cards-text {
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -74,6 +74,10 @@
 }
 
 .dashboard-card:hover .dashboard-cards-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
   opacity: 100;
   transition: all 0.5s;
 }
