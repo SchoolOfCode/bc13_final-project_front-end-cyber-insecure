@@ -1,20 +1,20 @@
-import React, { useRef, useState } from 'react';
-import { Form, Button, Card, Alert } from 'react-bootstrap';
-import { useAuth } from '../contexts/AuthContext';
-import { Link, useNavigate } from 'react-router-dom';
-import './Login.css';
-import devault from '../../Images/deVault.png';
-import apptrackerscreen from "../../Images/apptracker-screen.png"
-import appnotesscreen from "../../Images/appnotes-screen.png"
-import appkeyinformationscreen from "../../Images/appkeyinformation-screen.png"
-import appportfolioscreen from "../../Images/appportfolio-screen.png"
-import appinterviewscreen from "../../Images/appinterview-screen.png"
+import React, { useRef, useState } from "react";
+import { Form, Button, Card, Alert } from "react-bootstrap";
+import { useAuth } from "../contexts/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import "./Login.css";
+import devault from "../../Images/deVault.png";
+import appTrackerScreen from "../../Images/appTrackerScreen.png";
+import appNotesScreen from "../../Images/appNotesScreen.png";
+import appKeyInformationScreen from "../../Images/appKeyInformationScreen.png";
+import appPortfolioScreen from "../../Images/appPortfolioScreen.png";
+import appInterviewScreen from "../../Images/appInterviewScreen.png";
 
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const { logIn } = useAuth();
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -22,12 +22,12 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      setError('');
+      setError("");
       setLoading(true);
       await logIn(emailRef.current.value, passwordRef.current.value);
-      navigate('/', { replace: true });
+      navigate("/", { replace: true });
     } catch {
-      setError('Incorrect email or password');
+      setError("Incorrect email or password");
     }
     setLoading(false);
   }
@@ -83,34 +83,33 @@ export default function Login() {
       </div>
       <div className="login-second-section-main">
         <div className="second-ex">
-          <img src={apptrackerscreen} />
+          <img src={appTrackerScreen} />
           <p>Create your job application and edit it in real time!</p>
         </div>
         <div className="second-ex">
-          <img id='app-notes-screen' src={appnotesscreen} />
+          <img id="app-notes-screen" src={appNotesScreen} />
           <p>Make notes on how you did in your application! </p>
         </div>
         <div className="second-ex">
-          <img src={appkeyinformationscreen} />
-          <p id='second-ex-third-p'>Check key information on the jobs you have applied to!</p>
+          <img src={appKeyInformationScreen} />
+          <p id="second-ex-third-p">
+            Check key information on the jobs you have applied to!
+          </p>
         </div>
       </div>
     </div>,
     <div className="login-third-section-container">
       <div className="login-third-section-header">
-        <h1>Interview Prep </h1>
+        <h1>Interview Prep</h1>
         <p>
           Key tips and examples of how to best answer the most difficult and
           annoying interview questions!
         </p>
       </div>
-      <img
-        src={appportfolioscreen}
-        alt=""
-      />
+      <img src={appPortfolioScreen} alt="" />
     </div>,
     <div className="login-fourth-section-container">
-      <img src={appinterviewscreen} />
+      <img src={appInterviewScreen} />
       <div className="login-fourth-section-header">
         <h1>Perfect your Portfolio</h1>
         <p>
