@@ -78,7 +78,8 @@ Introducing DeVault, the ultimate tool for junior developers! DeVault enables yo
 ## ⚙️ Hosting
 
 ⚛ [Firebase](https://firebase.google.com/)  
-⚛ [Netlify](https://www.netlify.com/)
+⚛ [Netlify](https://www.netlify.com/)  
+⚛ [Railway](https://www.railway.app/)
 
 
 
