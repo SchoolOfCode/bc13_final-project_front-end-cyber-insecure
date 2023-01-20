@@ -35,9 +35,9 @@
 
 # ⚙️ DeVault
 
-As a junior developer, it can be hard to keep track of your professional development and job-seeking journey. If only there was an app that could allow junior developers to do this in one space...
-
-Introducing DeVault, the ultimate tool for junior developers! DeVault enables you to stay organised and maximise your job search potential. Track your job applications, optimise your CV and your portfolio, search for specific knowledge, prepare for interviews and even take quizzes. With DeVault, you can stay on top of your job search and put your best foot forward. Get started today and take your development career to the next level!
+>As a junior developer, it can be hard to keep track of your professional development and job-seeking journey. If only there was an app that could allow junior >developers to do this in one space...
+>
+>Introducing DeVault, the ultimate tool for junior developers! DeVault enables you to stay organised and maximise your job search potential. Track your job >applications, optimise your CV and your portfolio, search for specific knowledge, prepare for interviews and even take quizzes. With DeVault, you can stay on top of >your job search and put your best foot forward. Get started today and take your development career to the next level!
 
 
 ## ⚙️ Frontend development 
