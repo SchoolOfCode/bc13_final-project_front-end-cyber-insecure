@@ -87,12 +87,12 @@ export default function Login() {
           <p>Create your job application and edit it in real time!</p>
         </div>
         <div className="second-ex">
-          <img src={appnotesscreen} />
+          <img id='app-notes-screen' src={appnotesscreen} />
           <p>Make notes on how you did in your application! </p>
         </div>
         <div className="second-ex">
           <img src={appkeyinformationscreen} />
-          <p>Check key information on the jobs you have applied to!</p>
+          <p id='second-ex-third-p'>Check key information on the jobs you have applied to!</p>
         </div>
       </div>
     </div>,
