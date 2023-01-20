@@ -43,6 +43,7 @@ Introducing DeVault, the ultimate tool for junior developers! DeVault enables yo
 ## ⚙️ Frontend development 
 <div align="center">
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a>
+<img src="https://user-images.githubusercontent.com/78863735/213716962-66c91b86-e6a2-42fc-a6c6-db8f144a23d6.png" alt="Auth0" width="40" height="40"/> </a>
 </div>
 
 ⚛ [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)  
