@@ -88,7 +88,13 @@ export default function KnowledgeBankList() {
           {(close) => (
             <div className="popup">
               <div className="popup-inner">
-                <p>hello</p>
+                <p>This feauture is designed to help you easily find and access the programming knowledge you need. 
+                You can search for specific topics and filter the results by general knowledge, JavaScript, HTML, CSS and React.
+                <br/><br/> 
+                Each piece of knowledge returned will include an image, definition and resource links 
+                (two links to articles and one link to a video) to help you learn more. 
+                <br/><br/> This tool is a great resource for junior developers looking to expand their knowledge base and 
+                become experts in their field.</p>
                 <button
                   className="close-button"
                   onClick={() => {
