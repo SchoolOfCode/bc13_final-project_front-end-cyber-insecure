@@ -25,7 +25,7 @@ function ApplicationList() {
   }, []);
 
 
-  // useEffect calls below getAllApplications function 
+  // useEffect calls below getAllApplications functions 
   useEffect(() => {
     getAllApplications()
   }, [])
