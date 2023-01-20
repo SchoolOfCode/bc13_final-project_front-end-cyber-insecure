@@ -22,7 +22,7 @@ export default function Quizzes() {
   useEffect(() => {
     if (score === 5) {
       addToCompleted();
-      checkQuiz();
+      setQuizzesCompleted(quizzesCompleted + 1);
     }
     if (score === 5 && !badgesArray.includes(currentTopic)) {
       setBadgesArray([...badgesArray, currentTopic]);
@@ -70,6 +70,7 @@ export default function Quizzes() {
   async function checkQuiz() {
     const titleObject = await fetch(`${url}/api/quizzes/${currentUser.email}`);
     let data = await titleObject.json();
+    console.log(data.payload[0].completed)
     setQuizzesCompleted(data.payload[0].completed)
 }
 
