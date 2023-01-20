@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import KnowledgeBankItem from './KnowledgeBankItem'
 import './KnowledgeBank.css'
+import Popup from 'reactjs-popup'
 
 const url = process.env.REACT_APP_BACKEND_URL
 
@@ -81,6 +82,26 @@ export default function KnowledgeBankList() {
       <div className='knowledge-bank-header'>
         <div className='knowledge-bank-header-text'>
           <h1>Refresh your knowledge using our comprehensive knowledge bank</h1>
+          <Popup
+          trigger={<button className="info-button">𝒊</button>}
+        >
+          {(close) => (
+            <div className="popup">
+              <div className="popup-inner">
+                <p>hello</p>
+                <button
+                  className="close-button"
+                  onClick={() => {
+                    console.log('modal closed ');
+                    close();
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+        </Popup>
         </div>
         <div className='input-container'>
           <input value={input} onChange={handleChange} />

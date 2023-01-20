@@ -40,7 +40,33 @@ function InterviewPrepPage(props) {
     <div className="interviewPrepPage_container">
       <div className='interviewPrepPage_container-header'>
       <h1>Become job-ready by following our interview preparation advice </h1>
-      <h2>Key Interview Questions and Answers</h2>
+      <Popup
+          trigger={<button className="info-button">𝒊</button>}
+        >
+          {(close) => (
+            <div className="popup">
+              <div className="popup-inner">
+                <p>Our interview preparation feature is designed to help prepare you for job interviews. We provide questions 
+                and example answers to help you feel confident and prepared for both general and technical interview questions. 
+                <br/><br/>
+                Keep in mind - while an employer is interviewing you, you are also interviewing them. 
+                We provide questions to ask employers after the interview to demonstrate your knowledge and interest 
+                in the role and to understand whether they are a right fit for you. 
+                <br/><br/>
+                This feature is aimed to help you quickly find the resources you need to ace the interview.</p>
+                <button
+                  className="close-button"
+                  onClick={() => {
+                    console.log('modal closed ');
+                    close();
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+        </Popup>
       </div>
       <div className="allQuestions_container">
         <section className="interviewQuestionsSection">

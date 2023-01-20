@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import { questionsJavaScript, questionsReact, placeholderQuestion, questionsCSS, questionsTypeScript, questionsPython, questionsNode } from './questions'
 import './Quizzes.css'
 import { useAuth } from "../contexts/AuthContext";
+import Popup from 'reactjs-popup';
 
 const url = process.env.REACT_APP_BACKEND_URL
 
@@ -133,6 +134,34 @@ export default function Quizzes() {
     <div className='quiz-container'>
       <div className='quiz-container-header'>
         <h1>Take part in quizzes to improve your technical skills </h1>
+        <Popup
+          trigger={<button className="info-button">𝒊</button>}
+        >
+          {(close) => (
+            <div className="popup">
+              <div className="popup-inner">
+                <p>This app is designed to help you test youknowledge on a variety of topics, such as JavaScript, React, 
+                CSS, TypeScript, Python, and Node. To get started, simply click on the quiz topic of your choice. 
+                <br/><br/>
+                Once you have completed the quiz, you will be rewarded with a badge for your success. 
+                <br/><br/>
+                The app also keeps track of your total number of successful quiz completions, so you can keep 
+                track of your progress. 
+                <br/><br/>
+                So, go ahead and get started today!</p>
+                <button
+                  className="close-button"
+                  onClick={() => {
+                    console.log('modal closed ');
+                    close();
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+        </Popup>
       </div>
 
       <div className='quiz-buttons-div'>

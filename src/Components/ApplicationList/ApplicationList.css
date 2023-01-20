@@ -16,12 +16,16 @@
   min-height: 15vh;
   gap: 2vh;
 }
-.applications-header p {
+.applications-title h1 {
   border-bottom: 1px solid;
 }
 .applications-title {
   height: 80%;
-  border-bottom: 1px solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 .applications-buttons {
   display: flex;
@@ -77,6 +81,12 @@
   border-color: #bb8f6a transparent #bb8f6a transparent;
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
+}
+
+.info-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 @keyframes spin-anim {

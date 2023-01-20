@@ -5,6 +5,7 @@ import frontEndDeveloper from '../../Images/frontendDeveloper.png';
 import uxuiPortfolioPage from '../../Images/uxuiPortfolioPage.png';
 import backendPortfolio from '../../Images/backend.png';
 import fullstackPortfolio from '../../Images/fullstack.png';
+import Popup from 'reactjs-popup';
 import './CVworkshop.css';
 
 export default function CVworkshop() {
@@ -31,6 +32,33 @@ export default function CVworkshop() {
     <div className="cvworkshop-container">
       <div className="cvworkshop-container-header">
         <h1>Perfect your CV using our best-practice examples</h1>
+        <Popup
+          trigger={<button className="info-button">𝒊</button>}
+        >
+          {(close) => (
+            <div className="popup">
+              <div className="popup-inner">
+                <p>This tool is designed to help junior developers create an effective and professional CV. 
+                By clicking on the appropriate role button, you can view an example CV tailored to your desired role, 
+                as well as a written explanation of why the content is good. 
+                <br/><br/>
+                The explanation is split into three sections - Objective / Personal Statement, Skills, and 
+                Work Experience - which will help you to understand the importance of each section. 
+                <br/><br/>
+                If you like the CV, you can also view and download it to use as a template. Good luck with your job search!</p>
+                <button
+                  className="close-button"
+                  onClick={() => {
+                    console.log('modal closed ');
+                    close();
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+        </Popup>
       </div>
       <div className="cvButtonContainer">
         <button onClick={handleFrontEnd} className="cvButtonStyles">
