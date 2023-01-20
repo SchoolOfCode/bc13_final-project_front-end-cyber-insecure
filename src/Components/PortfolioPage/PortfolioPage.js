@@ -19,8 +19,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./PortfolioCarousel.css";
 
-import PortfolioCard from "./PortfolioCard";
-import { portfolioPageData } from "./PortfolioCardData";
 
 const responsive = {
   superLargeDesktop: {
@@ -50,6 +48,30 @@ function PortfolioPage(props) {
         <h1 className="portfolio-main-h1">
           Perfect your Portfolio using our best-practice examples
         </h1>
+        <Popup
+          trigger={<button className="info-button">𝒊</button>}
+        >
+          {(close) => (
+            <div className="popup">
+              <div className="popup-inner">
+                <p>Here you will find examples of well-constructed portfolios and GitHub pages, allowing you to 
+                learn what makes a good portfolio and how to improve your own. 
+                <br/><br/>
+                Simply scroll through the carousel  to view the examples, and click on the images to see an 
+                annotated version which explains why it is a good example, and tips to help you tailor and improve your own portfolio.</p>
+                <button
+                  className="close-button"
+                  onClick={() => {
+                    console.log('modal closed ');
+                    close();
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+        </Popup>
       </div>
       <div className="PortfolioCarousel-container">
         <Carousel
@@ -58,17 +80,6 @@ function PortfolioPage(props) {
           responsive={responsive}
           infinite={true}
         >
-          {/* {portfolioPageData.map((card) => {
-            return (
-              <PortfolioCard
-                headerH2={card.headerH2}
-                iconLink={card.iconLink}
-                plainSrc={card.plainSrc}
-                popSrc={card.popSrc}
-              />
-            );
-          })} */}
-          {/* <div className="PortfolioPage-examples"> */}
             <div className="PorfolioPage-example-item">
               <div className="PorfolioPage-example-item-header">
                 <h2 className="portfolio-h1">
@@ -130,8 +141,6 @@ function PortfolioPage(props) {
                 />
               </Popup>
             </div>
-          {/* </div> */}
-          {/* <div className="PortfolioPage-examples"> */}
             <div className="PorfolioPage-example-item">
               <div className="PorfolioPage-example-item-header">
                 <h2 className="portfolio-h1">
@@ -192,8 +201,6 @@ function PortfolioPage(props) {
                 />
               </Popup>
             </div>
-          {/* </div> */}
-          {/* <div className="PortfolioPage-examples"> */}
             <div className="PorfolioPage-example-item">
               <div className="PorfolioPage-example-item-header">
                 <h2 className="portfolio-h1">
@@ -254,7 +261,6 @@ function PortfolioPage(props) {
                 />
               </Popup>
             </div>
-          {/* </div> */}
         </Carousel>
       </div>
     </div>,

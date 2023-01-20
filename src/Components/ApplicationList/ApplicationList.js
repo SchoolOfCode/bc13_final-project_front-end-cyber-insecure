@@ -127,6 +127,33 @@ function ApplicationList() {
       <div className="applications-header">
         <div className="applications-title">
           <h1>Keep on top of your job applications with our tracker </h1>
+          <Popup
+          trigger={<button className="info-button">𝒊</button>}
+        >
+          {(close) => (
+            <div className="popup">
+              <div className="popup-inner">
+                <p>Using the job application tracking feature, you can easily keep track of all the jobs you are considering. To add a job application, 
+                simply enter the job title, company, job description, location, salary, job link and any additional notes. 
+                <br/><br/>
+                You can also use the slider to track your progress from research, ready to apply, applied, interview date, 
+                initial interview done, second interview done, to completed. You can view, edit and delete your applications 
+                at any time. 
+                <br/><br/>
+                This feature will help you stay organized and motivated as you navigate the job application process.</p>
+                <button
+                  className="close-button"
+                  onClick={() => {
+                    console.log('modal closed ');
+                    close();
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+        </Popup>
         </div>
         <div className="applications-buttons">
           <div className="app-buttons-left">

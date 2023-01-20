@@ -23,9 +23,10 @@ body {
   width: 100%;
   min-height: 15vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10px;
 }
 
 .interviewPrepPage_container-header h1 {

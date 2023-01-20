@@ -16,6 +16,14 @@
 }
 
 .knowledge-bank-header-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.knowledge-bank-header-text h1 {
   border-bottom: 1px solid;
 }
 
