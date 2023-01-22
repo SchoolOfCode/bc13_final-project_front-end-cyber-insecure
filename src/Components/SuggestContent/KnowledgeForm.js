@@ -45,11 +45,11 @@ export default function KnowledgeForm() {
         ></textarea>
         {errors.knowledge_topic &&
           errors.knowledge_topic.type === 'required' && (
-            <p className="error">Topic must not be blank</p>
+            <p className="form-error">Topic must not be blank</p>
           )}
         {errors.knowledge_topic &&
           errors.knowledge_topic.type === 'minLength' && (
-            <p className="error">Topic must have at least 3 characters</p>
+            <p className="form-error">Topic must have at least 3 characters</p>
           )}
         <label id="knowledge-label">Concept</label>
         <textarea
@@ -63,15 +63,14 @@ export default function KnowledgeForm() {
         ></textarea>
         {errors.knowledge_concept &&
           errors.knowledge_concept.type === 'required' && (
-            <p className="error">Concept must not be blank</p>
+            <p className="form-error">Concept must not be blank</p>
           )}
         {errors.knowledge_concept &&
           errors.knowledge_concept.type === 'minLength' && (
-            <p className="error">Concept must have at least 5 characters</p>
+            <p className="form-error">Concept must have at least 5 characters</p>
           )}
         <button id="knowledge-button" type="submit">
-          {' '}
-          Submit{' '}
+          Submit
         </button>
       </form>
     </div>

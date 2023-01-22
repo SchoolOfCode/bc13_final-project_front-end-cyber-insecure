@@ -44,10 +44,10 @@ export default function QuizForm() {
           })}
         ></textarea>
         {errors.quiz_topic && errors.quiz_topic.type === 'required' && (
-          <p className="error">Quiz topic must not be blank</p>
+          <p className="form-error">Quiz topic must not be blank</p>
         )}
         {errors.quiz_topic && errors.quiz_topic.type === 'minLength' && (
-          <p className="error">Quiz topic must have at least 3 characters</p>
+          <p className="form-error">Quiz topic must have at least 3 characters</p>
         )}
         <label id="quiz-label">Quiz question</label>
         <textarea
@@ -60,16 +60,15 @@ export default function QuizForm() {
           })}
         ></textarea>
         {errors.quiz_question && errors.quiz_question.type === 'required' && (
-          <p className="error">Quiz question must not be blank</p>
+          <p className="form-error">Quiz question must not be blank</p>
         )}
         {errors.quiz_question && errors.quiz_question.type === 'minLength' && (
-          <p className="error">
+          <p className="form-error">
             Quiz question must have at least 20 characters
           </p>
         )}
         <button id="quiz-button" type="submit">
-          {' '}
-          Submit{' '}
+          Submit
         </button>
       </form>
     </div>

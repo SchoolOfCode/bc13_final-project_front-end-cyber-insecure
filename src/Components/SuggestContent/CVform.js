@@ -44,10 +44,10 @@ export default function CVform() {
           })}
         ></textarea>
         {errors.cv_link && errors.cv_link.type === 'required' && (
-          <p className="error">CV link must not be blank</p>
+          <p className="form-error">CV link must not be blank</p>
         )}
         {errors.cv_link && errors.cv_link.type === 'minLength' && (
-          <p className="error">CV link must have at least 5 characters</p>
+          <p className="form-error">CV link must have at least 5 characters</p>
         )}
         <button id="cv-button" type="submit">
           Submit

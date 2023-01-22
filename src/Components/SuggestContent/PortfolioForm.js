@@ -44,10 +44,10 @@ export default function PortfolioForm() {
           })}
         ></textarea>
         {errors.github_link && errors.github_link.type === 'required' && (
-          <p className="error">GitHub link must not be blank</p>
+          <p className="form-error">GitHub link must not be blank</p>
         )}
         {errors.github_link && errors.github_link.type === 'minLength' && (
-          <p className="error">GitHub link must have at least 5 characters</p>
+          <p className="form-error">GitHub link must have at least 5 characters</p>
         )}
         <label id="portfolio-label">Portfolio link</label>
         <textarea
@@ -60,17 +60,16 @@ export default function PortfolioForm() {
           })}
         ></textarea>
         {errors.portfolio_link && errors.portfolio_link.type === 'required' && (
-          <p className="error">Porfolio link must not be blank</p>
+          <p className="form-error">Porfolio link must not be blank</p>
         )}
         {errors.portfolio_link &&
           errors.portfolio_link.type === 'minLength' && (
-            <p className="error">
+            <p className="form-error">
               Portfolio link must have at least 5 characters
             </p>
           )}
         <button id="portfolio-button" type="submit">
-          {' '}
-          Submit{' '}
+          Submit
         </button>
       </form>
     </div>

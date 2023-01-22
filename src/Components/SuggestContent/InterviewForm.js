@@ -50,7 +50,7 @@ export default function InterviewForm() {
         </select>
         {errors.interview_question_type &&
           errors.interview_question_type.type === 'required' && (
-            <p className="error">Interview question type must not be blank</p>
+            <p className="form-error">Interview question type must not be blank</p>
           )}
         <label id="interview-label">Question</label>
         <textarea
@@ -64,11 +64,11 @@ export default function InterviewForm() {
         ></textarea>
         {errors.interview_question &&
           errors.interview_question.type === 'required' && (
-            <p className="error">Interview question must not be blank</p>
+            <p className="form-error">Interview question must not be blank</p>
           )}
         {errors.interview_question &&
           errors.interview_question.type === 'minLength' && (
-            <p className="error">
+            <p className="form-error">
               Interview question must have at least 20 characters
             </p>
           )}
@@ -84,17 +84,16 @@ export default function InterviewForm() {
         ></textarea>
         {errors.interview_answer &&
           errors.interview_answer.type === 'required' && (
-            <p className="error">Interview answer must not be blank</p>
+            <p className="form-error">Interview answer must not be blank</p>
           )}
         {errors.interview_answer &&
           errors.interview_answer.type === 'minLength' && (
-            <p className="error">
+            <p className="form-error">
               Interview answer must have at least 20 characters
             </p>
           )}
         <button id="interview-button" type="submit">
-          {' '}
-          Submit{' '}
+          Submit
         </button>
       </form>
     </div>
