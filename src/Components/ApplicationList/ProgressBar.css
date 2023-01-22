@@ -107,11 +107,13 @@
       width: calc(16%);
       height: 100%;
       border-radius: 5px;
+      width: fit-content;
     }
     .Research p {
       margin-top: 15px;
-      margin-right: 2px;
-      text-align: center;
+      margin-left: 4px;
+      margin-right: 4px;
+      text-align: right;
     }
     .Ready_to_Apply {
       display: flex;
@@ -121,10 +123,14 @@
       width: calc(29.56%);
       height: 100%;
       border-radius: 5px;
+      width: max-content;
+      padding-left: 3px;
+
     }
     .Ready_to_Apply p {
       margin-top: 15px;
-      margin-right: 5px;
+      margin-left: 4px;
+      margin-right: 4px;
       text-align: center;
     }
     .Applied {
