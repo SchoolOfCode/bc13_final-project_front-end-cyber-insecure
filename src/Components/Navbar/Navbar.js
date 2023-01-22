@@ -74,7 +74,7 @@ export default function Navbar() {
         <button onClick={navigateCV}> CV workshop </button>
         <button onClick={navigateKnowledgebank}> Knowledge Bank </button>
         <button onClick={navigateQuizzes}> Quizzes </button>
-        <button onClick={navigateSuggestContent}> Suggest Content </button>
+        <button onClick={navigateSuggestContent}> Suggest content </button>
         <button onClick={handleLogout}> Log out </button>
       </div>
     </div>
