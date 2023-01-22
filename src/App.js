@@ -10,6 +10,7 @@ import DashboardPage from './Components/DashboardPage/DashboardPage'
 import CVworkshop from './Components/CV/CVworkshop';
 import Quizzes from './Components/Quizzes/Quizzes';
 import KnowledgeBankList from './Components/KnowledgeBankList/KnowledgeBankList';
+import SuggestContent from './Components/SuggestContent/SuggestContent';
 import { AuthProvider } from './Components/contexts/AuthContext'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -28,6 +29,7 @@ function App() {
               <Route path='/quizzes' element={<PrivateRoute><Quizzes/></PrivateRoute>}/>
               <Route path='/knowledge-bank' element={<PrivateRoute><KnowledgeBankList/></PrivateRoute>}/>
               <Route path='/forgot-password' element={<ForgotPassword/>}/>
+              <Route path='/suggest-content' element={<SuggestContent/>}/>
             </Routes>
           </AuthProvider>
         </Router>
