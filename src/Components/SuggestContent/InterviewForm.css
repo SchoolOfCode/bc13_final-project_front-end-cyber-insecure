@@ -1,0 +1,57 @@
+.interview-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff8c;
+    border: 1px solid #FBF0A2;
+    box-shadow: 0px 0px 5px 5px #ff00001c;
+    border-radius: 5px;
+    width: 500px;
+    height: 550px;
+    text-align: center;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .interview-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .interview-textarea {
+    width: 300px;
+    resize: none;
+    overflow: auto;
+    padding: 5px;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .interview-form-p {
+    width: 90%;
+  }
+  
+  #interview-label {
+    margin-right: 5px;
+  }
+  
+  #interview-button {
+    margin-left: 5px;
+    background-color: beige;
+    border-radius: 5px;
+    width: 80px;
+  }
+
+  .interview-input {
+    width: 300px;
+  }
+
+  .interview-select {
+    width: 300px;
+  }
