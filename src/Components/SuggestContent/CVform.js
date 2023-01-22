@@ -35,7 +35,7 @@ export default function CVform() {
       <form className="cv-form-content" onSubmit={handleSubmit(onSubmit)}>
         <label id="cv-label">CV link</label>
         <textarea
-          className="interview-input"
+          className="cv-textarea"
           type="text"
           name="cv_link"
           {...register('cv_link', {
@@ -50,8 +50,7 @@ export default function CVform() {
           <p className="error">CV link must have at least 5 characters</p>
         )}
         <button id="cv-button" type="submit">
-          {' '}
-          Submit{' '}
+          Submit
         </button>
       </form>
     </div>
