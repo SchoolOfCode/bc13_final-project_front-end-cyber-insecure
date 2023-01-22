@@ -43,7 +43,7 @@
   .app-section {
     display: flex;
     flex-direction: column;
-    width: calc(5%);
+    min-width: calc(5%);
     height: 80%;
     align-items: center;
     justify-content: center;
@@ -64,9 +64,11 @@
     align-items: center;
     justify-content: center;
     width: calc(100%);
-    min-height: 10%;
+    height: 10%;
     border-bottom: 1px solid #bb8f6a;
-
+  }
+  .app-section-header p{
+    font-size: medium;
   }
   .app-section-footer {
     display: flex;
@@ -161,7 +163,11 @@
     border: none;
     border-radius: 5px;
   }
-
+@media(max-width:1500px){
+  .app-section-header p{
+    font-size: smaller;
+  }
+}
   @media (max-width: 950px) {
     .application-container{
         /* width: 90%; */
@@ -240,6 +246,7 @@
       .app-progress-container{
         max-height: 6%;
         padding-top: 2px;
+        width: 99%;
       }
       .app-progress-bar-container{
         height: 90%;
@@ -254,7 +261,8 @@
         height: 95%;
 
       }
+
       .app-progress-button button {
-        /* height: auto; */
+
       }
 }
