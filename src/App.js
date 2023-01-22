@@ -29,7 +29,7 @@ function App() {
               <Route path='/quizzes' element={<PrivateRoute><Quizzes/></PrivateRoute>}/>
               <Route path='/knowledge-bank' element={<PrivateRoute><KnowledgeBankList/></PrivateRoute>}/>
               <Route path='/forgot-password' element={<ForgotPassword/>}/>
-              <Route path='/suggest-content' element={<SuggestContent/>}/>
+              <Route path='/suggest-content' element={<PrivateRoute><SuggestContent/></PrivateRoute>}/>
             </Routes>
           </AuthProvider>
         </Router>
