@@ -202,4 +202,7 @@ body {
     min-height: 200px;
     max-width: 300px;
   }
+  .exampleButton{
+    width: 85%;
+  }
 }
