@@ -202,7 +202,8 @@ body {
     padding: 0px;
     width: 40%;
     max-width: 200px;
-    height: 45px;
+    height: fit-content;
+    /* height: 45px; */
     font-size: 17px;
   }
   .individual-cv-examples {
@@ -229,7 +230,15 @@ body {
     /* min-width: 300px; */
     width: 90vw;
     /* height: 950px; */
-    gap: 1%;
+    gap: 3vh;
+    height: auto;
+  }
+  .individual-cv-right button{
+    font-size: small;
+    max-height: 130px;
+  }
+  .card-container{
+    padding-top: 4px;
   }
   .cv-tools-container-content{
     width: 100%;

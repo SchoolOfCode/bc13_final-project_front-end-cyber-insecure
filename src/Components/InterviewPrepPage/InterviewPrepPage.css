@@ -141,7 +141,7 @@ body {
   font-size: 1.2em;
   /* margin-right: 20px; */
   border-radius: 10px;
-  padding: 7px;
+  /* padding: 2px; */
   height: 300px;
   max-width: 400px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -200,6 +200,9 @@ body {
 }
 
 @media (max-width: 900px) {
+  .carousel{
+    height: 70%;
+  }
   .cardStyling h3 {
     font-size: smaller;
   }
@@ -207,8 +210,7 @@ body {
     font-size: small;
   }
   .cardStyling {
-    min-height: 200px;
-    max-width: 300px;
+    height: 267px;
   }
   .exampleButton{
     width: 85%;
@@ -220,4 +222,5 @@ body {
     text-align: center;
     gap: 1px;
   }
+
 }

@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: rgba(66, 65, 65, 0.444);
     display: flex;
@@ -41,4 +41,18 @@
   
   .i-close-button:hover {
     background-color: rgb(226, 226, 211);
+  }
+  @media(max-width:700px){
+    .i-popup-inner{
+      position: fixed;
+      top: 10vh;
+    }
+    .i-close-button {
+      padding: 5px;
+      border-radius: 5px;
+      width: 100px;
+      height: 40px;
+      background-color: beige;
+      font-size: 17px;
+    }
   }
