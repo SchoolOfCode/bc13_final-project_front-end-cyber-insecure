@@ -102,6 +102,14 @@
     width: 90%;
     height: 55%;
   }
+
+  .PortfolioPage-container-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    text-align: center;
+  }
+  
 }
 @media(max-width:700px){
   .portfolio-popup-image{
@@ -113,5 +121,10 @@
   .portfolio-popup-image{
     width: 95%;
     height: 33%;
+  }
+
+  .icon {
+    margin-left: 20px;
+    margin-bottom: 5px;
   }
 }

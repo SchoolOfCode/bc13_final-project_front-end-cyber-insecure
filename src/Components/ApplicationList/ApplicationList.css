@@ -141,4 +141,11 @@
   .applications-main {
     gap: 3vh;
   }
+  .applications-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1px;
+  }
+  
 }

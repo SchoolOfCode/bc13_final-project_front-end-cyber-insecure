@@ -185,4 +185,11 @@
   .quiz-final-results button{
     width: fit-content;
   }
+
+  .quiz-container-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    gap: 1px;
+  }
 }

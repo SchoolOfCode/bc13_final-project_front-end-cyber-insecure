@@ -249,5 +249,12 @@ body {
     height: 95%;
     width: 95%;
   }
+
+  .cvworkshop-container-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    text-align: center;
+  }
   
 }

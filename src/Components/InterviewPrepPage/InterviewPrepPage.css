@@ -213,4 +213,11 @@ body {
   .exampleButton{
     width: 85%;
   }
+
+  .interviewPrepPage_container-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1px;
+  }
 }

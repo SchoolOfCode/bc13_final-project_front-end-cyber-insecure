@@ -90,4 +90,11 @@
     height: 43px;
     font-size: 17px;
   }
+
+  .suggest-content-underlined {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
 }

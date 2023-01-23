@@ -83,32 +83,32 @@ export default function KnowledgeBankList() {
       <div className='knowledge-bank-header'>
         <div className='knowledge-bank-header-text'>
           <h1>Refresh your knowledge using our comprehensive knowledge bank</h1>
-          <Popup
-          trigger={<button className="info-button">𝒊</button>}
-        >
-          {(close) => (
-            <div className="i-popup">
-              <div className="i-popup-inner">
-                <p>This feauture is designed to help you easily find and access the programming knowledge you need. 
-                You can search for specific topics and filter the results by general knowledge, JavaScript, HTML, CSS and React.
-                <br/><br/> 
-                Each piece of knowledge returned will include an image, definition and resource links 
-                (two links to articles and one link to a video) to help you learn more. 
-                <br/><br/> This tool is a great resource for junior developers looking to expand their knowledge base and 
-                become experts in their field.</p>
-                <button
-                  className="i-close-button"
-                  onClick={() => {
-                    console.log('modal closed ');
-                    close();
-                  }}
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          )}
-        </Popup>
+            <Popup
+              trigger={<button className="info-button">𝒊</button>}
+            >
+              {(close) => (
+                <div className="i-popup">
+                  <div className="i-popup-inner">
+                    <p>This feauture is designed to help you easily find and access the programming knowledge you need.
+                      You can search for specific topics and filter the results by general knowledge, JavaScript, HTML, CSS and React.
+                      <br /><br />
+                      Each piece of knowledge returned will include an image, definition and resource links
+                      (two links to articles and one link to a video) to help you learn more.
+                      <br /><br /> This tool is a great resource for junior developers looking to expand their knowledge base and
+                      become experts in their field.</p>
+                    <button
+                      className="i-close-button"
+                      onClick={() => {
+                        console.log('modal closed ');
+                        close();
+                      }}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              )}
+            </Popup>
         </div>
         <div className='input-container'>
           <input value={input} onChange={handleChange} />
