@@ -153,6 +153,9 @@ yarn add react-hook-form
 
 ![devaultQuizzes](https://user-images.githubusercontent.com/78863735/213726634-bab49316-9b18-400b-9752-3a26a23f7952.gif)
 
+![devaultsuggestions](https://user-images.githubusercontent.com/78863735/214035965-d606f8a0-cbbc-4541-b2f4-c9bc4f36aa2e.gif)
+
+
 
 
 
