@@ -1,6 +1,7 @@
 .navbar-container {
   width: 100%;
-  height: 80px;
+  height: 6vh;
+  min-height: 50px;
   display: flex;
   align-items: center;
   gap: 20px;

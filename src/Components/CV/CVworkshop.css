@@ -15,11 +15,11 @@ body {
   align-items: center;
   gap: 1vh;
   width: 100%;
-  min-height: 100vh;
+  min-height: 94vh;
 }
 .cvworkshop-container-header {
   width: 100%;
-  min-height: 15vh;
+  min-height: 2vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -156,6 +156,7 @@ body {
   background-color: #ffffff8c;
   border-radius: 5px;
   border: 1px solid #FBF0A2;
+  margin-bottom: 20px;
 }
 .cv-tools-container-header{
   width: 100%;

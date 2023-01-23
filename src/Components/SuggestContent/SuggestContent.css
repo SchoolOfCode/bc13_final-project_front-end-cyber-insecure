@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 94vh;
   width: 100%;
 }
 
 .suggest-content-header {
   width: 100%;
-  min-height: 15vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

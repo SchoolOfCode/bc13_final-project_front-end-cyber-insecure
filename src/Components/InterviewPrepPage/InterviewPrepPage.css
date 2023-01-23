@@ -17,16 +17,16 @@ body {
   padding: 10px;
   text-align: center;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 94vh;
 }
 .interviewPrepPage_container-header {
   width: 100%;
-  min-height: 15vh;
+  min-height: 2vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 2vh;
 }
 
 .interviewPrepPage_container-header h1 {

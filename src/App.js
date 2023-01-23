@@ -9,6 +9,7 @@ import ForgotPassword from './Components/AuthComponents/ForgotPassword'
 import DashboardPage from './Components/DashboardPage/DashboardPage'
 import CVworkshop from './Components/CV/CVworkshop';
 import Quizzes from './Components/Quizzes/Quizzes';
+import AboutUs from './Components/AboutUs/AboutUs';
 import KnowledgeBankList from './Components/KnowledgeBankList/KnowledgeBankList';
 import SuggestContent from './Components/SuggestContent/SuggestContent';
 import { AuthProvider } from './Components/contexts/AuthContext'
@@ -30,6 +31,7 @@ function App() {
               <Route path='/knowledge-bank' element={<PrivateRoute><KnowledgeBankList/></PrivateRoute>}/>
               <Route path='/forgot-password' element={<ForgotPassword/>}/>
               <Route path='/suggest-content' element={<PrivateRoute><SuggestContent/></PrivateRoute>}/>
+              <Route path='/about-us' element={<PrivateRoute><AboutUs /></PrivateRoute>}/>
             </Routes>
           </AuthProvider>
         </Router>
