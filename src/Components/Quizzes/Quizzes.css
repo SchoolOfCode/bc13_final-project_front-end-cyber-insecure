@@ -38,11 +38,7 @@
   padding-bottom: 20px;
 }
 
-@media(max-width:1000px) {
-  .quiz-question-buttons{
-    font-size: 17px;
-  }
-}
+
 .quiz-question-buttons {
   padding: 5px;
   border-radius: 5px;
@@ -95,9 +91,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-width: 70vw;
-  width: 900px;
-  height: 700px;
+  width: 90vw;
+  max-width: 900px;
+  height: 50vh;
+  max-height: 600px;
   background-color: #ffffff8c;
   border-radius: 5px;
   gap: 10px;
@@ -171,4 +168,13 @@
 .whole-badge-container h1{
   width: 100%;
   min-height: 80px;
+}
+
+@media(max-width:1000px) {
+  .quiz-question-buttons{
+    font-size: 17px;
+  }
+  .quiz-final-results button{
+    width: fit-content;
+  }
 }
