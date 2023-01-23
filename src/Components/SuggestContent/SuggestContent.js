@@ -69,7 +69,7 @@ export default function SuggestContent() {
           </div>
           <div className="suggest-content-buttons">
             <button onClick={handleInterviewPrep} className="cvButtonStyles">
-              Interview prep
+              Interview Prep
             </button>
             <button onClick={handlePortfolio} className="cvButtonStyles">
               Portfolio
