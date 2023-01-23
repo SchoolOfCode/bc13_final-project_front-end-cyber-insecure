@@ -75,6 +75,32 @@ describe('template spec', () => {
     cy.get('.quiz-buttons-div > :nth-child(6)').click();
     cy.get('.quiz-ul > :nth-child(4)').click();
     cy.get('.navbar-links > :nth-child(8)').click();
+    cy.get('path').click();
+cy.get('.hamburger-open > :nth-child(8)').click();
+cy.get('.suggest-content-buttons > :nth-child(1)').click();
+cy.get('.interview-select').select('Question to ask employers');
+cy.get('.interview-select').select('Technical question');
+cy.get('.interview-select').select('General question');
+cy.get('[name="interview_question"]').click();
+cy.get('[name="interview_answer"]').click();
+cy.get('#interview-button').click();
+cy.get('[name="interview_answer"]').click();
+cy.get('#interview-button').click();
+cy.get('.suggest-content-buttons > :nth-child(2)').click();
+cy.get('[name="github_link"]').click();
+cy.get('[name="portfolio_link"]').click();
+cy.get('#portfolio-button').click();
+cy.get('.suggest-content-buttons > :nth-child(3)').click();
+cy.get('.cv-textarea').click();
+cy.get('#cv-button').click();
+cy.get('.suggest-content-buttons > :nth-child(4)').click();
+cy.get('[name="knowledge_topic"]').click();
+cy.get('[name="knowledge_concept"]').click();
+cy.get('#knowledge-button').click();
+cy.get('.suggest-content-buttons > :nth-child(5)').click();
+cy.get('[name="quiz_topic"]').click();
+cy.get('[name="quiz_question"]').click();
+cy.get('#quiz-button').click();
     /* ==== End Cypress Studio ==== */
   })
 })
