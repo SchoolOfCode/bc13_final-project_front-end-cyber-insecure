@@ -138,4 +138,7 @@
   .app-buttons-left {
     width: 20%;
   }
+  .applications-main {
+    gap: 3vh;
+  }
 }
