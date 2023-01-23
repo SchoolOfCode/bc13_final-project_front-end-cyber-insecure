@@ -57,6 +57,10 @@ export default function Navbar() {
     navigate('/suggest-content', { replace: true });
   };
 
+  const navigateAboutUs = () => {
+    navigate('/about-us', { replace: true });
+  };
+
   return (
     <div className={hamburger ? 'navbar-container' : 'navbar-open'}>
       {error && <Alert variant="danger">{error}</Alert>}
@@ -75,6 +79,7 @@ export default function Navbar() {
         <button onClick={navigateKnowledgebank}> Knowledge Bank </button>
         <button onClick={navigateQuizzes}> Quizzes </button>
         <button onClick={navigateSuggestContent}> Suggest content </button>
+        <button onClick={navigateAboutUs}> About Us </button>
         <button onClick={handleLogout}> Log out </button>
       </div>
     </div>
