@@ -70,12 +70,14 @@
   max-height: 95%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    border: 1px solid #FBF0A2;
+    border: 2px solid #FBF0A2;
   border-radius: 5px;
 }
 
 .portfolio-plain-image:hover {
   transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 40px,
+  rgba(0, 0, 0, 0.58) 0px 15px 12px;
 }
 
 .icon {
