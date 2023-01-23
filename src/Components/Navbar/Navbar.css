@@ -115,7 +115,11 @@
     width: 100%;
     align-items: center;
     top: 0px;
-    position: absolute;
+    position: fixed;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px,
+    rgba(0, 0, 0, 0.22) 0px 10px 8px;
+  
   }
   .navbar-links {
     display: none;
