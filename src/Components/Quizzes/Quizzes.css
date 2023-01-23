@@ -68,7 +68,8 @@
   gap: 10px;
   margin-bottom: 5%;
   border: 1px solid #FBF0A2;
-  box-shadow: 0px 0px 5px 5px #ff00001c;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .quiz-question-card-header {
@@ -100,7 +101,8 @@
   gap: 10px;
   margin-bottom: 5%;
   border: 1px solid #FBF0A2;
-  box-shadow: 0px 0px 5px 5px #ff00001c;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .quiz-question-card h2 {
@@ -159,11 +161,13 @@
   width: 90vw;
   max-width: 900px;
   min-height: 90px;
-  background-color: #dedede91;
+  background-color: #ffffff8c;
   border-radius: 5px;
   margin-bottom: 2%;
-  box-shadow: 0px 0px 5px 5px #a8a8a83d;
-  border: 1px solid white;
+  /* box-shadow: 0px 0px 5px 5px #a8a8a83d; */
+  border: 1px solid #FBF0A2;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+  rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .whole-badge-container h1{
   width: 100%;

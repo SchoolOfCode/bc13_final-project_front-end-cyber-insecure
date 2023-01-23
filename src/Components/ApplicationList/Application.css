@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-evenly;
     height: 150px;
-    background-color: rgba(255, 255, 255, 0.784);
+    background-color: white;
     border-radius: 5px;
     border: 2px solid #bb8f6a;
     cursor: pointer;

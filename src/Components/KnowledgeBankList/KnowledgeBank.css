@@ -82,19 +82,24 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #f1f1f1;
+  background-color: white;
   width: 90%;
   border-radius: 10px;
   margin: 5px;
   gap: 20px;
   padding: 10px;
-  border: 3px solid #bb8f6a;
+  /* border: 3px solid #bb8f6a; */
+    border: 3px solid #FBF0A2;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+  rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .knowledge-bank-item:hover {
-  -webkit-box-shadow: 0px 0px 5px 5px #e5be83;
-  box-shadow: 0px 0px 5px 5px #e5be83d4;
+  /* -webkit-box-shadow: 0px 0px 5px 5px #e5be83;
+  box-shadow: 0px 0px 5px 5px #e5be83d4; */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+  #fbf1a289 0px 15px 12px;
 }
 
 .knowledge-bank-first-third {

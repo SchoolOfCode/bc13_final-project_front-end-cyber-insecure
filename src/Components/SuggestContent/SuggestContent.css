@@ -65,8 +65,10 @@
   max-width: 800px;
   background-color: #e5be83;
   padding: 20px;
-  box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   border-radius: 10px;
+  border: 1px solid #FBF0A2;
 }
 
 @media(max-width:1100px){
