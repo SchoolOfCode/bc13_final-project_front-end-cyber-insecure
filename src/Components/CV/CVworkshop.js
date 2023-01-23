@@ -7,6 +7,10 @@ import backendPortfolio from '../../Images/backend.png';
 import fullstackPortfolio from '../../Images/fullstack.png';
 import Popup from 'reactjs-popup';
 import './CVworkshop.css';
+import figma from '../../Images/figma.png'
+import canva from '../../Images/canva.png'
+import adobe from '../../Images/adobe.png'
+import miro from '../../Images/miro.png'
 
 export default function CVworkshop() {
   const [CVonScreen, setCVonScreen] = useState('');
@@ -38,14 +42,14 @@ export default function CVworkshop() {
           {(close) => (
             <div className="popup">
               <div className="popup-inner">
-                <p>This tool is designed to help junior developers create an effective and professional CV. 
-                By clicking on the appropriate role button, you can view an example CV tailored to your desired role, 
-                as well as a written explanation of why the content is good. 
-                <br/><br/>
-                The explanation is split into three sections - Objective / Personal Statement, Skills, and 
-                Work Experience - which will help you to understand the importance of each section. 
-                <br/><br/>
-                If you like the CV, you can also view and download it to use as a template. Good luck with your job search!</p>
+                <p>This tool is designed to help junior developers create an effective and professional CV.
+                  By clicking on the appropriate role button, you can view an example CV tailored to your desired role,
+                  as well as a written explanation of why the content is good.
+                  <br /><br />
+                  The explanation is split into three sections - Objective / Personal Statement, Skills, and
+                  Work Experience - which will help you to understand the importance of each section.
+                  <br /><br />
+                  If you like the CV, you can also view and download it to use as a template. Good luck with your job search!</p>
                 <button
                   className="close-button"
                   onClick={() => {
@@ -270,6 +274,37 @@ export default function CVworkshop() {
             )}
           </div>
         )}
+      </div>
+      <div className='cv-tools-container'>
+        <div className='cv-tools-container-header'>
+          <h2> Popular tools used for formatting your CV </h2>
+        </div>
+        <div className='cv-tools-container-content'>
+          <div className='cv-tools-content-ex'>
+            <a href='https://www.adobe.com/' target="_blank" rel="noreferrer">
+              <img src={adobe} alt='' />
+              <p> Adobe</p>
+            </a>
+          </div>
+          <div className='cv-tools-content-ex'>
+            <a href='https://www.figma.com/' target="_blank" rel="noreferrer">
+              <img src={figma} alt='' />
+              <p> Figma</p>
+            </a>
+          </div>
+          <div className='cv-tools-content-ex'>
+            <a href='https://www.miro.com/' target="_blank" rel="noreferrer">
+              <img src={miro} alt='' />
+              <p> Miro </p>
+            </a>
+          </div>
+          <div className='cv-tools-content-ex'>
+            <a href='https://www.canva.com/' target="_blank" rel="noreferrer">
+              <img src={canva} alt='' />
+              <p> Canva </p>
+            </a>
+          </div>
+        </div>
       </div>
     </div>,
   ];
