@@ -11,6 +11,7 @@ import figma from '../../Images/figma.png'
 import canva from '../../Images/canva.png'
 import adobe from '../../Images/adobe.png'
 import miro from '../../Images/miro.png'
+import "../../Components/Ipopup.css"
 
 export default function CVworkshop() {
   const [CVonScreen, setCVonScreen] = useState('');
@@ -40,8 +41,8 @@ export default function CVworkshop() {
           trigger={<button className="info-button">𝒊</button>}
         >
           {(close) => (
-            <div className="popup">
-              <div className="popup-inner">
+            <div className="i-popup">
+              <div className="i-popup-inner">
                 <p>This tool is designed to help junior developers create an effective and professional CV.
                   By clicking on the appropriate role button, you can view an example CV tailored to your desired role,
                   as well as a written explanation of why the content is good.
@@ -51,7 +52,7 @@ export default function CVworkshop() {
                   <br /><br />
                   If you like the CV, you can also view and download it to use as a template. Good luck with your job search!</p>
                 <button
-                  className="close-button"
+                  className="i-close-button"
                   onClick={() => {
                     console.log('modal closed ');
                     close();

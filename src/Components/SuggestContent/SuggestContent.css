@@ -69,6 +69,13 @@
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   border-radius: 10px;
   border: 1px solid #FBF0A2;
+  text-align: center;
+}
+.welcome-content-card h4{
+ padding-bottom: 5px;
+}
+.thank-you{
+  border-bottom: 1px solid #FBF0A2;
 }
 
 @media(max-width:1100px){

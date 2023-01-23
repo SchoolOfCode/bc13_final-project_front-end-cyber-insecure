@@ -110,7 +110,7 @@
 }
 
 .quiz-question-text {
-  font-size: large;
+  font-size: x-large;
   width: 95%;
   min-height: 60px;
   background-color: rgb(255, 255, 255);
@@ -130,6 +130,7 @@
   width: 90%;
   height: 100%;
   padding: 0;
+  gap: 5px;
 }
 
 .quiz-li {

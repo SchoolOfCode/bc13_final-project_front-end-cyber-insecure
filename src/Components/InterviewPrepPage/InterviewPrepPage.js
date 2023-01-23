@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import Popup from 'reactjs-popup';
 import Card from './Card/Card';
 import interviewQuestions from './dummyData/dummyData';
+import "../../Components/Ipopup.css"
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -39,8 +40,8 @@ function InterviewPrepPage(props) {
           trigger={<button className="info-button">𝒊</button>}
         >
           {(close) => (
-            <div className="popup">
-              <div className="popup-inner">
+            <div className="i-popup">
+              <div className="i-popup-inner">
                 <p>Our interview preparation feature is designed to help prepare you for job interviews. We provide questions 
                 and example answers to help you feel confident and prepared for both general and technical interview questions. 
                 <br/><br/>
@@ -50,7 +51,7 @@ function InterviewPrepPage(props) {
                 <br/><br/>
                 This feature is aimed to help you quickly find the resources you need to ace the interview.</p>
                 <button
-                  className="close-button"
+                  className="i-close-button"
                   onClick={() => {
                     console.log('modal closed ');
                     close();

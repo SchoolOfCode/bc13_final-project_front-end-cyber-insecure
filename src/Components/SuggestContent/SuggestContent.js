@@ -7,6 +7,7 @@ import InterviewForm from './InterviewForm';
 import Navbar from '../Navbar/Navbar';
 import Popup from 'reactjs-popup';
 import './SuggestContent.css';
+import "../../Components/Ipopup.css"
 
 export default function SuggestContent() {
   const [topic, setTopic] = useState('');
@@ -40,8 +41,8 @@ export default function SuggestContent() {
             <h1> Suggest content for us to upload onto the site</h1>
             <Popup trigger={<button className="info-button">𝒊</button>}>
               {(close) => (
-                <div className="popup">
-                  <div className="popup-inner">
+                <div className="i-popup">
+                  <div className="i-popup-inner">
                     <p>
                       The suggest content feature allows you to suggest content
                       to add to the app. To do so, select a topic, and fill out
@@ -53,7 +54,7 @@ export default function SuggestContent() {
                       to deVault!
                     </p>
                     <button
-                      className="close-button"
+                      className="i-close-button"
                       onClick={() => {
                         console.log('modal closed ');
                         close();
@@ -105,7 +106,7 @@ export default function SuggestContent() {
               new job site for developers, please select the relevant tab and
               submit your suggestions.
             </p>
-            <p>
+            <p className='thank-you'>
               Thank you for sharing your experience with us and other users.
             </p>
             <p>The Devault Team</p>

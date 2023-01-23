@@ -4,6 +4,7 @@ import { questionsJavaScript, questionsReact, placeholderQuestion, questionsCSS,
 import './Quizzes.css'
 import { useAuth } from "../contexts/AuthContext";
 import Popup from 'reactjs-popup';
+import "../../Components/Ipopup.css"
 
 
 const url = process.env.REACT_APP_BACKEND_URL
@@ -139,8 +140,8 @@ export default function Quizzes() {
           trigger={<button className="info-button">𝒊</button>}
         >
           {(close) => (
-            <div className="popup">
-              <div className="popup-inner">
+            <div className="i-popup">
+              <div className="i-popup-inner">
                 <p>This app is designed to help you test your knowledge on a variety of topics, such as JavaScript, React, 
                 CSS, TypeScript, Python, and Node. To get started, simply click on the quiz topic of your choice. 
                 <br/><br/>
@@ -151,7 +152,7 @@ export default function Quizzes() {
                 <br/><br/>
                 So, go ahead and get started today!</p>
                 <button
-                  className="close-button"
+                  className="i-close-button"
                   onClick={() => {
                     console.log('modal closed ');
                     close();

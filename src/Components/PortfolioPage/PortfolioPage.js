@@ -18,6 +18,7 @@ import { SocialIcon } from "react-social-icons";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./PortfolioCarousel.css";
+import "../../Components/Ipopup.css"
 
 
 const responsive = {
@@ -52,15 +53,15 @@ function PortfolioPage(props) {
           trigger={<button className="info-button">𝒊</button>}
         >
           {(close) => (
-            <div className="popup">
-              <div className="popup-inner">
+            <div className="i-popup">
+              <div className="i-popup-inner">
                 <p>Here you will find examples of well-constructed portfolios and GitHub pages, allowing you to 
                 learn what makes a good portfolio and how to improve your own. 
                 <br/><br/>
                 Simply scroll through the carousel  to view the examples, and click on the images to see an 
                 annotated version which explains why it is a good example, and tips to help you tailor and improve your own portfolio.</p>
                 <button
-                  className="close-button"
+                  className="i-close-button"
                   onClick={() => {
                     console.log('modal closed ');
                     close();
