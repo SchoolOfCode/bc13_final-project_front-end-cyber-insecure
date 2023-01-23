@@ -3,12 +3,12 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 94vh;
 }
 
 .PortfolioPage-container-header {
   width: 100%;
-  min-height: 15vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
