@@ -8,8 +8,7 @@
 ![deVault fallout png](https://user-images.githubusercontent.com/78863735/213680975-cb47d46b-a5ab-43fa-8e97-a19df288f2c7.png#gh-light-mode-only)
 
 
-![frame (2)](https://user-images.githubusercontent.com/78863735/214069046-988980b9-c0a6-4d42-9022-912b99cb6178.png)
-
+![frame (2)](https://user-images.githubusercontent.com/78863735/214069585-f6216703-eca7-4ba2-ac50-6463c8804341.png)
 
 <br>
 
