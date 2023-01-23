@@ -173,34 +173,32 @@
         align-items: center;
       }
       .app-popup{
+        position: fixed;
+        top: 9vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         min-width: 93vw;
-        height: 80vh;
+        height: 77vh;
         background-color: rgb(255, 255, 255);
         border-radius: 5px;
       }
-
-
-
-
     .form-container {
         display: flex;
         flex-direction: row;
-        height: 75vh;
+        height: 65vh;
         /* height: 200px; */
-        max-width: 85vw;
+        max-width: 80vw;
         align-items: center;
         justify-content: center;
         gap: 2%;
     }
     .form-itself{
         display: flex;
-        height: 70vh;
+        height: 65vh;
         /* height: 200px; */
-        max-width: 85vw;
+        max-width: 80vw;
         background-color: rgb(255, 255, 255);
         /* padding: 5px; */
         gap: 2%;
@@ -325,5 +323,6 @@
         background-color: #bb8f6a;
         border-radius: 5px;
         width: 35px;
+        height: fit-content;
     }
 }

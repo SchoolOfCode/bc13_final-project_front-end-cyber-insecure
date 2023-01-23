@@ -208,6 +208,7 @@ body {
   }
   .cardStyling {
     min-height: 200px;
+    width: 80%;
     max-width: 300px;
   }
   .exampleButton{
