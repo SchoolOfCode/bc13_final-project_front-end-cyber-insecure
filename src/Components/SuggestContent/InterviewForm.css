@@ -21,10 +21,12 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 100%;
   }
 
   .interview-textarea {
-    width: 300px;
+    width: 95%;
+    max-width: 300px;
     resize: none;
     overflow: auto;
     padding: 5px;
@@ -54,5 +56,6 @@
   }
 
   .interview-select {
-    width: 300px;
+    width: 95%;
+    max-width: 300px;
   }

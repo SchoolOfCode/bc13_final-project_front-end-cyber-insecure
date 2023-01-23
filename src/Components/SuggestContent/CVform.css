@@ -21,10 +21,12 @@
   align-items: center;
   justify-content: center;
   gap: 10px ;
+  width: 100%;
 }
 
 .cv-textarea {
-  width: 300px;
+  width: 95%;
+  max-width: 300px;
   resize: none;
   overflow: auto;
   padding: 5px;
