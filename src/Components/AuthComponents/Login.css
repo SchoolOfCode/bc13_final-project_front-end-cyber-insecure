@@ -15,6 +15,7 @@
     min-width: 70vw;
     gap: 20%;
     height: 90vh;
+    
 }
 .login-component a{
     color: black;
@@ -30,6 +31,8 @@
     border-radius: 5px;
     border: 1px solid;
     border-color: #FBF0A2;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .login-container a {
@@ -97,11 +100,14 @@
     justify-content: center;
     max-width: 30%;
     gap: 20px;
+    
 }
 .second-ex img{
 width: 350px;
 height: 290px;
 border:2px solid #FBF0A2;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .second-ex p{
     max-width: 90%;
@@ -133,6 +139,8 @@ border:2px solid #FBF0A2;
     height: 280px;
     border:2px solid #FBF0A2;
     width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .login-fourth-section-container{
     min-height: 50vh;
@@ -155,6 +163,8 @@ border:2px solid #FBF0A2;
     height: 280px;
     width: 500px;
     border:2px solid #FBF0A2;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 @media (max-width: 1150px){

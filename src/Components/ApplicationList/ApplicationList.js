@@ -6,6 +6,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import Popup from "reactjs-popup";
 import Form from "../Form/Form";
 import { useAuth } from "../contexts/AuthContext";
+import "../../Components/Ipopup.css"
 
 const url = process.env.REACT_APP_BACKEND_URL
 
@@ -130,8 +131,8 @@ function ApplicationList() {
           trigger={<button className="info-button">𝒊</button>}
         >
           {(close) => (
-            <div className="popup">
-              <div className="popup-inner">
+            <div className="i-popup">
+              <div className="i-popup-inner">
                 <p>Using the job application tracking feature, you can easily keep track of all the jobs you are considering. To add a job application, 
                 simply enter the job title, company, job description, location, salary, job link and any additional notes. 
                 <br/><br/>
@@ -141,7 +142,7 @@ function ApplicationList() {
                 <br/><br/>
                 This feature will help you stay organized and motivated as you navigate the job application process.</p>
                 <button
-                  className="close-button"
+                  className="i-close-button"
                   onClick={() => {
                     console.log('modal closed ');
                     close();
