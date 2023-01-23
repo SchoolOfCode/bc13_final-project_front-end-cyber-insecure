@@ -40,19 +40,19 @@
   width: 300px;
   min-height: 350px;
   border-radius: 5px;
-  border: 2px solid #e5be83;
+  border: 2px solid #FBF0A2;
   /* -webkit-box-shadow: 0px 0px 5px 5px #ffa805;  */
-  box-shadow: 0px 0px 5px 5px #937e5e8a;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .dashboard-card:hover {
   transform: scale(1.1);
-  -webkit-box-shadow: 0px 0px 5px 5px #e5be8382;
-  box-shadow: 0px 0px 5px 5px #e5be83b1;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.794) 0px 15px 12px;
   cursor: pointer;
   color: black;
-  border: 1px solid;
-  border-color: #fbf0a2;
+  /* border: 1px solid #FBF0A2; */
   transition: all 0.5s;
   background: rgba(231, 230, 230, 0.9);
   opacity: 80%;
