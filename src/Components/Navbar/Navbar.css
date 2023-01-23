@@ -111,7 +111,7 @@
   .navbar-open {
     display: flex;
     flex-direction: column;
-    background-color: #fbf0a2;
+    background-color: #e5be83;
     width: 100%;
     align-items: center;
     top: 0px;
@@ -119,8 +119,8 @@
     z-index: 1;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px,
     rgba(0, 0, 0, 0.22) 0px 10px 8px;
-  
   }
+  
   .navbar-links {
     display: none;
   }
@@ -134,7 +134,7 @@
   }
 
   .navbar-open button:hover {
-    background-color: #e5be83;
+    background-color: #fbf0a2;
   }
 
   .devault-icon {

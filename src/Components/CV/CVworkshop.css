@@ -244,5 +244,10 @@ body {
     align-items: center;
     width: 40%;
   }
+
+  .cv-tools-content-ex img{
+    height: 95%;
+    width: 95%;
+  }
   
 }
