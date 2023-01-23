@@ -147,6 +147,10 @@ body {
   margin: 20px;
   border: 1px solid #FBF0A2;
 }
+.cardStyling:hover{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 40px,
+  rgba(0, 0, 0, 0.58) 0px 15px 12px;
+}
 
 .question {
   display: flex;
