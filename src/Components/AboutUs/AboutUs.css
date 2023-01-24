@@ -25,11 +25,10 @@
 }
 
 .about-us-mission{
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
   width: 90%;
   max-width: 1650px;
   background-color: #e5be83;
@@ -49,7 +48,6 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 20px;
-    
     width: 90%;
     max-width: 1700px;
     min-height: 50%;
@@ -60,18 +58,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    
     width: 15%;
     min-width: 300px;
     max-width: 500px;
-
     height: 370px;
     min-height: 600px;
     max-height: 850px;
-
-
-
     gap: 20px;
     margin: 0;
     padding: 10px;
@@ -115,6 +107,13 @@
 
 .social-icon {
     margin: 0;
-
-    
 }
+
+@media (max-width: 1000px) {
+    .about-us-header {
+      text-align: center;
+    }
+    .about-us-mission {
+      text-align: center;
+    }
+  }

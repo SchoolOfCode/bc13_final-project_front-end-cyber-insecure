@@ -69,7 +69,7 @@ export default function Navbar() {
           <GiHamburgerMenu />
         </button>
       </div>
-      <img className='devault-icon' src={deVault} alt=''/>
+      <img onClick={navigateHome} className='devault-icon' src={deVault} alt=''/>
       <div className={hamburger ? 'navbar-links' : 'hamburger-open'}>
         <button onClick={navigateHome}> Dashboard </button>
         <button onClick={navigateApplications}> My applications</button>

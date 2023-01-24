@@ -60,6 +60,10 @@
   margin-left: 10px;
 }
 
+.devault-icon:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 1500px) {
   .navbar-links {
     font-size: 17px;
