@@ -27,15 +27,17 @@ export default function AboutUs() {
           great ideas about how to solve?". As a junior developer, it can be
           hard to keep track of your professional development and job-seeking
           journey. If only there was an app that could allow junior developers
-          to do this in one space... 
-          <br/><br/>
-          Introducing DeVault, the ultimate tool for
-          junior developers! DeVault enables you to stay organised and maximise
-          your job search potential. Track your job applications, optimise your
-          CV and your portfolio, search for specific knowledge, prepare for
-          interviews and even take quizzes. With DeVault, you can stay on top of
-          your job search and put your best foot forward. 
-          <br/><br/>
+          to do this in one space...
+          <br />
+          <br />
+          Introducing DeVault, the ultimate tool for junior developers! DeVault
+          enables you to stay organised and maximise your job search potential.
+          Track your job applications, optimise your CV and your portfolio,
+          search for specific knowledge, prepare for interviews and even take
+          quizzes. With DeVault, you can stay on top of your job search and put
+          your best foot forward.
+          <br />
+          <br />
           Get started today and take your development career to the next level!
         </p99>
       </div>
@@ -43,7 +45,11 @@ export default function AboutUs() {
         <div className="developer">
           <h2>Calla</h2>
           <img className="dev-img" src={calla} alt="Calla" />
-          <p>I am worried I worry too much.</p>
+          <p>
+            I used to spend my time moderating interviews and focus groups. Now,
+            instead of asking questions, I want to solve problems and answer
+            important tech questions with code.
+          </p>
           <div className="developer-shortcuts">
             <SocialIcon
               className="icon"
@@ -68,7 +74,7 @@ export default function AboutUs() {
         <div className="developer">
           <h2>Constantin</h2>
           <img className="dev-img" src={constantin} alt="Constantin" />
-          <p>Because... Why not?</p>
+          <p>When I am not coding or learning about new technologies, I enjoy playing video games with friends, travelling, anything about  motorcycles, filming with my GoPro and watching old movies.</p>
           <div className="developer-shortcuts">
             <SocialIcon
               className="icon"
@@ -93,7 +99,7 @@ export default function AboutUs() {
         <div className="developer">
           <h2>Barbara</h2>
           <img className="dev-img" src={barbara} alt="Barbara" />
-          <p>Who is Taylor?</p>
+          <p>I moved to the UK from France in 2017, hoping for a fresh start. I stumbled into code and fell in love with it. When I'm not coding I love playing video games, watching horror movies, true crime and reading.</p>
           <div className="developer-shortcuts">
             <SocialIcon
               className="icon"
@@ -116,11 +122,13 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="developer">
-          <h2>MiKo</h2>
+          <h2>MiKO</h2>
           <img className="dev-img" src={miko2} alt="MiKo" />
           <p>
-            Ever since discovered the code can’t live without it! Taylor doesn't
-            live at all.
+            Before bootcamp I used to drive double-decker lorries on narrow
+            streets of London where I developed my ability to solve problems in
+            no time and then I discovered code. Ever since my life is dedicated
+            to it!
           </p>
           <div className="developer-shortcuts">
             <SocialIcon
@@ -147,10 +155,8 @@ export default function AboutUs() {
           <h2>Taylor</h2>
           <img className="dev-img" src={taylor2} alt="Taylor" />
           <p>
-            After a role of travelling around the world I wanted to test myself
-            by learning programming and software development to achieve my goal
-            of having a highly skilled job that can make a difference in the
-            world.
+            After travelling the world on a plane for three years, I
+            decided to fly my way to code and the world of software development.
           </p>
           <div className="developer-shortcuts">
             <SocialIcon
