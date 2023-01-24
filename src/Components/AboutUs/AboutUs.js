@@ -67,7 +67,7 @@ export default function AboutUs() {
         </div>
         <div className="developer">
           <img className="dev-img" src={barbara} alt="Barbara" />
-          <p>Barbara</p>
+          <p>Barbaraaaaaaaaa</p>
           <div className="developer-shortcuts">
             <SocialIcon
               className="icon"
