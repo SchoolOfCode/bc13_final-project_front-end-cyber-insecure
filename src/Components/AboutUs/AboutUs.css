@@ -24,15 +24,34 @@
     border-bottom: solid 1px;
 }
 
+.about-us-mission{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  width: 90%;
+  max-width: 1650px;
+  background-color: #e5be83;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 10px;
+  border: 1px solid #FBF0A2;
+  font-size: large;
+  
+}
+
 .all-of-us{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 20px;
     
     width: 90%;
+    max-width: 1700px;
     min-height: 50%;
 }
 
@@ -48,14 +67,14 @@
     max-width: 500px;
 
     height: 370px;
-    min-height: 500px;
-    max-height: 700px;
+    min-height: 600px;
+    max-height: 850px;
 
 
 
     gap: 20px;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     background-color: white;
     border: 2px solid #FBF0A2;
     border-radius: 5px;
@@ -65,9 +84,9 @@
 
 .developer p{
     width: 100%;
-    height: 5%;
+    height: 20%;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
     margin: 0;
     padding: 0;
     
