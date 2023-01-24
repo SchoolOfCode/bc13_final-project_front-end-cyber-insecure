@@ -11,15 +11,16 @@ body {
 .cvworkshop-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   align-items: center;
   gap: 1vh;
   width: 100%;
-  min-height: 94vh;
+  min-height: 93vh;
 }
 .cvworkshop-container-header {
   width: 100%;
-  min-height: 2vh;
+  /* min-height: 2vh; */
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;

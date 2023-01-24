@@ -17,11 +17,12 @@ body {
   padding: 10px;
   text-align: center;
   width: 100vw;
-  min-height: 94vh;
+  min-height: 93vh;
 }
 .interviewPrepPage_container-header {
   width: 100%;
-  min-height: 2vh;
+  /* min-height: 2vh; */
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -40,7 +41,7 @@ body {
   justify-content: center;
   gap: 20px;
   width: 100%;
-  min-height: 80vh;
+  /* min-height: 80vh; */
 }
 
 /* Individual Question Sections */

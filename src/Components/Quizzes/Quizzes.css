@@ -5,12 +5,13 @@
   justify-content: center;
   text-align: center;
   width: 100vw;
-  min-height: 94vh;
+  min-height: 93vh;
   /* gap: 10px; */
 }
 
 .quiz-container-header{
-  min-height: 5vh;
+  /* min-height: 5vh; */
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
