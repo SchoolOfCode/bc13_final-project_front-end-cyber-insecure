@@ -72,15 +72,15 @@ export default function Navbar() {
       <img className='devault-icon' src={deVault} alt=''/>
       <div className={hamburger ? 'navbar-links' : 'hamburger-open'}>
         <button onClick={navigateHome}> Dashboard </button>
-        <button onClick={navigateApplications}> My applications</button>
+        <button onClick={navigateApplications}> My Applications</button>
         <button onClick={navigateInterviewPrep}> Interview Prep</button>
-        <button onClick={navigatePortfolio}> Perfect your portfolio</button>
+        <button onClick={navigatePortfolio}> Perfect Your Portfolio</button>
         <button onClick={navigateCV}> CV workshop </button>
         <button onClick={navigateKnowledgebank}> Knowledge Bank </button>
         <button onClick={navigateQuizzes}> Quizzes </button>
-        <button onClick={navigateSuggestContent}> Suggest content </button>
+        <button onClick={navigateSuggestContent}> Suggest Content </button>
         <button onClick={navigateAboutUs}> About Us </button>
-        <button onClick={handleLogout}> Log out </button>
+        <button onClick={handleLogout}> Log Out </button>
       </div>
     </div>
   );
