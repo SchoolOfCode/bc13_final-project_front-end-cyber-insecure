@@ -16,10 +16,34 @@ export default function AboutUs() {
       <div className="about-us-header">
         <h1>Meet the team who bravely built DeVault! </h1>
       </div>
+      <div className="about-us-mission">
+        <p99>
+          Meet the deVault developers! Calla, Constantin, Barbara, Miko and
+          Taylor are School of Code bootcamp graduates. The deVault team built
+          this site for their final 4-week team project - after just 12 weeks of
+          coding experience! They were tasked with building a full-stack
+          application that solves a real-world problem and they though to
+          themselves - "why not solve a problem that we know well and have some
+          great ideas about how to solve?". As a junior developer, it can be
+          hard to keep track of your professional development and job-seeking
+          journey. If only there was an app that could allow junior developers
+          to do this in one space... 
+          <br/><br/>
+          Introducing DeVault, the ultimate tool for
+          junior developers! DeVault enables you to stay organised and maximise
+          your job search potential. Track your job applications, optimise your
+          CV and your portfolio, search for specific knowledge, prepare for
+          interviews and even take quizzes. With DeVault, you can stay on top of
+          your job search and put your best foot forward. 
+          <br/><br/>
+          Get started today and take your development career to the next level!
+        </p99>
+      </div>
       <div className="all-of-us">
         <div className="developer">
+          <h2>Calla</h2>
           <img className="dev-img" src={calla} alt="Calla" />
-          <p>Calla</p>
+          <p>I am worried I worry too much.</p>
           <div className="developer-shortcuts">
             <SocialIcon
               className="icon"
@@ -42,8 +66,9 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="developer">
+          <h2>Constantin</h2>
           <img className="dev-img" src={constantin} alt="Constantin" />
-          <p>Constantin</p>
+          <p>Because... Why not?</p>
           <div className="developer-shortcuts">
             <SocialIcon
               className="icon"
@@ -66,8 +91,9 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="developer">
+          <h2>Barbara</h2>
           <img className="dev-img" src={barbara} alt="Barbara" />
-          <p>Barbara</p>
+          <p>Who is Taylor?</p>
           <div className="developer-shortcuts">
             <SocialIcon
               className="icon"
@@ -90,8 +116,12 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="developer">
+          <h2>MiKo</h2>
           <img className="dev-img" src={miko2} alt="MiKo" />
-          <p>MiKo</p>
+          <p>
+            Ever since discovered the code can’t live without it! Taylor doesn't
+            live at all.
+          </p>
           <div className="developer-shortcuts">
             <SocialIcon
               className="icon"
@@ -114,8 +144,14 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="developer">
+          <h2>Taylor</h2>
           <img className="dev-img" src={taylor2} alt="Taylor" />
-          <p>Taylor</p>
+          <p>
+            After a role of travelling around the world I wanted to test myself
+            by learning programming and software development to achieve my goal
+            of having a highly skilled job that can make a difference in the
+            world.
+          </p>
           <div className="developer-shortcuts">
             <SocialIcon
               className="icon"
