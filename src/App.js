@@ -17,7 +17,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   return <div className='app-container'>
-        <Router>
+        <Router basename='/'>
           <AuthProvider>
             <Routes>
               <Route exact path="/" element={<PrivateRoute><DashboardPage/></PrivateRoute>}/>
