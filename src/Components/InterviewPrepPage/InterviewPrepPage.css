@@ -216,5 +216,18 @@ border: 2px solid white !important;
     text-align: center;
     gap: 1px;
   }
+  .popup-inner {
+    position: fixed;
+    top: 7vh;
+  }
+  
+  .close-button {
+    padding: 5px;
+    border-radius: 5px;
+    width: 120px;
+    height: fit-content;
+    background-color: beige;
+    font-size: 17px;
+  }
 
 }
