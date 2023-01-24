@@ -21,7 +21,6 @@ body {
 }
 .interviewPrepPage_container-header {
   width: 100%;
-  /* min-height: 2vh; */
   margin-top: 50px;
   display: flex;
   flex-direction: row;
@@ -41,7 +40,6 @@ body {
   justify-content: center;
   gap: 20px;
   width: 100%;
-  /* min-height: 80vh; */
 }
 
 /* Individual Question Sections */
@@ -65,10 +63,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* padding: 20px; */
   width: 100vw;
   height: 100%;
-  /* min-height: 500px; */
 }
 
 /* Individual Questions Styling */
@@ -116,9 +112,6 @@ body {
   background-color: #ffffff;
   border-radius: 10px;
   border: 2px solid #FBF0A2;
-  /* -webkit-box-shadow: 0px 0px 5px 5px #e5be83;
-  box-shadow: 0px 0px 5px 5px #e5be83c0;
-  border:1px solid #bb8f6a; */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -138,15 +131,12 @@ body {
 
 .cardStyling {
   background-color: var(--secondary_colour);
-  /* background-color: white; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   font-size: 1.2em;
-  /* margin-right: 20px; */
   border-radius: 10px;
-  /* padding: 2px; */
   height: 300px;
   max-width: 400px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -167,18 +157,15 @@ body {
   text-align: center;
   padding: 10px;
   margin: 0;
-
   min-width: 100%;
   min-height: 80%;
 }
 
 .question h5 {
   background-color: #94c296;
-
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  /* box-shadow: 0px 0px 5px 5px #937e5e8a; */
 }
 
 .answer-button {
@@ -188,7 +175,6 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
-
   min-width: 100%;
   min-height: 20%;
   max-width: 100%;
@@ -196,13 +182,16 @@ body {
 }
 
 .carousel {
-  /* background-color: red; */
   width: 1500px;
   max-width: 100%;
   min-width: 100vw;
   height: 100%;
-  /* min-height: 500px; */
+  z-index: 0;
 }
+.react-multiple-carousel__arrow {
+border: 2px solid white !important;
+}
+
 
 @media (max-width: 900px) {
   .carousel{
