@@ -8,7 +8,9 @@ export default function KnowledgeBankItem(props) {
           <div className='knowledge-bank-first-third'>
               <h2> {props.title}</h2>
               <Popup trigger={<img src={props.image} alt='' />}>
+                {/* <div className="knowledge-pop-up-background"> */}
                   <img className='knowledge-pop-up' src={props.image} alt='' />
+                  {/* </div> */}
               </Popup>
           </div>
           <div className='knowledge-bank-middle-third'>
