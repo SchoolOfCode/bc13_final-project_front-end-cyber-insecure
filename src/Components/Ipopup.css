@@ -45,7 +45,8 @@
   @media(max-width:700px){
     .i-popup-inner{
       position: fixed;
-      top: 10vh;
+      top: 5vh;
+      font-size: 15px;
     }
     .i-close-button {
       padding: 5px;

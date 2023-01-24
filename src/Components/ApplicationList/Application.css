@@ -17,10 +17,14 @@
     height: calc(100%); */
     /* text-overflow: ellipsis; */
     /* overflow: hidden; */
+    width: 95%;
+
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     display: -webkit-box;
+    
+
 
 
   }
