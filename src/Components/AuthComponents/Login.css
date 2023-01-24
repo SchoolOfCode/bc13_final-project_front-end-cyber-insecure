@@ -104,6 +104,7 @@
 }
 .second-ex img{
 width: 350px;
+
 height: 290px;
 border:2px solid #FBF0A2;
 box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -173,9 +174,25 @@ box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
         flex-direction: column;
         gap:10vh;
     }
+    .title-container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .title-container img {
+        height: 70px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #FBF0A2;
+    }
     .title-container p{
         text-align: center;
         font-size: medium;
+    }
+    .login-second-section-container{
+        margin-top: 15px;
     }
     .login-second-section-main{
         flex-direction: column;
