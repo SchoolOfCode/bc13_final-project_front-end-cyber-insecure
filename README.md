@@ -30,7 +30,7 @@
       <td align="center"><a href="https://github.com/KETAMINION"><img src="https://avatars.githubusercontent.com/u/106491264?v=4" width="100px;" alt="Miko"/><br /><sub><b>Mikolaj Zagrodzki</b></sub></a><br /><a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Aketaminion" title="Reviewed Pull Requests">👀</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-cyber-insecure/commits?author=ketaminion" title="Commits">💻</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-cyber-insecure/commits?author=ketaminion" title="Backend">💾</a></td>
       <td align="center"><a href="https://github.com/CTHall05"><img src="https://avatars.githubusercontent.com/u/63585450?v=4" width="100px;" alt="Taylor Hall"/><br /><sub><b>Taylor Hall</b></sub></a><br /><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-cyber-insecure/commits?author=THall05" title="Commits">💻</a><a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3ACTHall05" title="Reviewed Pull Requests">👀</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-cyber-insecure/commits?author=THall05" title="Backend">💾</a></td>
       <td align="center"><a href="https://github.com/constantine30"><img src="https://avatars.githubusercontent.com/u/112565241?v=4" width="100px;" alt="Constantin"/><br /><sub><b>Constantin Banciu</b></sub></a><br /><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-cyber-insecure/commits?author=constantine30" title="Code">💻</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-cyber-insecure/pulls?q=is%3Apr+reviewed-by%3Aconstantine30" title="Reviewed Pull Requests">👀</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-cyber-insecure/commits?author=constantine30" title="Backend">💾</a></td>
-      <td align="center"><a href="https://github.com/rielara"><img src="https://media.licdn.com/dms/image/D4E03AQH6yPcE1cWJBQ/profile-displayphoto-shrink_400_400/0/1674203412218?e=1679529600&v=beta&t=oz-jVz61CYLjyFunWMyh0pVq_AGqBPfxJ6vkghVVnyE" width="100px;" alt="rielara"/><br /><sub><b>Barbara</b></sub></a><br /> <a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-cyber-insecure/pulls?q=is%3Apr+reviewed-by%3Arielara" title="Reviewed Pull Requests">👀</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-cyber-insecure/commits?author=rielara" title="Code">💻</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-cyber-insecure/commits?author=rielara" title="Backend">💾</a> </td>
+      <td align="center"><a href="https://github.com/rielara"><img src="https://media.licdn.com/dms/image/D4E03AQEwJX15qDTywQ/profile-displayphoto-shrink_400_400/0/1674481286727?e=1680134400&v=beta&t=wHvc_OjZFj_mZK1Qs7iV4fkkaeYWcgds9Wg1OD5rLsQ" width="100px;" alt="rielara"/><br /><sub><b>Barbara</b></sub></a><br /> <a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-cyber-insecure/pulls?q=is%3Apr+reviewed-by%3Arielara" title="Reviewed Pull Requests">👀</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-cyber-insecure/commits?author=rielara" title="Code">💻</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-cyber-insecure/commits?author=rielara" title="Backend">💾</a> </td>
   </tbody>
 </table>
 <br>
@@ -49,55 +49,11 @@
 </div>
 
 ⚛ [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)  
-``` 
-npm install --save-dev @testing-library/react
-
-yarn add --dev @testing-library/react
-```
-
 ⚛ [React Icons](https://react-icons.github.io/react-icons/)  
-```
-npm install react-icons --save
-
-yarn add react-icons
-```
 ⚛ [React multi carousel](https://www.npmjs.com/package/react-multi-carousel)  
-```
-$ npm install react-multi-carousel --save
-
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-
-or alternatively:
-
-yarn add react-multi-carousel
-```
-
 ⚛ [React social icons](https://www.npmjs.com/package/react-social-icons)  
-```
-npm install react-social-icons
-
-or alternatively:
-
-yarn add react-icons
-```
-⚛ [ReactJs popup](https://www.npmjs.com/package/reactjs-popup) 
-```
-npm install reactjs-popup --save
-
-or alternatively:
-
-yarn add reactjs-popup
-```
+⚛ [ReactJs popup](https://www.npmjs.com/package/reactjs-popup)  
 ⚛ [React hook form](https://react-hook-form.com/)
-```
-npm i react-hook-form
-
-or alternatively:
-
-yarn add react-hook-form
-```
-
 
 
 
@@ -132,9 +88,41 @@ yarn add react-hook-form
 ⚛ [Railway](https://www.railway.app/)
 
 
+## ⚙️ For contributors
+
+If you'd like to contribute to our projects or play around with it, these are a few commands you should use:
 
 
-# DeVault Demo
+For the front-end:
+```
+npm i
+npm start
+```
+
+For the back-end: 
+```
+npm run dev
+```
+
+Testing the front-end:
+```
+npx cypress open
+```
+
+Testing the back-end: 
+```
+npm run test
+```
+
+
+
+
+
+
+
+
+
+# ⚙️ DeVault Demo
 
 [DeVault](https://dev-vault.netlify.app/login)
 
