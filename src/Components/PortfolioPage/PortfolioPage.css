@@ -110,12 +110,20 @@
     gap: 1px;
     text-align: center;
   }
+  .PorfolioPage-example-item-header a{
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
   
 }
 @media(max-width:700px){
   .portfolio-popup-image{
     width: 95%;
     height: 37%;
+  }
+  .PorfolioPage-example-item-header a{
+    margin-left: 20px;
+    margin-bottom: 15px;
   }
 }
 @media(max-width:400px){
@@ -124,8 +132,8 @@
     height: 33%;
   }
 
-  .icon {
+  .PorfolioPage-example-item-header a{
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 }
