@@ -180,7 +180,8 @@ box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
         width: 100vw;
         align-items: center;
         justify-content: center;
-        margin-top: 30px;
+        /* margin-top: 30px; */
+        padding-top: 50px;
     }
     
     .title-container img {
@@ -194,8 +195,10 @@ box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
         font-size: medium;
         width: 95vw;
     }
+
     .login-second-section-container{
-        margin-top: 30px;
+        /* margin-top: 30px; */
+        padding-top: 40px;
     }
     .login-second-section-main{
         flex-direction: column;
