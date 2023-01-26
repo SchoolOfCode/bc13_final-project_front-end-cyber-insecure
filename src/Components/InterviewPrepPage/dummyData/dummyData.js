@@ -90,8 +90,8 @@ const interviewQuestions = [
 
     {
       number: 8,
-      question: `How do you prioritize and manage your tasks?`,
-      answer: `I prioritize and manage my tasks by creating a to-do list and breaking down larger tasks into smaller, more manageable ones. I then prioritize these tasks based on their importance and urgency. I also make sure to set specific, measurable goals and track my progress throughout the project.`,
+      question: `What experience do you have that makes you a good fit for this role?`,
+      answer: `I have {talk about your experience}, and my background in {background skills}, {background skills}, and problem solving make me an ideal candidate for this position. I have a proven track record of success, and I'm confident that my experience in this field will be an asset to your team.`,
     },
 
     {
