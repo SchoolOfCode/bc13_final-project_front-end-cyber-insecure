@@ -1,0 +1,121 @@
+.about-us-container{
+    background-color: #94C296;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-start; */
+    min-height: 94vh;
+    
+    width: 100vw;
+    gap: 10vh;
+    overflow: hidden;
+    
+}
+
+.about-us-header{
+    display: flex;
+    width: 100%;
+    /* height: 5vh; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.about-us-header h1{
+    border-bottom: solid 1px;
+}
+
+.about-us-mission{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1650px;
+  background-color: #e5be83;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 10px;
+  border: 1px solid #FBF0A2;
+  font-size: large;
+  
+}
+
+.all-of-us{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 90%;
+    max-width: 1700px;
+    min-height: 50%;
+    margin-bottom: 50px;
+}
+
+.developer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    min-width: 300px;
+    max-width: 550px;
+    height: 370px;
+    min-height: 600px;
+    max-height: 850px;
+    gap: 10px;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #FBF0A2;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.developer p{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 30px;
+    
+    
+}
+
+.dev-img{
+    min-width: 50px;
+    max-width: 250px;
+    min-height: 50px;
+    max-height: 250px;
+    border: 2px solid;
+    border-color: #FBF0A2;
+    border-radius: 50%;
+}
+
+.developer-shortcuts{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.social-icon {
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .about-us-header {
+      text-align: center;
+    }
+    .about-us-mission {
+      text-align: center;
+    }
+  }

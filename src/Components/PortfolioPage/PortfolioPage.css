@@ -1,0 +1,133 @@
+.PortfolioPage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 94vh;
+}
+
+.PortfolioPage-container-header {
+  width: 100%;
+  /* min-height: 2vh; */
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.PortfolioPage-container-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.PortfolioPage-container-header h1 {
+  border-bottom: 1px solid;
+}
+
+.PortfolioPage-examples {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.PorfolioPage-example-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.PorfolioPage-example-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+  border-bottom: 1px solid #FBF0A2;
+}
+.PorfolioPage-example-item-header a{
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.PorfolioPage-example-item-image-container {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.portfolio-plain-image {
+  max-width: 95%;
+  max-height: 95%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border: 2px solid #FBF0A2;
+  border-radius: 5px;
+}
+
+.portfolio-plain-image:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+  rgba(0, 0, 0, 0.614) 0px 15px 12px;
+}
+
+.icon {
+  max-height: 80%;
+  margin-left: 20px;
+}
+
+.portfolio-popup-image {
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fbf0a2;
+  -webkit-box-shadow: 0px 0px 5px 5px #e5be83;
+  box-shadow: 0px 0px 5px 5px rgba(155, 140, 118, 0.667);
+}
+
+@media(max-width:1100px){
+  .portfolio-popup-image{
+    width: 90%;
+    height: 55%;
+  }
+
+  .PortfolioPage-container-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    text-align: center;
+  }
+
+}
+@media(max-width:700px){
+  .portfolio-popup-image{
+    width: 95%;
+    height: 37%;
+  }
+
+}
+@media(max-width:400px){
+  .portfolio-popup-image{
+    width: 95%;
+    height: 33%;
+  }
+
+
+}

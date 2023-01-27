@@ -1,0 +1,127 @@
+.AppDisplayed-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.597);
+}
+.AppDisplayed-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:80%;
+    width: 90%;
+    background-color: beige;
+    -webkit-box-shadow: 0px 0px 5px 5px #e5be83;
+    box-shadow: 0px 0px 5px 5px #e5be83d4;
+    border:1px solid #bb8f6a;
+}
+.AppDisplayed-container p{
+    border-bottom: 2px solid #bb8f6a;
+}
+.AppDisplayed-top{
+    width: 95%;
+    height: 30%;
+    display: flex;
+}
+.AppDisplayed-top-left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.AppDisplayed-top-right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.AppDisplayed-top-section{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.AppDisplayed-top-section-top{
+    width: 100%;
+    height: 30%;
+    border-left: 2px solid #bb8f6a;
+    padding-left: 5px;
+}
+.AppDisplayed-top-section-bottom{
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+}
+.AppDisplayed-main{
+    width: 95%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.AppDisplayed-main-section{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.AppDisplayed-main-section-top{
+    height: 15%;
+    width: 100%;
+    border-left: 2px solid #bb8f6a;
+    padding-left: 5px;
+}
+.AppDisplayed-main-section-bottom{
+    max-height: 85%;
+    width: 100%;
+    overflow: auto;
+}
+.AppDisplayed-bottom{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.AppDisplayed-bottom button{
+    height: 50%;
+    min-height: 26px;
+    width: 50%;
+    max-width: 175px;
+    border: none;
+    background-color: #bb8f6a;
+    border-radius: 5px;
+}
+.AppDisplayed-bottom-link{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.AppDisplayed-bottom-close{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@media(max-width:1000px){
+    .AppDisplayed-container{
+         position: fixed;
+        top: 7vh;
+    }
+    .AppDisplayed-top-right p{
+        width: 100%;
+        height: fit-content;
+    }
+
+}
